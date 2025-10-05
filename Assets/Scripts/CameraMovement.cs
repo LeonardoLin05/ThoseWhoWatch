@@ -5,7 +5,7 @@ public class CameraMovement : MonoBehaviour
 {
     public Transform player;
 
-    private float mouseSensitivity = 500f;
+    private float mouseSensitivity = 250f;
     private float xRotation;
     private float yRotation;
 
@@ -21,6 +21,7 @@ public class CameraMovement : MonoBehaviour
         float inputY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * mouseSensitivity;
 
         yRotation += inputX;
+
         xRotation -= inputY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
