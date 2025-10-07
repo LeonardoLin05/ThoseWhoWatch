@@ -1,6 +1,11 @@
 using UnityEditor;
 using UnityEngine;
 
+public interface IInteractable
+{
+    public void interact();
+}
+
 public class Interaction : MonoBehaviour
 {
 
@@ -16,6 +21,10 @@ public class Interaction : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, 2f, mask))
         {
+            if (hit.collider.gameObject.TryGetComponent<IInteractable>(out IInteractable i))
+            {
+                i.interact();
+            }
             Debug.Log("Estas mirando a un objecto interactuable");
         }
     }
