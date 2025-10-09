@@ -989,6 +989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   teleportDestino: {fileID: 114755236}
+  player: {fileID: 1629247662}
 --- !u!1 &2079545196
 GameObject:
   m_ObjectHideFlags: 0
