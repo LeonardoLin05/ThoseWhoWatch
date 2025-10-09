@@ -12,13 +12,12 @@ public class InteractDoor : MonoBehaviour, IInteractable
 
     public void interact()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
+        
             open = !open;
             door.SetBool("open", open);
             door.SetTrigger("interact");
             Debug.Log("El objecto ha hecho algo");
-        }
+        
     }
 
 }

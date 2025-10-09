@@ -23,7 +23,11 @@ public class Interaction : MonoBehaviour
         {
             if (hit.collider.gameObject.TryGetComponent<IInteractable>(out IInteractable i))
             {
-                i.interact();
+		Debug.Log("Objeto interactuable detectado: " + hit.collider.name);
+		if (Input.GetKeyDown(KeyCode.E))
+		{
+                	i.interact();
+		}
             }
             Debug.Log("Estas mirando a un objecto interactuable");
         }
