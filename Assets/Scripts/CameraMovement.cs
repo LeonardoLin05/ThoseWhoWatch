@@ -17,7 +17,10 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-        GirarCamara();
+	if(!VariablesGlobales.PARAR_CAMARA)
+	{
+        	GirarCamara();
+	}
     }
 
     void LateUpdate()
@@ -25,6 +28,7 @@ public class CameraMovement : MonoBehaviour
         GirarPersonaje();
     }
 
+	
     private void GirarCamara()
     {
         float inputX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * mouseSensitivity;
