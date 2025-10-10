@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EsconderseArmario : MonoBehaviour, IInteractable
 {
-    	public GameObject teleportDestino;
+    public GameObject teleportDestino;
 	public Transform player;
 	public Transform camara; 
 	public Material materialTransparente;
