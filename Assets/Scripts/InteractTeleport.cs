@@ -13,7 +13,9 @@ public class InteractTeleport : MonoBehaviour, IInteractable
 
 		if (player != null && teleportDestino != null)
 		{
+
 			player.position = teleportDestino.position;
+			Physics.SyncTransforms();
 			Debug.Log("Jugador teletransportado");
 		}
 	}
