@@ -17,10 +17,11 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-	if(!VariablesGlobales.PARAR_CAMARA)
-	{
+	    if(!VariablesGlobales.PARAR_CAMARA)
+	    {
         	GirarCamara();
-	}
+	    }
+        
     }
 
     void LateUpdate()
