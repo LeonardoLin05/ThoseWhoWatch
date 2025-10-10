@@ -1,40 +1,58 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EsconderseArmario : MonoBehaviour, IInteractable
 {
-    	public GameObject teleportDestino;
+	public Transform teleportEntrada;
+	public Transform teleportSalida;
 	public Transform player;
-	public Transform camara; 
+	public HeadbobSystem headbobSystem;
+	public Transform camara;
 	public Material materialTransparente;
-	private Material materialArmario; 
-	private bool estoyFuera = true; 
-		
+	private Material materialArmario;
 
-    public void interact()
+	private Animator fade;
+
+	private bool estoyFuera = true;
+
+    void Start()
 	{
-		if (player != null && teleportDestino != null && materialTransparente != null)
+		fade = GameObject.FindGameObjectsWithTag("Fade")[0].GetComponent<Animator>();
+        materialArmario = GetComponent<MeshRenderer>().material;
+    }
+
+    public IEnumerator interact()
+	{
+		if (estoyFuera)
 		{
-			if (estoyFuera)
-			{
-				VariablesGlobales.PARAR_CAMARA = true; 
-				player.position = teleportDestino.GetComponent<Transform>().position;
-				camara.eulerAngles = new Vector3(camara.rotation.x,0,camara.rotation.z);
-				//player.eulerAngles = new Vector3(player.rotation.x,0,player.rotation.z);
-				//camara.rotation = Quaternion.Euler(0,Time.deltaTime * 10,0);  
-				//player.rotation = Quaternion.Euler(0,Time.deltaTime * 10,0);
-				materialArmario = GetComponent<MeshRenderer>().material; 
-				GetComponent<MeshRenderer>().material = materialTransparente;
-				estoyFuera = false; 
-			}
-			else
-			{
-				Vector3 newPos= teleportDestino.GetComponent<Transform>().position;
-				newPos.z = newPos.z + 1;  
-				player.position = newPos;
-				GetComponent<MeshRenderer>().material = materialArmario;
-				estoyFuera = true;
-				VariablesGlobales.PARAR_CAMARA = false; 	
-			} 			
+			VariablesGlobales.PARAR_CAMARA = true;
+			VariablesGlobales.PARAR_MOVIMIENTO = true;
+			headbobSystem.enabled = false;
+			estoyFuera = false;
+
+			fade.SetTrigger("Fade");
+			yield return new WaitForSeconds(1.5f);
+
+			camara.rotation = Quaternion.Euler(0, 0, 0);
+			player.position = teleportEntrada.position;
+
+			GetComponent<MeshRenderer>().material = materialTransparente;
 		}
+		else
+		{
+			fade.SetTrigger("Fade");
+			yield return new WaitForSeconds(1.5f);
+
+			VariablesGlobales.PARAR_CAMARA = false;
+			VariablesGlobales.PARAR_MOVIMIENTO = false;
+			headbobSystem.enabled = true;
+			estoyFuera = true;
+
+			player.position = teleportSalida.position;
+			GetComponent<MeshRenderer>().material = materialArmario;
+		}
+		Physics.SyncTransforms();
+		VariablesGlobales.INTERACTUAR = true;
 	}
 }

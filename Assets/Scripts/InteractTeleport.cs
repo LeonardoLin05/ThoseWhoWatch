@@ -1,22 +1,27 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InteractTeleport : MonoBehaviour, IInteractable
 {
     public Transform teleportDestino;
+	public Transform player;
 
-	public Transform player;	
+	private Animator fade;
 
-    public void interact()
+	void Start()
+    {
+		fade = GameObject.FindGameObjectsWithTag("Fade")[0].GetComponent<Animator>();
+    }
+
+    public IEnumerator interact()
 	{
+		fade.SetTrigger("Fade");
+		yield return new WaitForSeconds(1.5f);
 
-		Debug.Log("Hola");
-
-		if (player != null && teleportDestino != null)
-		{
-
-			player.position = teleportDestino.position;
-			Physics.SyncTransforms();
-			Debug.Log("Jugador teletransportado");
-		}
+		player.position = teleportDestino.position;
+		Physics.SyncTransforms();
+		VariablesGlobales.INTERACTUAR = true;
+		Debug.Log("Jugador teletransportado");
 	}
 }

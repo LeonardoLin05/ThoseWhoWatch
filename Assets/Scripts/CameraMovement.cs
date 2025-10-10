@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public Transform player;
+    public Transform orientation;
 
     private float mouseSensitivity = 500f;
     private float xRotation;
@@ -43,6 +43,6 @@ public class CameraMovement : MonoBehaviour
     
     private void GirarPersonaje()
     {
-        player.rotation = Quaternion.Euler(0, yRotation, 0);
+        orientation.rotation = Quaternion.Euler(0, yRotation, 0);
     }
 }

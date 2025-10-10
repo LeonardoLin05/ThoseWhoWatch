@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class InteractDoor : MonoBehaviour, IInteractable
@@ -7,17 +8,16 @@ public class InteractDoor : MonoBehaviour, IInteractable
 
     void Start()
     {
-        door = gameObject.GetComponent<Animator>();
+        door = GetComponent<Animator>();
     }
 
-    public void interact()
+    public IEnumerator interact()
     {
-        
         open = !open;
         door.SetBool("open", open);
         door.SetTrigger("interact");
         Debug.Log("El objecto ha hecho algo");
-        
+        yield return null;
     }
 
 }

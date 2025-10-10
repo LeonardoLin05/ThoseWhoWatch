@@ -1,9 +1,10 @@
-using UnityEditor;
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public interface IInteractable
 {
-    public void interact();
+    public IEnumerator interact();
 }
 
 public class Interaction : MonoBehaviour
@@ -24,9 +25,10 @@ public class Interaction : MonoBehaviour
             if (hit.collider.gameObject.TryGetComponent<IInteractable>(out IInteractable i))
             {
                 Debug.Log("Objeto interactuable detectado: " + hit.collider.name);
-                if (Input.GetKeyDown(KeyCode.E))
+                if (VariablesGlobales.INTERACTUAR && Input.GetKeyDown(KeyCode.E))
                 {
-                    i.interact();
+                    VariablesGlobales.INTERACTUAR = false;
+                    StartCoroutine(i.interact());
                 }
                 
             }

@@ -4,6 +4,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    public Transform orientation;
+
     private float walkSpeed = 2f;
     private float gravity = -9.81f;
     private Vector3 velocity;
@@ -37,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
             speed = Run();
         }
 
-        Vector3 finalMove = (transform.right * Input.GetAxisRaw("Horizontal") + transform.forward * Input.GetAxisRaw("Vertical")) * speed + velocity;
+        Vector3 finalMove = (orientation.right * Input.GetAxisRaw("Horizontal") + orientation.forward * Input.GetAxisRaw("Vertical")) * speed + velocity;
 
         characterController.Move(finalMove * Time.deltaTime);
     }
@@ -52,13 +54,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            Debug.Log("Corriendo");
             HeadbobSystem.ChangeData(0.008f, 15f);
             return walkSpeed * 1.3f;
         }
         else
         {
-            Debug.Log("No corriendo");
             HeadbobSystem.ChangeData(0.004f, 10f);
             return walkSpeed;
         }
