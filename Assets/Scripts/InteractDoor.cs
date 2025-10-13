@@ -20,4 +20,10 @@ public class InteractDoor : MonoBehaviour, IInteractable
         yield return null;
     }
 
+    public string MensajeInteraccion(){
+
+        return "Press E to open";
+    }
+
+
 }
