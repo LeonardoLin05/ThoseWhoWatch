@@ -24,4 +24,9 @@ public class InteractTeleport : MonoBehaviour, IInteractable
 		VariablesGlobales.INTERACTUAR = true;
 		Debug.Log("Jugador teletransportado");
 	}
+
+	public string MensajeInteraccion(){
+
+		return "Press E to teleport";
+	}
 }

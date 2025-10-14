@@ -55,4 +55,14 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 		Physics.SyncTransforms();
 		VariablesGlobales.INTERACTUAR = true;
 	}
+
+	public string MensajeInteraccion(){
+
+		if(estoyFuera){
+			return "Press E to hide";
+		}
+		else{
+			return "Press E to exit";
+		}
+	}
 }
