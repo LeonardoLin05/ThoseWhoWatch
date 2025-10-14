@@ -16,13 +16,21 @@ public class InteractDoor : MonoBehaviour, IInteractable
         open = !open;
         door.SetBool("open", open);
         door.SetTrigger("interact");
+        VariablesGlobales.INTERACTUAR = true;
         Debug.Log("El objecto ha hecho algo");
         yield break;
     }
 
     public string MensajeInteraccion(){
-
-        return "Press E to open";
+        if (!open)
+        {
+            return "Press E to open";
+        }
+        else
+        {
+            return "Press E to close";
+        }
+       
     }
 
 
