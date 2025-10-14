@@ -17,7 +17,7 @@ public class InteractDoor : MonoBehaviour, IInteractable
         door.SetBool("open", open);
         door.SetTrigger("interact");
         Debug.Log("El objecto ha hecho algo");
-        yield return null;
+        yield break;
     }
 
 }

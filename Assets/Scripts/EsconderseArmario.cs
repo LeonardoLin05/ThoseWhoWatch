@@ -14,7 +14,7 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 
 	private Animator fade;
 
-	private bool estoyFuera = true;
+	//private bool estoyFuera = true;
 
     void Start()
 	{
@@ -24,12 +24,12 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 
     public IEnumerator interact()
 	{
-		if (estoyFuera)
+		if (!VariablesGlobales.DENTRO_ARMARIO)
 		{
 			VariablesGlobales.PARAR_CAMARA = true;
 			VariablesGlobales.PARAR_MOVIMIENTO = true;
 			headbobSystem.enabled = false;
-			estoyFuera = false;
+			VariablesGlobales.DENTRO_ARMARIO = true; 
 
 			fade.SetTrigger("Fade");
 			yield return new WaitForSeconds(1.5f);
@@ -47,7 +47,7 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 			VariablesGlobales.PARAR_CAMARA = false;
 			VariablesGlobales.PARAR_MOVIMIENTO = false;
 			headbobSystem.enabled = true;
-			estoyFuera = true;
+			VariablesGlobales.DENTRO_ARMARIO = false; 
 
 			player.position = teleportSalida.position;
 			GetComponent<MeshRenderer>().material = materialArmario;
