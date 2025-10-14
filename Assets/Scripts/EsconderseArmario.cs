@@ -58,10 +58,12 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 
 	public string MensajeInteraccion(){
 
-		if(estoyFuera){
+		if(!VariablesGlobales.DENTRO_ARMARIO)
+		{
 			return "Press E to hide";
 		}
-		else{
+		else
+		{
 			return "Press E to exit";
 		}
 	}
