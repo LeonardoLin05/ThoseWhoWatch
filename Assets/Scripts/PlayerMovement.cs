@@ -22,26 +22,24 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Aplicamos la gravedad
-        velocity.y += gravity;
-
-        // Reiniciamos la velocidad aplicada por la gravedad si el personaje
-        // esta tocando el suelo
-        if (characterController.isGrounded && characterController.velocity.y < 0)
+        if (!VariablesGlobales.PARAR_MOVIMIENTO)
         {
-            velocity.y = 0f;
-        }
+            // Aplicamos la gravedad
+            velocity.y += gravity;
 
-        speed = Crouch();
+            // Reiniciamos la velocidad aplicada por la gravedad si el personaje
+            // esta tocando el suelo
+            if (characterController.isGrounded && characterController.velocity.y < 0)
+            {
+                velocity.y = 0f;
+            }
 
-        if (!crouching)
-        {
             speed = Run();
+
+            Vector3 finalMove = (orientation.right * Input.GetAxisRaw("Horizontal") + orientation.forward * Input.GetAxisRaw("Vertical")) * speed + velocity;
+
+            characterController.Move(finalMove * Time.deltaTime);
         }
-
-        Vector3 finalMove = (orientation.right * Input.GetAxisRaw("Horizontal") + orientation.forward * Input.GetAxisRaw("Vertical")) * speed + velocity;
-
-        characterController.Move(finalMove * Time.deltaTime);
     }
 
     /// <summary>
