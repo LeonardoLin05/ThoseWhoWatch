@@ -35,6 +35,7 @@ public class Interaction : MonoBehaviour
         {
             if (hit.collider.gameObject.TryGetComponent<IInteractable>(out IInteractable i))
             {
+                
                 texto.text = i.MensajeInteraccion();
                 texto.gameObject.SetActive(true);
                 Debug.Log("Objeto interactuable detectado: " + hit.collider.name);
