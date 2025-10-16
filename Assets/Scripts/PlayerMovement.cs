@@ -11,8 +11,6 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity;
     private float speed;
 
-    private bool crouching = false;
-
     private CharacterController characterController;
 
     void Awake()
@@ -58,23 +56,6 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             HeadbobSystem.ChangeData(0.004f, 10f);
-            return walkSpeed;
-        }
-    }
-
-    // TODO: mejorar sistema de agachar
-    private float Crouch()
-    {
-        if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.C))
-        {
-            crouching = true;
-            transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
-            return walkSpeed * 0.6f;
-        }
-        else
-        {
-            transform.localScale = new Vector3(1, 1, 1);
-            crouching = false;
             return walkSpeed;
         }
     }
