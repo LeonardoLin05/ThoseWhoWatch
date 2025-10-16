@@ -6,16 +6,26 @@ public class InteractTeleport : MonoBehaviour, IInteractable
 {
     public Transform teleportDestino;
 	public Transform player;
-
+	private bool ready = false;
 	private Animator fade;
 
 	void Start()
-    {
+	{
 		fade = GameObject.FindGameObjectsWithTag("Fade")[0].GetComponent<Animator>();
+	}
+	
+	public void ActivarTeleport()
+    {
+		ready = true;
     }
 
     public IEnumerator interact()
 	{
+        if (!ready)
+        {
+			yield break;
+        }
+
 		fade.SetTrigger("Fade");
 		yield return new WaitForSeconds(1.5f);
 
@@ -26,7 +36,13 @@ public class InteractTeleport : MonoBehaviour, IInteractable
 	}
 
 	public string MensajeInteraccion(){
-
-		return "Press E to teleport";
+        if (ready)
+        {
+          return "Press E to teleport";  
+        }
+        else
+        {
+			return "Waiting for Bus";
+        }
 	}
 }

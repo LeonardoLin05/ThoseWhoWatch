@@ -9,7 +9,7 @@ public class InteractTalk : MonoBehaviour, IInteractable
     private int i;
     public TextMeshProUGUI texto;
     public bool hablando = false;
-
+    private Coroutine textoAnimado;
     void Start()
     {
         if (texto == null)
@@ -26,31 +26,49 @@ public class InteractTalk : MonoBehaviour, IInteractable
         {
             hablando = true;
             i = 0;
-            texto.text = dialogo[i];
             texto.gameObject.SetActive(true);
 
             VariablesGlobales.PARAR_CAMARA = true;
-			VariablesGlobales.PARAR_MOVIMIENTO = true;
+            VariablesGlobales.PARAR_MOVIMIENTO = true;
+
+            textoAnimado = StartCoroutine(textoAnimar(dialogo[i]));
         }
         else
         {
+            if (textoAnimado != null)
+            {
+                StopCoroutine(textoAnimado);
+                texto.text = dialogo[i];
+                textoAnimado = null;
+                VariablesGlobales.INTERACTUAR = true;
+                yield break;
+            }
             i++;
             if (i < dialogo.Length)
             {
-                texto.text = dialogo[i];
+                textoAnimado = StartCoroutine(textoAnimar(dialogo[i]));
             }
             else
             {
-            hablando = false;
+                hablando = false;
                 texto.gameObject.SetActive(false);
-            
+
                 VariablesGlobales.PARAR_CAMARA = false;
-			    VariablesGlobales.PARAR_MOVIMIENTO = false;
+                VariablesGlobales.PARAR_MOVIMIENTO = false;
             }
         }
-
-        yield return new WaitForSeconds(1.5f);
         VariablesGlobales.INTERACTUAR = true;
+    }
+    
+    private IEnumerator textoAnimar(string dial)
+    {
+        texto.text = "";
+
+        for (int j = 0; j < dial.Length; j++)
+        {
+            texto.text = texto.text + dial[j];
+            yield return new WaitForSeconds(0.05f);
+        }
     }
     
     public string MensajeInteraccion()
