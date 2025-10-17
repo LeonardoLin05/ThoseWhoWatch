@@ -7,7 +7,9 @@ public class Perseguir : MonoBehaviour
     float moveSpeed = 1.5f;
     private float rotationSpeed = 6f;
     private Transform enemigoTrans;
-    private CharacterController enemigoControl; 
+    private CharacterController enemigoControl;
+    private Vector3 velocity;
+    private float gravity = -9.81f;
 
 
     void Awake()
@@ -16,14 +18,25 @@ public class Perseguir : MonoBehaviour
        enemigoControl = GetComponent<CharacterController>();
     }
 
-    void Update () 
+    void Update ()
     {
+        
         //Calcular distancia
         float distancia;
         distancia = Vector3.Distance(player.transform.position, transform.position);
 
         if(distancia<15 && distancia>2)
         {
+            // Aplicamos la gravedad
+            velocity.y += gravity;
+
+            // Reiniciamos la velocidad aplicada por la gravedad si el personaje
+            // esta tocando el suelo
+            if (enemigoControl.isGrounded && enemigoControl.velocity.y < 0)
+            {
+                velocity.y = 0f;
+            }
+
             //Voltear
             enemigoTrans.rotation = Quaternion.Slerp(enemigoTrans.rotation,
             Quaternion.LookRotation(player.position - enemigoTrans.position), rotationSpeed*Time.deltaTime);
@@ -32,12 +45,12 @@ public class Perseguir : MonoBehaviour
             {
                 if (distancia < 8)
                 {
-                    enemigoControl.Move(-enemigoTrans.forward * moveSpeed/2 * Time.deltaTime);
+                    enemigoControl.Move((-enemigoTrans.forward * moveSpeed/2 + velocity) * Time.deltaTime);
                 }
             }
             else
             {
-                enemigoControl.Move(enemigoTrans.forward * moveSpeed * Time.deltaTime);
+                enemigoControl.Move((enemigoTrans.forward * moveSpeed + velocity) * Time.deltaTime);
             }
             
             
