@@ -5,7 +5,7 @@ public class CameraMovement : MonoBehaviour
 {
     public Transform player;
 
-    private float mouseSensitivity = 500f;
+    public float mouseSensitivity = 500f;
     private float xRotation;
     private float yRotation;
 

@@ -39,6 +39,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     void Start()
     {
         texto = GameObject.Find("texto_interactuar2").GetComponent<TextMeshProUGUI>();
+        posicion = transform;
     }
 
     // Update is called once per frame
@@ -54,7 +55,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
             texto.gameObject.SetActive(true);
             texto.text = "Presiona G para soltar";
         }
-        if (!enMano && Input.GetKeyDown(KeyCode.G))
+        else if (Input.GetKeyDown(KeyCode.G))
         {
             objeto.useGravity = true;
             boxCollider.enabled = true;
