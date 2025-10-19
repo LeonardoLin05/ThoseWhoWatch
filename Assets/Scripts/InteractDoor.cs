@@ -24,11 +24,11 @@ public class InteractDoor : MonoBehaviour, IInteractable
     public string MensajeInteraccion(){
         if (!open)
         {
-            return "Press E to open";
+            return "[E] para Abrir";
         }
         else
         {
-            return "Press E to close";
+            return "[E] para Cerrar";
         }
        
     }

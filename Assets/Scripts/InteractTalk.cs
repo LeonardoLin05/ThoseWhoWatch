@@ -10,6 +10,7 @@ public class InteractTalk : MonoBehaviour, IInteractable
     public TextMeshProUGUI texto;
     public bool hablando = false;
     private Coroutine textoAnimado;
+    
     void Start()
     {
         if (texto == null)
@@ -75,11 +76,11 @@ public class InteractTalk : MonoBehaviour, IInteractable
     {
         if (!hablando)
         {
-            return "Press E to talk";
+            return "[E] para Hablar";
         }
         else
         {
-            return "Press E to continue";
+            return "[E] para Continuar";
         }
     }
 }

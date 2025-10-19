@@ -24,7 +24,7 @@ MonoBehaviour:
     value: 4
   FixedVerticalResolution:
     overrideState: 1
-    value: 400
+    value: 500
   ColorDepth:
     overrideState: 1
     value: 0.25
@@ -37,7 +37,7 @@ MonoBehaviour:
     value: 1
   DitherThreshold:
     overrideState: 1
-    value: 0.75
+    value: 0.4
   DitherIntensity:
     overrideState: 1
     value: 0.15

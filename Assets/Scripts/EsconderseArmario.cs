@@ -60,11 +60,11 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 
 		if(!VariablesGlobales.DENTRO_ARMARIO)
 		{
-			return "Press E to hide";
+			return "[E] para Esconderse";
 		}
 		else
 		{
-			return "Press E to exit";
+			return "[E] para Salir";
 		}
 	}
 }

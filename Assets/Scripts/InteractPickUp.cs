@@ -3,12 +3,15 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
+using UnityEditor.SceneManagement;
 
 public class InteractPickUp : MonoBehaviour, IInteractable
 {
     public Transform mano;
 
-    private Boolean enMano = false;
+    private bool interactuar = false;
+    private bool lanzar = false;
+    private bool enMano = false;
     private Transform posicion;
     private Rigidbody objeto;
     private BoxCollider boxCollider;
@@ -16,15 +19,18 @@ public class InteractPickUp : MonoBehaviour, IInteractable
 
     public IEnumerator interact()
     {
-        enMano = true;
+        if (!VariablesGlobales.OBJETO_MANO)
+        {
+            interactuar = true;
+        }
         VariablesGlobales.INTERACTUAR = true;
         yield break;
     }
 
     public string MensajeInteraccion()
     {
-        if (!enMano)
-            return "Press E to pick up";
+        if (!VariablesGlobales.OBJETO_MANO)
+            return "[E] para Recoger";
         else
             return "";
     }
@@ -45,24 +51,54 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     // Update is called once per frame
     void Update()
     {
-        if (enMano)
+        if (interactuar)
         {
             objeto.useGravity = false;
+            objeto.freezeRotation = true;
+            objeto.linearVelocity = new Vector3(0, 0, 0);
+            objeto.rotation = Quaternion.Euler(0,0,0);
+
             boxCollider.enabled = false;
-            enMano = false;
+            interactuar = false;
+            lanzar = false;
+
+            enMano = true;
+            VariablesGlobales.OBJETO_MANO = true;
 
             posicion = mano;
-            texto.gameObject.SetActive(true);
-            texto.text = "Presiona G para soltar";
+            texto.text = "[G] para Lanzar";
         }
         else if (Input.GetKeyDown(KeyCode.G))
         {
             objeto.useGravity = true;
+            objeto.freezeRotation = false;
+
+            lanzar = true;
             boxCollider.enabled = true;
             posicion = transform;
-            texto.gameObject.SetActive(false);
+            texto.text = "";
+
+            enMano = false;
+            VariablesGlobales.OBJETO_MANO = false;
         }
-        objeto.position = posicion.position;
+        if (enMano)
+        {
+            CameraMovement.GirarObjeto(transform);
+        }
+        transform.position = posicion.position;
         Physics.SyncTransforms();
+    }
+
+    void FixedUpdate()
+    {
+        if (lanzar)
+        {
+            objeto.AddForce(mano.transform.forward * 5f, ForceMode.Force);
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        lanzar = false;
     }
 }

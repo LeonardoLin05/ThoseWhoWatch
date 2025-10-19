@@ -6,8 +6,8 @@ public class CameraMovement : MonoBehaviour
     public Transform player;
 
     public float mouseSensitivity = 500f;
-    private float xRotation;
-    private float yRotation;
+    private static float xRotation;
+    private static float yRotation;
 
     void Start()
     {
@@ -40,9 +40,14 @@ public class CameraMovement : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
     }
-    
+
     private void GirarPersonaje()
     {
         player.rotation = Quaternion.Euler(0, yRotation, 0);
+    }
+    
+    public static void GirarObjeto(Transform objeto)
+    {
+        objeto.rotation = Quaternion.Euler(xRotation, yRotation, 0);
     }
 }

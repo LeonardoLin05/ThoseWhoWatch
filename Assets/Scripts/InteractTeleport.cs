@@ -38,7 +38,7 @@ public class InteractTeleport : MonoBehaviour, IInteractable
 	public string MensajeInteraccion(){
         if (ready)
         {
-          return "Press E to teleport";  
+          return "[E] para Viajar";  
         }
         else
         {
