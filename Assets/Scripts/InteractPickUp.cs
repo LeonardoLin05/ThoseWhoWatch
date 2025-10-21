@@ -93,7 +93,8 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     {
         if (lanzar)
         {
-            objeto.AddForce(mano.transform.forward * 5f, ForceMode.Force);
+            // NO poner la fuerza a más de 10f por favor
+            objeto.AddForce(mano.transform.forward * 6f, ForceMode.Force);
         }
     }
 
