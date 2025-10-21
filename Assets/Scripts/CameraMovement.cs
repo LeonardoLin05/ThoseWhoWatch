@@ -9,6 +9,8 @@ public class CameraMovement : MonoBehaviour
     private static float xRotation;
     private static float yRotation;
 
+    public static float prueba;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -26,7 +28,10 @@ public class CameraMovement : MonoBehaviour
 
     void LateUpdate()
     {
-        GirarPersonaje();
+        if(!VariablesGlobales.PARAR_CAMARA)
+        {
+            GirarPersonaje();   
+        }
     }
 
 	
@@ -38,12 +43,12 @@ public class CameraMovement : MonoBehaviour
         yRotation += inputX;
         xRotation -= inputY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+        transform.rotation = Quaternion.Euler(xRotation, yRotation + prueba, 0);
     }
 
     private void GirarPersonaje()
     {
-        player.rotation = Quaternion.Euler(0, yRotation, 0);
+        player.rotation = Quaternion.Euler(0, yRotation + prueba, 0);
     }
     
     public static void GirarObjeto(Transform objeto)

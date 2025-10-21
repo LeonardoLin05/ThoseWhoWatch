@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54ccac7a7b193e24b838948044c40846, type: 3}
   m_Name: RetroPostProcessEffect
   m_EditorClassIdentifier: Assembly-CSharp::RetroPostProcessEffect
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
@@ -24,7 +24,7 @@ MonoBehaviour:
     value: 4
   FixedVerticalResolution:
     overrideState: 1
-    value: 500
+    value: 560
   ColorDepth:
     overrideState: 1
     value: 0.25
@@ -37,10 +37,10 @@ MonoBehaviour:
     value: 1
   DitherThreshold:
     overrideState: 1
-    value: 0.4
+    value: 0.5
   DitherIntensity:
     overrideState: 1
-    value: 0.15
+    value: 0.05
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

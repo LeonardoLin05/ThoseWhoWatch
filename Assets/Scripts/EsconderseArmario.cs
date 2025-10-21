@@ -29,12 +29,15 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 			VariablesGlobales.PARAR_CAMARA = true;
 			VariablesGlobales.PARAR_MOVIMIENTO = true;
 			headbobSystem.enabled = false;
-			VariablesGlobales.DENTRO_ARMARIO = true; 
+			VariablesGlobales.DENTRO_ARMARIO = true;
+
+			CameraMovement.prueba = 180;
 
 			fade.SetTrigger("Fade");
 			yield return new WaitForSeconds(1.5f);
+			VariablesGlobales.PARAR_CAMARA = false;
 
-			camara.rotation = Quaternion.Euler(0, 0, 0);
+			//camara.rotation = Quaternion.Euler(0, 0, 0);
 			player.position = teleportEntrada.position;
 
 			GetComponent<MeshRenderer>().material = materialTransparente;
@@ -44,10 +47,12 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 			fade.SetTrigger("Fade");
 			yield return new WaitForSeconds(1.5f);
 
-			VariablesGlobales.PARAR_CAMARA = false;
+			//VariablesGlobales.PARAR_CAMARA = false;
 			VariablesGlobales.PARAR_MOVIMIENTO = false;
 			headbobSystem.enabled = true;
-			VariablesGlobales.DENTRO_ARMARIO = false; 
+			VariablesGlobales.DENTRO_ARMARIO = false;
+
+			CameraMovement.prueba = 0;
 
 			player.position = teleportSalida.position;
 			GetComponent<MeshRenderer>().material = materialArmario;
