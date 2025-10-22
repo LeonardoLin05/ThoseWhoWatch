@@ -31,7 +31,8 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 			headbobSystem.enabled = false;
 			VariablesGlobales.DENTRO_ARMARIO = true;
 
-			CameraMovement.prueba = 180;
+			CameraMovement.xRotation = 0;
+			CameraMovement.yRotation = 0;
 
 			fade.SetTrigger("Fade");
 			yield return new WaitForSeconds(1.5f);
@@ -52,7 +53,8 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 			headbobSystem.enabled = true;
 			VariablesGlobales.DENTRO_ARMARIO = false;
 
-			CameraMovement.prueba = 0;
+			CameraMovement.xRotation = 0;
+			CameraMovement.yRotation = 0;
 
 			player.position = teleportSalida.position;
 			GetComponent<MeshRenderer>().material = materialArmario;
