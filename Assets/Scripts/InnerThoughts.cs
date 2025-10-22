@@ -7,6 +7,7 @@ public class InnerThoughts : MonoBehaviour
     public string pensamiento_mostrar;
     public TextMeshProUGUI pensamiento;
     private Coroutine textoAnimado;
+    public GameObject activaTrigger;
 
     void Start()
     {
@@ -32,15 +33,19 @@ public class InnerThoughts : MonoBehaviour
     {
             pensamiento.gameObject.SetActive(true);
             pensamiento.text = "";
-            
-            for(int i = 0; i < pensamiento_mostrar.Length; i++)
+
+        for (int i = 0; i < pensamiento_mostrar.Length; i++)
+        {
+            pensamiento.text = pensamiento.text + pensamiento_mostrar[i];
+            yield return new WaitForSeconds(0.05f);
+        }
+            if(activaTrigger != null)
             {
-                pensamiento.text = pensamiento.text + pensamiento_mostrar[i];
-                yield return new WaitForSeconds(0.05f);
+                activaTrigger.SetActive(true);
             }
             yield return new WaitForSeconds(10f);
             pensamiento.gameObject.SetActive(false);
-
+            
         Destroy(gameObject);
     }
 }
