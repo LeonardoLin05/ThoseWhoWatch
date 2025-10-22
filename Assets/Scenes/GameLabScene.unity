@@ -1059,7 +1059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6961124b2f33d941a973a6bf6e94652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Perseguir
-  player: {fileID: 0}
+  player: {fileID: 797457951}
 --- !u!143 &230255580
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1575,6 +1575,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 797457951}
+    - target: {fileID: 6088995774697790566, guid: 4e9d775daa5814847942f709bf33ce97, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6620746414494571966, guid: 4e9d775daa5814847942f709bf33ce97, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.04
@@ -3617,7 +3621,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractBus
   Autobus: {fileID: 953220934}
-  teleportBus: {fileID: 114755236}
 --- !u!1001 &1656657000658828893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3626,6 +3629,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 460081888333390888, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1912123209035246258, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
       propertyPath: m_Name
       value: Player

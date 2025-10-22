@@ -35,24 +35,30 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, 3f, mask))
+        Ray ray = new Ray(transform.position, transform.forward);
+        if (Physics.Raycast(ray, out RaycastHit hit, 3f, mask | LayerMask.GetMask("Default")))
         {
-            if (hit.collider.gameObject.TryGetComponent<IInteractable>(out IInteractable i))
+            Debug.DrawRay(ray.origin, ray.direction * hit.distance);
+            if (hit.transform.gameObject.layer == 6)
             {
-
-                texto.text = i.MensajeInteraccion();
-                punteroInteractuar.gameObject.GetComponent<Image>().enabled = true;
-                Debug.Log("Objeto interactuable detectado: " + hit.collider.name);
-
-                if (VariablesGlobales.INTERACTUAR && Input.GetKeyDown(KeyCode.E))
+                if (hit.collider.gameObject.TryGetComponent<IInteractable>(out IInteractable i))
                 {
-                    VariablesGlobales.INTERACTUAR = false;
-                    StartCoroutine(i.interact());
-                }
 
+                    texto.text = i.MensajeInteraccion();
+                    punteroInteractuar.gameObject.GetComponent<Image>().enabled = true;
+                    Debug.Log("Objeto interactuable detectado: " + hit.collider.name);
+
+                    if (VariablesGlobales.INTERACTUAR && Input.GetKeyDown(KeyCode.E))
+                    {
+                        VariablesGlobales.INTERACTUAR = false;
+                        StartCoroutine(i.interact());
+                    }
+                }
+                Debug.Log("Estas mirando a un objecto interactuable");
+                // NO quiten este return, por algún motivo si se quita los textos de las interacciones
+                // no aparecen
+                return;
             }
-            Debug.Log("Estas mirando a un objecto interactuable");
-            return;
         }
         punteroInteractuar.gameObject.GetComponent<Image>().enabled = false;
         texto.text = "";

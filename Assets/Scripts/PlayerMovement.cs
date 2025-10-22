@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -16,6 +17,14 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         characterController = GetComponent<CharacterController>();
+    }
+
+    void Start()
+    {
+        
+        VariablesGlobales.INTERACTUAR = true;
+        VariablesGlobales.PARAR_CAMARA = false;
+        VariablesGlobales.PARAR_MOVIMIENTO = false;
     }
 
     void Update()
