@@ -34,8 +34,8 @@ public class InteractBus : MonoBehaviour, IInteractable
         }
         else if (active && ready)
         {
-            VariablesGlobales.PARAR_CAMARA = true;
-            VariablesGlobales.PARAR_MOVIMIENTO = true;
+            /*VariablesGlobales.PARAR_CAMARA = true;
+            VariablesGlobales.PARAR_MOVIMIENTO = true;*/
 
             fade.SetTrigger("Fade");
             yield return new WaitForSeconds(1.5f);
@@ -47,13 +47,13 @@ public class InteractBus : MonoBehaviour, IInteractable
 
     public string MensajeInteraccion()
     {
-        if (!active)
+        if (!active && !ready)
         {
             return "[E] para llamar al bus";
         }
-        else if(active && !ready)
+        else if (active && !ready)
         {
-            return "El bus está llegando"; 
+            return "El bus está llegando";
         }
         else
         {

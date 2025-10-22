@@ -284,8 +284,8 @@ MonoBehaviour:
   shader: {fileID: 4800000, guid: 739c6569a1eb0c448804a9e0e49f34b1, type: 3}
   FilterQuality: 1
   VideoMode: 1
-  DisplaySizeX: 960
-  DisplaySizeY: 480
+  DisplaySizeX: 1280
+  DisplaySizeY: 720
   StretchToDisplay: 1
   AspectRatio: 1.33
   EnableTVCurvature: 0

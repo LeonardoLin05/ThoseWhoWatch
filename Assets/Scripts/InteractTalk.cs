@@ -15,7 +15,7 @@ public class InteractTalk : MonoBehaviour, IInteractable
     {
         if (texto == null)
         {
-            texto = texto = GameObject.Find("texto_dialogo").GetComponent<TextMeshProUGUI>();
+            texto = GameObject.Find("texto_dialogo").GetComponent<TextMeshProUGUI>();
         }
 
         texto.gameObject.SetActive(false);
@@ -61,7 +61,7 @@ public class InteractTalk : MonoBehaviour, IInteractable
         VariablesGlobales.INTERACTUAR = true;
     }
     
-    private IEnumerator textoAnimar(string dial)
+    public IEnumerator textoAnimar(string dial)
     {
         texto.text = "";
 
