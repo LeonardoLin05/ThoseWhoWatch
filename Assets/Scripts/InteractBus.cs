@@ -1,16 +1,18 @@
 using System.Collections;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class InteractBus : MonoBehaviour, IInteractable
 {
     public GameObject Autobus;
     private Animator busAnimation;
-    public Transform teleportBus;
+    private string destino = "Gasolinera";
     private bool active = false;
-
+    private bool ready = false;
+    private Animator fade;
     void Start()
     {
         busAnimation = Autobus.GetComponent<Animator>();
+        fade = GameObject.FindGameObjectsWithTag("Fade")[0].GetComponent<Animator>();
     }
 
     public IEnumerator interact()
@@ -27,27 +29,35 @@ public class InteractBus : MonoBehaviour, IInteractable
             busAnimation.SetTrigger("Move");
 
             yield return new WaitForSeconds(6f);
+            ready = true;
 
-            InteractTeleport busTeleport = Autobus.GetComponent<InteractTeleport>();
-            if (busTeleport != null)
-            {
-                busTeleport.teleportDestino = teleportBus;
-                busTeleport.player = GameObject.FindWithTag("Player").transform;
-                busTeleport.ActivarTeleport();
-            }
+        }
+        else if (active && ready)
+        {
+            VariablesGlobales.PARAR_CAMARA = true;
+            VariablesGlobales.PARAR_MOVIMIENTO = true;
+
+            fade.SetTrigger("Fade");
+            yield return new WaitForSeconds(1.5f);
+
+            SceneManager.LoadScene("Gasolinera");
         }
         VariablesGlobales.INTERACTUAR = true;
     }
 
     public string MensajeInteraccion()
     {
-        if (active)
+        if (!active)
         {
-            return "Bus is arriving";
+            return "[E] para llamar al bus";
+        }
+        else if(active && !ready)
+        {
+            return "El bus está llegando"; 
         }
         else
         {
-            return "Press E to spawn bus";
+            return "[E] para montarte";
         }
     }
 }
