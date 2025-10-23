@@ -1,0 +1,156 @@
+using System.Collections;
+using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+
+
+[System.Serializable]
+public class DialogoFilas
+{
+    public string[] lineas;
+}
+[System.Serializable]
+public class DialogosOpcion
+{
+    public string[] respuestas;
+    public int[] saltar;
+}
+public class InteractNPCs : MonoBehaviour, IInteractable
+{
+    public DialogoFilas[] dialogos;
+    public DialogosOpcion[] opciones;
+    public TextMeshProUGUI texto;
+    public Button[] botones;
+    private int fila = 0;
+    private int i = 0;
+    public bool hablando = false;
+    private Coroutine textoAnimado;
+
+    void Start()
+    {
+        if (texto == null)
+        {
+            texto = GameObject.Find("texto_dialogo").GetComponent<TextMeshProUGUI>();
+        }
+
+        for(int j = 0; j < botones.Length; j++)
+        {
+            botones[j].gameObject.SetActive(false);
+        }
+        texto.gameObject.SetActive(false);
+    }
+
+    public IEnumerator interact()
+    {
+        if (!hablando)
+        {
+            hablando = true;
+            fila = 0;
+            i = 0;
+            texto.gameObject.SetActive(true);
+
+            VariablesGlobales.PARAR_CAMARA = true;
+            VariablesGlobales.PARAR_MOVIMIENTO = true;
+
+            textoAnimado = StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
+        }
+        else
+        {
+            if (textoAnimado != null)
+            {
+                StopCoroutine(textoAnimado);
+                texto.text = dialogos[fila].lineas[i];
+                textoAnimado = null;
+                VariablesGlobales.INTERACTUAR = true;
+                yield break;
+            }
+            i++;
+            if (i < dialogos[fila].lineas.Length)
+            {
+                textoAnimado = StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
+            }
+            else
+            {
+                MostrarOpcionesFila(fila);
+            }
+        }
+        VariablesGlobales.INTERACTUAR = true;
+    }
+
+    private void MostrarOpcionesFila(int fila)
+    {
+        if (fila < opciones.Length && opciones[fila].respuestas.Length > 0)
+        {
+            MostrarOpciones(opciones[fila].respuestas, opciones[fila].saltar);
+        }
+        else
+        {
+            FinDialogo();
+        }
+    }
+
+    private void MostrarOpciones(string[] opciones, int[] saltar)
+    {
+        texto.text = "";
+
+        for (int i = 0; i < botones.Length; i++)
+        {
+            if (i < opciones.Length)
+            {
+                botones[i].gameObject.SetActive(true);
+                botones[i].GetComponentInChildren<TextMeshProUGUI>().text = opciones[i];
+                int salto = saltar[i];
+                botones[i].onClick.RemoveAllListeners();
+                botones[i].onClick.AddListener(() => SeleccionRespuesta(salto));
+            }
+            else
+            {
+                botones[i].gameObject.SetActive(false);
+            }
+        }
+    }
+
+    private void SeleccionRespuesta(int sigFila)
+    {
+        Debug.Log("Botón clickeado, salto a fila: " + sigFila);
+        for (int i = 0; i < botones.Length; i++)
+        {
+            botones[i].gameObject.SetActive(false);
+        }
+        fila = sigFila;
+        i = 0;
+        textoAnimado = StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
+    }
+    
+    private void FinDialogo()
+    {
+        hablando = false;
+        texto.gameObject.SetActive(false);
+
+        VariablesGlobales.PARAR_CAMARA = false;
+        VariablesGlobales.PARAR_MOVIMIENTO = false;
+    }
+
+    public IEnumerator textoAnimar(string dial)
+    {
+        texto.text = "";
+
+        for (int j = 0; j < dial.Length; j++)
+        {
+            texto.text = texto.text + dial[j];
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+
+    public string MensajeInteraccion()
+    {
+        if (!hablando)
+        {
+            return "[E] para Hablar";
+        }
+        else
+        {
+            return "[E] para Continuar";
+        }
+    }
+}

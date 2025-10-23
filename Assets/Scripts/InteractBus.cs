@@ -5,7 +5,6 @@ public class InteractBus : MonoBehaviour, IInteractable
 {
     public GameObject Autobus;
     private Animator busAnimation;
-    private string destino = "Gasolinera";
     private bool active = false;
     private bool ready = false;
     private Animator fade;
