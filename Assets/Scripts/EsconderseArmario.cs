@@ -1,24 +1,22 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class EsconderseArmario : MonoBehaviour, IInteractable
 {
-	public Transform teleportEntrada;
-	public Transform teleportSalida;
-	public Transform player;
-	public HeadbobSystem headbobSystem;
-	public Transform camara;
-	public Material materialTransparente;
+	[SerializeField] private Transform teleportEntrada;
+	[SerializeField] private Transform teleportSalida;
+
+	private Transform player;
+
+	[SerializeField] private Material materialTransparente;
 	private Material materialArmario;
 
 	private Animator fade;
 
-	//private bool estoyFuera = true;
-
     void Start()
 	{
 		fade = GameObject.FindGameObjectsWithTag("Fade")[0].GetComponent<Animator>();
+		player = GameObject.Find("Player").GetComponent<Transform>();
         materialArmario = GetComponent<MeshRenderer>().material;
     }
 
@@ -26,19 +24,17 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 	{
 		if (!VariablesGlobales.DENTRO_ARMARIO)
 		{
-			VariablesGlobales.PARAR_CAMARA = true;
-			VariablesGlobales.PARAR_MOVIMIENTO = true;
-			headbobSystem.enabled = false;
+			PlayerMovement.Instance.enabled = false;
+			HeadbobSystem.Instance.enabled = false;
 			VariablesGlobales.DENTRO_ARMARIO = true;
-
-			CameraMovement.xRotation = 0;
-			CameraMovement.yRotation = 0;
 
 			fade.SetTrigger("Fade");
 			yield return new WaitForSeconds(1.5f);
-			VariablesGlobales.PARAR_CAMARA = false;
 
-			//camara.rotation = Quaternion.Euler(0, 0, 0);
+			// Rotamos la cámara para que mire donde queramos
+			CameraMovement.Instance.setRotationX(teleportEntrada.eulerAngles.x);
+			CameraMovement.Instance.setRotationY(teleportEntrada.eulerAngles.y);
+
 			player.position = teleportEntrada.position;
 
 			GetComponent<MeshRenderer>().material = materialTransparente;
@@ -48,13 +44,13 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 			fade.SetTrigger("Fade");
 			yield return new WaitForSeconds(1.5f);
 
-			//VariablesGlobales.PARAR_CAMARA = false;
-			VariablesGlobales.PARAR_MOVIMIENTO = false;
-			headbobSystem.enabled = true;
+			PlayerMovement.Instance.enabled = true;
+			HeadbobSystem.Instance.enabled = true;
 			VariablesGlobales.DENTRO_ARMARIO = false;
 
-			CameraMovement.xRotation = 0;
-			CameraMovement.yRotation = 0;
+			// Rotamos la cámara para que mire donde queramos
+			CameraMovement.Instance.setRotationX(teleportSalida.eulerAngles.x);
+			CameraMovement.Instance.setRotationY(teleportSalida.eulerAngles.y);
 
 			player.position = teleportSalida.position;
 			GetComponent<MeshRenderer>().material = materialArmario;
@@ -63,9 +59,10 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 		VariablesGlobales.INTERACTUAR = true;
 	}
 
-	public string MensajeInteraccion(){
+	public string MensajeInteraccion()
+	{
 
-		if(!VariablesGlobales.DENTRO_ARMARIO)
+		if (!VariablesGlobales.DENTRO_ARMARIO)
 		{
 			return "[E] para Esconderse";
 		}

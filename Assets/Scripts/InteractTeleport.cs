@@ -1,48 +1,42 @@
 using System.Collections;
-using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 using UnityEngine;
+using System;
 
 public class InteractTeleport : MonoBehaviour, IInteractable
 {
-    public Transform teleportDestino;
-	public Transform player;
-	private bool ready = false;
 	private Animator fade;
 
-	void Start()
+	private string mensajeInteraccion;
+
+	void OnEnable()
 	{
-		fade = GameObject.FindGameObjectsWithTag("Fade")[0].GetComponent<Animator>();
+		mensajeInteraccion = "[E] para Viajar";
 	}
-	
-	public void ActivarTeleport()
+
+    void OnDisable()
     {
-		ready = true;
+		mensajeInteraccion = "";
     }
+
+    void Start()
+	{
+		fade = GameObject.Find("Fade").GetComponent<Animator>();
+	}
 
     public IEnumerator interact()
 	{
-        if (!ready)
-        {
-			yield break;
+		if(isActiveAndEnabled)
+		{
+			fade.SetTrigger("Fade");
+			mensajeInteraccion = "";
+			yield return new WaitForSeconds(1.5f);
+			SceneManager.LoadScene("Gasolinera"); 
         }
-
-		fade.SetTrigger("Fade");
-		yield return new WaitForSeconds(1.5f);
-
-		player.position = teleportDestino.position;
-		Physics.SyncTransforms();
-		VariablesGlobales.INTERACTUAR = true;
-		Debug.Log("Jugador teletransportado");
 	}
 
-	public string MensajeInteraccion(){
-        if (ready)
-        {
-          return "[E] para Viajar";  
-        }
-        else
-        {
-			return "Waiting for Bus";
-        }
+	public string MensajeInteraccion()
+	{
+		return mensajeInteraccion;
 	}
 }

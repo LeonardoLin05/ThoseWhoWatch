@@ -1,18 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-
 
 public class HeadbobSystem : MonoBehaviour
 {
-    private static float Amount = 0.004f;
+    public static HeadbobSystem Instance { get; private set; }
 
-    private static float Frequency = 10.0f;
+    [SerializeField, Range(0f, 1f)] private static float Amount = 0.004f;
+
+    [SerializeField, Range(0f, 40f)] private static float Frequency = 10.0f;
 
     private float Smooth = 80.0f;
 
     Vector3 StartPos;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 
     void Start()
     {

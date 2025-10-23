@@ -30,8 +30,5 @@ public class InteractDoor : MonoBehaviour, IInteractable
         {
             return "[E] para Cerrar";
         }
-       
     }
-
-
 }

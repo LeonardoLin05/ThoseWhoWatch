@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -13,22 +12,24 @@ public interface IInteractable
 
 public class Interaction : MonoBehaviour
 {
-
     private LayerMask mask;
     private TextMeshProUGUI texto;
     public Image punteroInteractuar;
 
     void Start()
     {
-        mask = LayerMask.GetMask("Interactable");
+        mask = LayerMask.GetMask("Interactable") | LayerMask.GetMask("Default");
 
         if (texto == null)
         {
-
             texto = GameObject.Find("texto_interactuar").GetComponent<TextMeshProUGUI>();
         }
-        punteroInteractuar = GameObject.Find("PunteroInteractuar").GetComponent<Image>();
 
+        if(punteroInteractuar == null)
+        {
+            punteroInteractuar = GameObject.Find("PunteroInteractuar").GetComponent<Image>();
+        }
+    
         punteroInteractuar.gameObject.GetComponent<Image>().enabled = false;
     }
 
@@ -36,25 +37,22 @@ public class Interaction : MonoBehaviour
     void Update()
     {
         Ray ray = new Ray(transform.position, transform.forward);
-        if (Physics.Raycast(ray, out RaycastHit hit, 3f, mask | LayerMask.GetMask("Default")))
+        if (Physics.Raycast(ray, out RaycastHit hit, 3f, mask) && hit.transform.gameObject.layer == 6)
         {
             Debug.DrawRay(ray.origin, ray.direction * hit.distance);
             if (hit.transform.gameObject.layer == 6)
             {
                 if (hit.collider.gameObject.TryGetComponent<IInteractable>(out IInteractable i))
                 {
-
                     texto.text = i.MensajeInteraccion();
                     punteroInteractuar.gameObject.GetComponent<Image>().enabled = true;
-                    Debug.Log("Objeto interactuable detectado: " + hit.collider.name);
 
-                    if (VariablesGlobales.INTERACTUAR && Input.GetKeyDown(KeyCode.E))
+                    if (Input.GetKeyDown(KeyCode.E))
                     {
                         VariablesGlobales.INTERACTUAR = false;
                         StartCoroutine(i.interact());
                     }
                 }
-                Debug.Log("Estas mirando a un objecto interactuable");
                 // NO quiten este return, por algún motivo si se quita los textos de las interacciones
                 // no aparecen
                 return;

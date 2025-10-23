@@ -3,33 +3,41 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public Transform player;
+    public static CameraMovement Instance { get; private set; }
 
-    [SerializeField] [Range(0f, 1000f)] private float mouseSensitivity = 500f;
-    public static float xRotation;
-    public static float yRotation;
+    private Transform player;
+
+    [SerializeField, Range(0f, 1000f)] private float mouseSensitivity = 500f;
+    private float xRotation;
+    private float yRotation;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 
     void Start()
     {
+        player = GameObject.Find("Player").GetComponent<Transform>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     void Update()
     {
-	    if(!VariablesGlobales.PARAR_CAMARA)
-	    {
-        	GirarCamara();
-	    }
-        
+        GirarCamara();
     }
 
     void LateUpdate()
     {
-        if(!VariablesGlobales.PARAR_CAMARA)
-        {
-            GirarPersonaje();   
-        }
+        GirarPersonaje();   
     }
 
 	
@@ -49,9 +57,31 @@ public class CameraMovement : MonoBehaviour
     {
         player.rotation = Quaternion.Euler(0, yRotation, 0);
     }
-    
-    public static void GirarObjeto(Transform objeto)
+
+    /// <summary>
+    /// Hace que el objeto rote junto con la cámara
+    /// </summary>
+    /// <param name="objeto">El objeto que se quiere girar</param>
+    public void GirarObjeto(Transform objeto)
     {
         objeto.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+    }
+
+    /// <summary>
+    /// Cambia la rotatición X de la cámara
+    /// </summary>
+    /// <param name="newRotation">La nueva rotación que se quiere asignar a X</param>
+    public void setRotationX(float newRotation)
+    {
+        xRotation = newRotation;
+    }
+
+    /// <summary>
+    /// Cambia la rotatición Y de la cámara
+    /// </summary>
+    /// <param name="newRotation">La nueva rotación que se quiere asignar a Y</param>
+    public void setRotationY(float newRotation)
+    {
+        yRotation = newRotation;
     }
 }

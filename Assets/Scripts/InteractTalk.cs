@@ -29,8 +29,9 @@ public class InteractTalk : MonoBehaviour, IInteractable
             i = 0;
             texto.gameObject.SetActive(true);
 
-            VariablesGlobales.PARAR_CAMARA = true;
-            VariablesGlobales.PARAR_MOVIMIENTO = true;
+            CameraMovement.Instance.enabled = false;
+            HeadbobSystem.Instance.enabled = false;
+            PlayerMovement.Instance.enabled = false;
 
             textoAnimado = StartCoroutine(textoAnimar(dialogo[i]));
         }
@@ -54,8 +55,9 @@ public class InteractTalk : MonoBehaviour, IInteractable
                 hablando = false;
                 texto.gameObject.SetActive(false);
 
-                VariablesGlobales.PARAR_CAMARA = false;
-                VariablesGlobales.PARAR_MOVIMIENTO = false;
+                CameraMovement.Instance.enabled = true;
+                HeadbobSystem.Instance.enabled = true;
+                PlayerMovement.Instance.enabled = true;
             }
         }
         VariablesGlobales.INTERACTUAR = true;

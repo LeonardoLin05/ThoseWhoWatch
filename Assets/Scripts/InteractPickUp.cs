@@ -1,17 +1,15 @@
-using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
-using UnityEditor.SceneManagement;
 
 public class InteractPickUp : MonoBehaviour, IInteractable
 {
-    public Transform mano;
+    private Transform mano;
 
     private bool interactuar = false;
     private bool lanzar = false;
     private bool enMano = false;
+
     private Transform posicion;
     private Rigidbody objeto;
     private BoxCollider boxCollider;
@@ -19,8 +17,9 @@ public class InteractPickUp : MonoBehaviour, IInteractable
 
     public IEnumerator interact()
     {
-        if (!VariablesGlobales.OBJETO_MANO)
+        if (!enMano)
         {
+            enabled = true;
             interactuar = true;
         }
         VariablesGlobales.INTERACTUAR = true;
@@ -29,7 +28,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
 
     public string MensajeInteraccion()
     {
-        if (!VariablesGlobales.OBJETO_MANO)
+        if (!enMano)
             return "[E] para Recoger";
         else
             return "";
@@ -38,12 +37,14 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
+        enabled = false;
         objeto = gameObject.GetComponent<Rigidbody>();
         boxCollider = gameObject.GetComponent<BoxCollider>();
     }
 
     void Start()
     {
+        mano = GameObject.Find("Mano").GetComponent<Transform>();
         texto = GameObject.Find("texto_interactuar2").GetComponent<TextMeshProUGUI>();
         posicion = transform;
     }
@@ -53,37 +54,15 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     {
         if (interactuar)
         {
-            objeto.useGravity = false;
-            objeto.freezeRotation = true;
-            objeto.linearVelocity = new Vector3(0, 0, 0);
-            objeto.rotation = Quaternion.Euler(0,0,0);
-
-            boxCollider.enabled = false;
-            interactuar = false;
-            lanzar = false;
-
-            enMano = true;
-            VariablesGlobales.OBJETO_MANO = true;
-
-            posicion = mano;
-            texto.text = "[G] para Lanzar";
+            Recoger();
         }
-        else if (Input.GetKeyDown(KeyCode.G))
+        else if (enMano && Input.GetKeyDown(KeyCode.G))
         {
-            objeto.useGravity = true;
-            objeto.freezeRotation = false;
-
-            lanzar = true;
-            boxCollider.enabled = true;
-            posicion = transform;
-            texto.text = "";
-
-            enMano = false;
-            VariablesGlobales.OBJETO_MANO = false;
+            Lanzar();
         }
         if (enMano)
         {
-            CameraMovement.GirarObjeto(transform);
+            CameraMovement.Instance.GirarObjeto(transform);
         }
         transform.position = posicion.position;
         Physics.SyncTransforms();
@@ -100,6 +79,36 @@ public class InteractPickUp : MonoBehaviour, IInteractable
 
     void OnCollisionEnter(Collision collision)
     {
+        enabled = false;
         lanzar = false;
+    }
+
+    private void Recoger()
+    {
+        objeto.useGravity = false;
+        objeto.freezeRotation = true;
+        objeto.linearVelocity = new Vector3(0, 0, 0);
+        objeto.rotation = Quaternion.Euler(0,0,0);
+
+        boxCollider.enabled = false;
+        interactuar = false;
+        lanzar = false;
+        enMano = true;
+
+        posicion = mano;
+        texto.text = "[G] para Lanzar";
+    }
+    
+    private void Lanzar()
+    {
+        objeto.useGravity = true;
+        objeto.freezeRotation = false;
+
+        lanzar = true;
+        boxCollider.enabled = true;
+        posicion = transform;
+        texto.text = "";
+
+        enMano = false;
     }
 }

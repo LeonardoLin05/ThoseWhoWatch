@@ -17,7 +17,7 @@ public class CadaverParada : MonoBehaviour
         {
             animacion.SetTrigger("Andar");
             Destroy(killer, 20f);
-            Destroy(gameObject, 0f);
+            Destroy(gameObject);
         }
     }
 }

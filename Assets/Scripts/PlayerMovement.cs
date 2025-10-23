@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement Instance { get; private set; }
 
     public Transform orientation;
 
@@ -16,47 +17,49 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+
         characterController = GetComponent<CharacterController>();
     }
 
     void Start()
     {
-        
+        // Para carga de nueva escena principalmente
         VariablesGlobales.INTERACTUAR = true;
-        VariablesGlobales.PARAR_CAMARA = false;
-        VariablesGlobales.PARAR_MOVIMIENTO = false;
     }
 
     void Update()
     {
-        if (!VariablesGlobales.PARAR_MOVIMIENTO)
+        // Aplicamos la gravedad
+        velocity.y += gravity;
+
+        // Reiniciamos la velocidad aplicada por la gravedad si el personaje
+        // esta tocando el suelo
+        if (characterController.isGrounded && characterController.velocity.y < 0)
         {
-            // Aplicamos la gravedad
-            velocity.y += gravity;
-
-            // Reiniciamos la velocidad aplicada por la gravedad si el personaje
-            // esta tocando el suelo
-            if (characterController.isGrounded && characterController.velocity.y < 0)
-            {
-                velocity.y = 0f;
-            }
-
-            speed = Run();
-
-            Vector3 finalMove = (orientation.right * Input.GetAxisRaw("Horizontal") + orientation.forward * Input.GetAxisRaw("Vertical")) * speed + velocity;
-
-            characterController.Move(finalMove * Time.deltaTime);
+            velocity.y = 0f;
         }
+
+        speed = Run();
+
+        Vector3 finalMove = (orientation.right * Input.GetAxisRaw("Horizontal") + orientation.forward * Input.GetAxisRaw("Vertical")) * speed + velocity;
+
+        characterController.Move(finalMove * Time.deltaTime);
     }
 
     /// <summary>
     /// Devuelve la velocidad adecuada dependiendo de si
     /// el jugador esta corriendo o no (presionando la tecla left shift o no)
     /// </summary>
-    /// <returns></returns>
     private float Run()
     {
-
         if (Input.GetKey(KeyCode.LeftShift))
         {
             HeadbobSystem.ChangeData(0.008f, 15f);
