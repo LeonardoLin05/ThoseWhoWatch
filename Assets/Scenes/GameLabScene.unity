@@ -2171,8 +2171,6 @@ MonoBehaviour:
   - "Jam\xE1s dejar\xE9 de serlo"
   texto: {fileID: 983758427}
   hablando: 0
-<<<<<<< Updated upstream
-=======
 --- !u!1 &546462724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2465,7 +2463,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634448201}
   m_CullTransparentMesh: 1
->>>>>>> Stashed changes
 --- !u!1 &641430726
 GameObject:
   m_ObjectHideFlags: 0
@@ -5208,9 +5205,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-<<<<<<< Updated upstream
-    m_AddedGameObjects: []
-=======
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1042199005792137860, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       insertIndex: -1
@@ -5227,7 +5221,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1042199005792137860, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2072948493}
->>>>>>> Stashed changes
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
 --- !u!1660057539 &9223372036854775807
