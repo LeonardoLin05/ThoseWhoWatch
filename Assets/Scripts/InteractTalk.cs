@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class InteractTalk : MonoBehaviour, IInteractable
 {
@@ -10,6 +11,8 @@ public class InteractTalk : MonoBehaviour, IInteractable
     public TextMeshProUGUI texto;
     public bool hablando = false;
     private Coroutine textoAnimado;
+
+    public UnityEvent evento;
     
     void Start()
     {
@@ -52,6 +55,13 @@ public class InteractTalk : MonoBehaviour, IInteractable
             }
             else
             {
+                // Se ejecuta este evento si es que se ha
+                // definido
+                if (evento != null)
+                {
+                    evento.Invoke();
+                }
+                
                 hablando = false;
                 texto.gameObject.SetActive(false);
 

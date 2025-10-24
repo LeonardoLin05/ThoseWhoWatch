@@ -8,8 +8,8 @@ public class CameraMovement : MonoBehaviour
     private Transform player;
 
     [SerializeField, Range(0f, 1000f)] private float mouseSensitivity = 500f;
-    private float xRotation;
-    private float yRotation;
+    [SerializeField] private float xRotation;
+    [SerializeField] private float yRotation;
 
     void Awake()
     {

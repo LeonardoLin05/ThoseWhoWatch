@@ -6,7 +6,6 @@ public class InnerThoughts : MonoBehaviour
 {
     public string pensamiento_mostrar;
     public TextMeshProUGUI pensamiento;
-    private Coroutine textoAnimado;
     public GameObject activaTrigger;
 
     void Start()
@@ -15,37 +14,30 @@ public class InnerThoughts : MonoBehaviour
         {
             pensamiento = GameObject.Find("pensamiento").GetComponent<TextMeshProUGUI>();
         }
-        pensamiento.gameObject.SetActive(false);
     }
+
     public void OnTriggerEnter(Collider other)
     {
-
-        if (other.CompareTag("Player"))
+        if (!VariablesGlobales.EN_PENSAMIENTO && other.CompareTag("Player"))
         {
-            if (textoAnimado == null)
-            {
-                textoAnimado = StartCoroutine(pensamientoAnimado());
-            }
+            StartCoroutine(Thoughts());
         }
     }
     
-    private IEnumerator pensamientoAnimado()
+    private IEnumerator Thoughts()
     {
-            pensamiento.gameObject.SetActive(true);
-            pensamiento.text = "";
+        VariablesGlobales.EN_PENSAMIENTO = true;
 
-        for (int i = 0; i < pensamiento_mostrar.Length; i++)
+        pensamiento.text = pensamiento_mostrar;
+        yield return new WaitForSeconds(5f);
+        pensamiento.text = "";
+
+        if (activaTrigger != null)
         {
-            pensamiento.text = pensamiento.text + pensamiento_mostrar[i];
-            yield return new WaitForSeconds(0.05f);
+            activaTrigger.SetActive(true);
         }
-            if(activaTrigger != null)
-            {
-                activaTrigger.SetActive(true);
-            }
-            yield return new WaitForSeconds(10f);
-            pensamiento.gameObject.SetActive(false);
-            
+
+        VariablesGlobales.EN_PENSAMIENTO = false;
         Destroy(gameObject);
     }
 }

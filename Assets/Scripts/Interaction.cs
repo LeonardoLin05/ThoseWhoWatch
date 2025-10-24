@@ -39,24 +39,21 @@ public class Interaction : MonoBehaviour
         Ray ray = new Ray(transform.position, transform.forward);
         if (Physics.Raycast(ray, out RaycastHit hit, 3f, mask) && hit.transform.gameObject.layer == 6)
         {
-            Debug.DrawRay(ray.origin, ray.direction * hit.distance);
-            if (hit.transform.gameObject.layer == 6)
+        Debug.DrawRay(ray.origin, ray.direction * hit.distance);
+            if (hit.collider.gameObject.TryGetComponent<IInteractable>(out IInteractable i))
             {
-                if (hit.collider.gameObject.TryGetComponent<IInteractable>(out IInteractable i))
-                {
-                    texto.text = i.MensajeInteraccion();
-                    punteroInteractuar.gameObject.GetComponent<Image>().enabled = true;
+                texto.text = i.MensajeInteraccion();
+                punteroInteractuar.gameObject.GetComponent<Image>().enabled = true;
 
-                    if (Input.GetKeyDown(KeyCode.E))
-                    {
-                        VariablesGlobales.INTERACTUAR = false;
-                        StartCoroutine(i.interact());
-                    }
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    VariablesGlobales.INTERACTUAR = false;
+                    StartCoroutine(i.interact());
                 }
-                // NO quiten este return, por algún motivo si se quita los textos de las interacciones
-                // no aparecen
-                return;
             }
+            // NO quiten este return, por algún motivo si se quita los textos de las interacciones
+            // no aparecen
+            return;
         }
         punteroInteractuar.gameObject.GetComponent<Image>().enabled = false;
         texto.text = "";

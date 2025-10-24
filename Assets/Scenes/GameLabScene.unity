@@ -288,7 +288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7cebaadc20cdcc47a78d8a92cdbe41a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractPickUp
-  mano: {fileID: 1330424621}
 --- !u!65 &75593680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1266,11 +1265,6 @@ Transform:
   - {fileID: 1343181700}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &333033319 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6620746414494571966, guid: 4e9d775daa5814847942f709bf33ce97, type: 3}
-  m_PrefabInstance: {fileID: 505794525}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &345424135
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,6 +2165,9 @@ MonoBehaviour:
   - "Jam\xE1s dejar\xE9 de serlo"
   texto: {fileID: 983758427}
   hablando: 0
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &546462724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2579,17 +2576,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2953313818409056956, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
   m_PrefabInstance: {fileID: 1656657000658828893}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &817120834 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4340251578854275746, guid: 4e9d775daa5814847942f709bf33ce97, type: 3}
-  m_PrefabInstance: {fileID: 505794525}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d62438435798bb645ba550c9f6b5a33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HeadbobSystem
 --- !u!1 &887198511
 GameObject:
   m_ObjectHideFlags: 0
@@ -3167,11 +3153,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216475303}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1330424621 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 768470528846172500, guid: 4e9d775daa5814847942f709bf33ce97, type: 3}
-  m_PrefabInstance: {fileID: 505794525}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1343181699
 GameObject:
   m_ObjectHideFlags: 0
@@ -3336,9 +3317,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EsconderseArmario
   teleportEntrada: {fileID: 1724891524}
   teleportSalida: {fileID: 1746428834}
-  player: {fileID: 797457951}
-  headbobSystem: {fileID: 817120834}
-  camara: {fileID: 333033319}
   materialTransparente: {fileID: 2100000, guid: 0df524ed61aac574da0d4cf3439c5d5c, type: 2}
 --- !u!1 &1380305599
 GameObject:
@@ -3353,6 +3331,7 @@ GameObject:
   - component: {fileID: 1380305601}
   - component: {fileID: 1380305600}
   - component: {fileID: 1380305604}
+  - component: {fileID: 1380305605}
   m_Layer: 0
   m_Name: Trigger 1
   m_TagString: Untagged
@@ -3467,6 +3446,21 @@ MonoBehaviour:
   pensamiento_mostrar: "Hola que tal est\xE1s"
   pensamiento: {fileID: 198212871}
   activaTrigger: {fileID: 392993259}
+--- !u!114 &1380305605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380305599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 256fb3d46d6c8f34a90b1b05176f0be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Prueba
+  spawnBus:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1386768819
 GameObject:
   m_ObjectHideFlags: 0
@@ -3951,8 +3945,8 @@ GameObject:
   - component: {fileID: 1593192360}
   - component: {fileID: 1593192359}
   - component: {fileID: 1593192358}
-  - component: {fileID: 1593192357}
-  - component: {fileID: 1593192356}
+  - component: {fileID: 1593192363}
+  - component: {fileID: 1593192362}
   m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -3960,46 +3954,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &1593192356
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593192355}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 2
---- !u!114 &1593192357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593192355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7cebaadc20cdcc47a78d8a92cdbe41a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractPickUp
-  mano: {fileID: 1330424621}
 --- !u!65 &1593192358
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4092,6 +4046,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1593192362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593192355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7832810985193e24ab1b7073204174b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnBus
+  Autobus: {fileID: 953220934}
+--- !u!114 &1593192363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593192355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be13629eda97185429087c29679d4dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTalk
+  dialogo:
+  - Va a spawnear a un bus
+  texto: {fileID: 983758427}
+  hablando: 0
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1608408008
 GameObject:
   m_ObjectHideFlags: 0
@@ -5099,6 +5085,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 26413584297690680, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 26413584297690680, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 26413584297690680, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -439
+      objectReference: {fileID: 0}
     - target: {fileID: 236394289641503057, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_text
       value: 
@@ -5199,16 +5197,53 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4362714194862724637, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362714194862724637, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362714194862724637, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8087643121aa3aa4b801a125c06727aa, type: 2}
+    - target: {fileID: 4362714194862724637, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.70440245
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362714194862724637, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.70440245
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362714194862724637, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.70440245
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362714194862724637, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362714194862724637, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6865367971743674914, guid: 8087643121aa3aa4b801a125c06727aa, type: 2}
+    - target: {fileID: 4362714194862724637, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5354573064368230955, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5476910113173586719, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1042199005792137860, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 198212870}
     - targetCorrespondingSourceObject: {fileID: 1042199005792137860, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1437313613}
