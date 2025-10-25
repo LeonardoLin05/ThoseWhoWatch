@@ -1977,7 +1977,7 @@ MonoBehaviour:
   botones:
   - {fileID: 1437313614}
   - {fileID: 425763216}
-  - {fileID: 1993542102}
+  - {fileID: 0}
   hablando: 0
 --- !u!136 &546462726
 CapsuleCollider:
@@ -2245,7 +2245,7 @@ MonoBehaviour:
   botones:
   - {fileID: 1437313614}
   - {fileID: 425763216}
-  - {fileID: 1993542102}
+  - {fileID: 0}
   hablando: 0
 --- !u!136 &708671223
 CapsuleCollider:
@@ -2842,7 +2842,7 @@ MonoBehaviour:
   botones:
   - {fileID: 1437313614}
   - {fileID: 425763216}
-  - {fileID: 1993542102}
+  - {fileID: 0}
   hablando: 0
 --- !u!136 &1326242039
 CapsuleCollider:
@@ -4479,17 +4479,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractBus
   Autobus: {fileID: 953220934}
---- !u!114 &1993542102 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4122081135607380285, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-  m_PrefabInstance: {fileID: 1719047532184657015}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &1656657000658828893
 PrefabInstance:
   m_ObjectHideFlags: 0
