@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &36834333 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4122081135607380285, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+  m_PrefabInstance: {fileID: 1719047532184657015}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &75593678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,7 +1988,7 @@ MonoBehaviour:
   botones:
   - {fileID: 1437313614}
   - {fileID: 425763216}
-  - {fileID: 0}
+  - {fileID: 36834333}
   hablando: 0
 --- !u!136 &546462726
 CapsuleCollider:
@@ -2245,7 +2256,7 @@ MonoBehaviour:
   botones:
   - {fileID: 1437313614}
   - {fileID: 425763216}
-  - {fileID: 0}
+  - {fileID: 36834333}
   hablando: 0
 --- !u!136 &708671223
 CapsuleCollider:
@@ -2842,7 +2853,7 @@ MonoBehaviour:
   botones:
   - {fileID: 1437313614}
   - {fileID: 425763216}
-  - {fileID: 0}
+  - {fileID: 36834333}
   hablando: 0
 --- !u!136 &1326242039
 CapsuleCollider:
@@ -4687,6 +4698,46 @@ PrefabInstance:
     - target: {fileID: 5476910113173586719, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: lineas.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[0]'
+      value: Hola, quizas es la primera vez que me ves
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[1]'
+      value: Si, te hablo a ti pescabichin que estas leyendo esto
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[2]'
+      value: Espero que te guste este tipo de pensamientos\n\n\n
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[3]'
+      value: Si no quieres volver a verme
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[4]'
+      value: Estoy en el gameObject Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[5]'
+      value: Como Pensamiento_narrar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[6]'
+      value: saltar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[7]'
+      value: Un saludo :)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[8]'
+      value: Un saludo :)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

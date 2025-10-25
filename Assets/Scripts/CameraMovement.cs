@@ -21,13 +21,13 @@ public class CameraMovement : MonoBehaviour
         {
             Instance = this;
         }
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<Transform>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     void Update()
