@@ -53,6 +53,9 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             HeadbobSystem.Instance.enabled = false;
             PlayerMovement.Instance.enabled = false;
 
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
             textoAnimado = StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
         }
         else
@@ -94,6 +97,9 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     {
         texto.text = "";
 
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         for (int i = 0; i < botones.Length; i++)
         {
             if (i < opciones.Length)
@@ -113,7 +119,9 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     private void SeleccionRespuesta(int sigFila)
     {
-        Debug.Log("Botón clickeado, salto a fila: " + sigFila);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        
         for (int i = 0; i < botones.Length; i++)
         {
             botones[i].gameObject.SetActive(false);
@@ -127,6 +135,9 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     {
         hablando = false;
         texto.gameObject.SetActive(false);
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         CameraMovement.Instance.enabled = true;
         HeadbobSystem.Instance.enabled = true;
