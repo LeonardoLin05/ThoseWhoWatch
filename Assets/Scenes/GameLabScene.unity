@@ -1991,6 +1991,7 @@ MonoBehaviour:
   - {fileID: 425763216}
   - {fileID: 36834333}
   hablando: 0
+  puedeInteractuar: 1
 --- !u!136 &546462726
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2260,6 +2261,7 @@ MonoBehaviour:
   - {fileID: 425763216}
   - {fileID: 36834333}
   hablando: 0
+  puedeInteractuar: 1
 --- !u!136 &708671223
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2847,13 +2849,17 @@ MonoBehaviour:
   - lineas:
     - "Buenos d\xEDas"
     - "esto tambi\xE9n es una prueba"
+  - lineas:
+    - Esto es jodido
+    - "ya no se puede hablar m\xE1s aqu\xED"
   opciones:
   - respuestas: []
     saltar: 
   - respuestas:
     - element 2
     - element 3
-    saltar: 0200000003000000
+    - element 4
+    saltar: 020000000300000004000000
   siguienteFila: 01000000000000000200000000000000
   texto: {fileID: 983758427}
   botones:
@@ -2861,6 +2867,7 @@ MonoBehaviour:
   - {fileID: 425763216}
   - {fileID: 36834333}
   hablando: 0
+  puedeInteractuar: 1
 --- !u!136 &1326242039
 CapsuleCollider:
   m_ObjectHideFlags: 0

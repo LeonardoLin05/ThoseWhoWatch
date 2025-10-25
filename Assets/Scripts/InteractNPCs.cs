@@ -26,6 +26,10 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     private int i = 0;
     public bool hablando = false;
     private Coroutine textoAnimado;
+    public bool puedeInteractuar = true;
+    public bool opcionSecreta;
+    public string textoSecreto;
+    public int saltoSecreto;
 
     void Start()
     {
@@ -43,6 +47,10 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     public IEnumerator interact()
     {
+        if (!puedeInteractuar)
+        {
+            yield break;
+        }
         if (!hablando)
         {
             hablando = true;
@@ -81,11 +89,15 @@ public class InteractNPCs : MonoBehaviour, IInteractable
                 }
                 else
                 {
-                    FinDialogo();
-
-                    if(fila < siguienteFila.Length)
+                    if (fila < siguienteFila.Length)
                     {
+                        FinDialogo();
                         fila = siguienteFila[fila];
+                    }
+                    else
+                    {
+                        FinDialogo();
+                        puedeInteractuar = false;
                     }
                 }
             }
@@ -111,6 +123,24 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        if (opcionSecreta)
+        {
+            string[] opcionesNuevas = new string[opciones.Length + 1];
+            int[] saltarNuevo = new int[saltar.Length + 1];
+
+            for (int j = 0; j < opciones.Length; j++)
+            {
+                opcionesNuevas[j] = opciones[j];
+                saltarNuevo[j] = saltar[j];
+            }
+
+            opcionesNuevas[opciones.Length] = textoSecreto;
+            saltarNuevo[saltar.Length] = saltoSecreto;
+
+            opciones = opcionesNuevas;
+            saltar = saltarNuevo;
+        }
 
         for (int i = 0; i < botones.Length; i++)
         {
@@ -169,6 +199,11 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     public string MensajeInteraccion()
     {
+        if (!puedeInteractuar)
+        {
+            return "";
+        }
+
         if (!hablando)
         {
             return "[E] para Hablar";

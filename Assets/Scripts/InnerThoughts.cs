@@ -7,6 +7,7 @@ public class InnerThoughts : MonoBehaviour
     public string pensamiento_mostrar;
     public TextMeshProUGUI pensamiento;
     public GameObject activaTrigger;
+    public InteractNPCs npc;
 
     void Start()
     {
@@ -35,6 +36,11 @@ public class InnerThoughts : MonoBehaviour
         if (activaTrigger != null)
         {
             activaTrigger.SetActive(true);
+        }
+
+        if(npc != null)
+        {
+            npc.opcionSecreta = true;
         }
 
         VariablesGlobales.EN_PENSAMIENTO = false;
