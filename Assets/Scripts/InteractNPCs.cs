@@ -19,6 +19,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 {
     public DialogoFilas[] dialogos;
     public DialogosOpcion[] opciones;
+    public int[] siguienteFila;
     public TextMeshProUGUI texto;
     public Button[] botones;
     private int fila = 0;
@@ -45,7 +46,6 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         if (!hablando)
         {
             hablando = true;
-            fila = 0;
             i = 0;
             texto.gameObject.SetActive(true);
 
@@ -75,7 +75,19 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             }
             else
             {
-                MostrarOpcionesFila(fila);
+                if (fila < opciones.Length && opciones[fila].respuestas.Length > 0)
+                {
+                    MostrarOpcionesFila(fila);
+                }
+                else
+                {
+                    FinDialogo();
+
+                    if(fila < siguienteFila.Length)
+                    {
+                        fila = siguienteFila[fila];
+                    }
+                }
             }
         }
         VariablesGlobales.INTERACTUAR = true;

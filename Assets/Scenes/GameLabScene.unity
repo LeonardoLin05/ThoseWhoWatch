@@ -1984,6 +1984,7 @@ MonoBehaviour:
     - "yo tambi\xE9n"
     - y yo
     saltar: 010000000200000003000000
+  siguienteFila: 
   texto: {fileID: 983758427}
   botones:
   - {fileID: 1437313614}
@@ -2252,6 +2253,7 @@ MonoBehaviour:
     - "Soy la opci\xF3n 3"
     - "Soy la opci\xF3n 4"
     saltar: 0300000004000000
+  siguienteFila: 
   texto: {fileID: 983758427}
   botones:
   - {fileID: 1437313614}
@@ -2840,15 +2842,19 @@ MonoBehaviour:
     - No me gusta esto
     - "Ojal\xE1 acabe ya"
   - lineas:
-    - Solo digo una cosa
+    - Buenas noches
+    - esto es una prueba
   - lineas:
-    - Yo solo digo otra
+    - "Buenos d\xEDas"
+    - "esto tambi\xE9n es una prueba"
   opciones:
+  - respuestas: []
+    saltar: 
   - respuestas:
-    - Soy una respuesta
-    - "yo tambi\xE9n"
-    - y yo
-    saltar: 010000000200000003000000
+    - element 2
+    - element 3
+    saltar: 0200000003000000
+  siguienteFila: 01000000000000000200000000000000
   texto: {fileID: 983758427}
   botones:
   - {fileID: 1437313614}
