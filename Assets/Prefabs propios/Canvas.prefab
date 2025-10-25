@@ -703,10 +703,7 @@ RectTransform:
   - {fileID: 413641693525522568}
   - {fileID: 7875442439957810263}
   - {fileID: 26413584297690680}
-  - {fileID: 8433576170093830133}
-  - {fileID: 8493359319558696948}
-  - {fileID: 1449252267203070446}
-  - {fileID: 7629363604189608838}
+  - {fileID: 2482171177377144530}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1201,7 +1198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
