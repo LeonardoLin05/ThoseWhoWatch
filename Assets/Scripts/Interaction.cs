@@ -12,9 +12,23 @@ public interface IInteractable
 
 public class Interaction : MonoBehaviour
 {
+    public static Interaction Instance { get; private set; }
+
     private LayerMask mask;
     private TextMeshProUGUI texto;
     public Image punteroInteractuar;
+
+    void Awake()
+    {
+          if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 
     void Start()
     {
