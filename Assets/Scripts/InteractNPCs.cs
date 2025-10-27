@@ -43,6 +43,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             botones[j].gameObject.SetActive(false);
         }
         texto.gameObject.SetActive(false);
+        GameObject.Find("Image").GetComponent<Image>().enabled = false; 
     }
 
     public IEnumerator interact()
@@ -56,10 +57,12 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             hablando = true;
             i = 0;
             texto.gameObject.SetActive(true);
-
+        
             CameraMovement.Instance.enabled = false;
             HeadbobSystem.Instance.enabled = false;
             PlayerMovement.Instance.enabled = false;
+
+            GameObject.Find("Image").GetComponent<Image>().enabled = true;
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
