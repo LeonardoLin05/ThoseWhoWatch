@@ -117,8 +117,9 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         else
         {
             FinDialogo();
-        }
-    }
+        }         
+        
+     }
 
     private void MostrarOpciones(string[] opciones, int[] saltar)
     {
@@ -187,6 +188,8 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         CameraMovement.Instance.enabled = true;
         HeadbobSystem.Instance.enabled = true;
         PlayerMovement.Instance.enabled = true;
+
+        GameObject.Find("Image").GetComponent<Image>().enabled = false;
     }
 
     public IEnumerator textoAnimar(string dial)
