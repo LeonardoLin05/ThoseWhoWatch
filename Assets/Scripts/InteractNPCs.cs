@@ -216,7 +216,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         }
         else
         {
-            return "[E] para Continuar";
+            return "";
         }
     }
 }
