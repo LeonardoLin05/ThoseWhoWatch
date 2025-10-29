@@ -43,7 +43,8 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             botones[j].gameObject.SetActive(false);
         }
         texto.gameObject.SetActive(false);
-        GameObject.Find("Image").GetComponent<Image>().enabled = false; 
+        GameObject.Find("Image").GetComponent<Image>().enabled = false;
+        GameObject.Find("Cuadrado").GetComponent<Image>().enabled = false;  
     }
 
     public IEnumerator interact()
@@ -127,6 +128,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        GameObject.Find("Image").GetComponent<Image>().enabled = true; 
 
         if (opcionSecreta)
         {
