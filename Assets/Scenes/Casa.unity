@@ -1033,6 +1033,27 @@ MonoBehaviour:
   opcionSecreta: 0
   textoSecreto: 
   saltoSecreto: 0
+--- !u!65 &447222608
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447222605}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.45219392, y: 1.9081683, z: 0.50064015}
+  m_Center: {x: -0.024671454, y: 0.90822387, z: 0.0020225495}
 --- !u!114 &452803228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12140,6 +12161,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Abuela
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5f741c2e50a441644ba118703539198e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12147,6 +12172,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5f741c2e50a441644ba118703539198e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 447222606}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5f741c2e50a441644ba118703539198e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 447222608}
   m_SourcePrefab: {fileID: 100100000, guid: 5f741c2e50a441644ba118703539198e, type: 3}
 --- !u!1001 &1987828097
 PrefabInstance:
