@@ -90,8 +90,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bcb388407028104d82633c8584517fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
-  player: {fileID: 0}
   mouseSensitivity: 500
+  xRotation: 0
+  yRotation: 0
 --- !u!1 &5683302750729384795
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,11 +104,12 @@ GameObject:
   - component: {fileID: 6865126733105264518}
   - component: {fileID: 4540694875420821054}
   - component: {fileID: 860781208009160653}
+  - component: {fileID: 1229445397592838334}
+  - component: {fileID: 4117173822148959015}
+  - component: {fileID: 4340251578854275746}
   - component: {fileID: 1574663433580471423}
   - component: {fileID: 6659375714043303794}
   - component: {fileID: 1321599678127321678}
-  - component: {fileID: 4340251578854275746}
-  - component: {fileID: 1229445397592838334}
   m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -190,6 +192,44 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5683302750729384795}
   m_Enabled: 1
+--- !u!114 &1229445397592838334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5683302750729384795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b3b17d04dc6dc4d9f5d62cfa9be416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interaction
+  punteroInteractuar: {fileID: 0}
+--- !u!114 &4117173822148959015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5683302750729384795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ac63c8c67e04648b41e5d1c73247f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Zoom
+  zoomFOV: 60
+--- !u!114 &4340251578854275746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5683302750729384795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62438435798bb645ba550c9f6b5a33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeadbobSystem
 --- !u!114 &1574663433580471423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,28 +349,3 @@ MonoBehaviour:
   EnableRollingFlicker: 0
   RollingFlickerFactor: 0.25
   RollingVSyncTime: 1
---- !u!114 &4340251578854275746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5683302750729384795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d62438435798bb645ba550c9f6b5a33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HeadbobSystem
---- !u!114 &1229445397592838334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5683302750729384795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76b3b17d04dc6dc4d9f5d62cfa9be416, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interaction
-  punteroInteractuar: {fileID: 0}

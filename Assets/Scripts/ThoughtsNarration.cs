@@ -25,6 +25,7 @@ public class ThoughtsNarration : MonoBehaviour
         CameraMovement.Instance.enabled = false;
         PlayerMovement.Instance.enabled = false;
         Interaction.Instance.enabled = false;
+        Zoom.Instance.enabled = false;
 
         fade = GameObject.Find("Fade").GetComponent<Animator>();
         textoInteractuar2 = GameObject.Find("texto_interactuar2").GetComponent<TextMeshProUGUI>();
@@ -52,6 +53,7 @@ public class ThoughtsNarration : MonoBehaviour
             CameraMovement.Instance.enabled = true;
             PlayerMovement.Instance.enabled = true;
             Interaction.Instance.enabled = true;
+            Zoom.Instance.enabled = true;
         }
         else
         {
