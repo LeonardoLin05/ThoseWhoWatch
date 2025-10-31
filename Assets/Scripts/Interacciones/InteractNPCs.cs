@@ -60,6 +60,9 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             i = 0;
             texto.gameObject.SetActive(true);
 
+            TalkZoomMoveCamera.Instance.setCabeza(transform);
+            TalkZoomMoveCamera.Instance.StartZoomMovement(true);
+
             CameraMovement.Instance.enabled = false;
             PlayerMovement.Instance.enabled = false;
             HeadbobSystem.Instance.enabled = false;
@@ -196,6 +199,8 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        TalkZoomMoveCamera.Instance.StartZoomMovement(false);
 
         CameraMovement.Instance.enabled = true;
         HeadbobSystem.Instance.enabled = true;

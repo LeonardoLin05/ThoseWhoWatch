@@ -14,6 +14,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     private Rigidbody objeto;
     private BoxCollider boxCollider;
     private TextMeshProUGUI texto;
+    public InteractNPCs npc;
 
     public IEnumerator interact()
     {
@@ -97,6 +98,11 @@ public class InteractPickUp : MonoBehaviour, IInteractable
 
         posicion = mano;
         texto.text = "[G] para Lanzar";
+
+        if(npc != null)
+        {
+            npc.opcionSecreta = true;
+        }
     }
     
     private void Lanzar()
