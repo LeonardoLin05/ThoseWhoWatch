@@ -22,6 +22,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     public int[] siguienteFila;
     public TextMeshProUGUI texto;
     public Button[] botones;
+    public Button continueButton;
     private int fila = 0;
     private int i = 0;
     public bool hablando = false;
@@ -43,8 +44,8 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             botones[j].gameObject.SetActive(false);
         }
         texto.gameObject.SetActive(false);
-        GameObject.Find("Image").GetComponent<Image>().enabled = false;
-        GameObject.Find("Cuadrado").GetComponent<Image>().enabled = false;  
+        continueButton.gameObject.SetActive(false);
+        GameObject.Find("Image").GetComponent<Image>().enabled = false; 
     }
 
     public IEnumerator interact()
@@ -58,55 +59,72 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             hablando = true;
             i = 0;
             texto.gameObject.SetActive(true);
-        
+
+            TalkZoomMoveCamera.Instance.setCabeza(transform);
+            TalkZoomMoveCamera.Instance.StartZoomMovement(true);
+
             CameraMovement.Instance.enabled = false;
-            HeadbobSystem.Instance.enabled = false;
             PlayerMovement.Instance.enabled = false;
+            HeadbobSystem.Instance.enabled = false;
 
             GameObject.Find("Image").GetComponent<Image>().enabled = true;
 
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
 
             textoAnimado = StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
         }
         else
         {
-            if (textoAnimado != null)
+            if(textoAnimado != null)
             {
                 StopCoroutine(textoAnimado);
                 texto.text = dialogos[fila].lineas[i];
                 textoAnimado = null;
+
+                if (i < dialogos[fila].lineas.Length - 1)
+                {
+                    continueButton.gameObject.SetActive(true);
+                    continueButton.onClick.RemoveAllListeners();
+                    continueButton.onClick.AddListener(() => StartCoroutine(AvanzarDialogo()));
+                }
                 VariablesGlobales.INTERACTUAR = true;
                 yield break;
             }
-            i++;
-            if (i < dialogos[fila].lineas.Length)
+        }
+        VariablesGlobales.INTERACTUAR = true;
+    }
+    
+    private IEnumerator AvanzarDialogo()
+    {
+        continueButton.gameObject.SetActive(false);
+        i++;
+        if (i < dialogos[fila].lineas.Length)
+        {
+            textoAnimado = StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
+        }
+        else
+        {
+            if (fila < opciones.Length && opciones[fila].respuestas.Length > 0)
             {
-                textoAnimado = StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
+
+                MostrarOpcionesFila(fila);
             }
             else
             {
-                if (fila < opciones.Length && opciones[fila].respuestas.Length > 0)
+                if (fila < siguienteFila.Length && siguienteFila[fila] >= 0)
                 {
-                    MostrarOpcionesFila(fila);
+                    FinDialogo();
+                    fila = siguienteFila[fila];
                 }
                 else
                 {
-                    if (fila < siguienteFila.Length)
-                    {
-                        FinDialogo();
-                        fila = siguienteFila[fila];
-                    }
-                    else
-                    {
-                        FinDialogo();
-                        puedeInteractuar = false;
-                    }
+                    FinDialogo();
+                    puedeInteractuar = false;
                 }
             }
         }
-        VariablesGlobales.INTERACTUAR = true;
+        yield break;
     }
 
     private void MostrarOpcionesFila(int fila)
@@ -124,10 +142,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     private void MostrarOpciones(string[] opciones, int[] saltar)
     {
-        texto.text = "";
-
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        continueButton.gameObject.SetActive(false);
         GameObject.Find("Image").GetComponent<Image>().enabled = true; 
 
         if (opcionSecreta)
@@ -166,10 +181,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     }
 
     private void SeleccionRespuesta(int sigFila)
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        
+    {        
         for (int i = 0; i < botones.Length; i++)
         {
             botones[i].gameObject.SetActive(false);
@@ -183,9 +195,12 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     {
         hablando = false;
         texto.gameObject.SetActive(false);
+        continueButton.gameObject.SetActive(false);
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        TalkZoomMoveCamera.Instance.StartZoomMovement(false);
 
         CameraMovement.Instance.enabled = true;
         HeadbobSystem.Instance.enabled = true;
@@ -202,6 +217,26 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         {
             texto.text = texto.text + dial[j];
             yield return new WaitForSeconds(0.05f);
+        }
+        if (i < dialogos[fila].lineas.Length - 1)
+        {
+            continueButton.gameObject.SetActive(true);
+            continueButton.onClick.RemoveAllListeners();
+            continueButton.onClick.AddListener(() => StartCoroutine(AvanzarDialogo()));
+        }
+        else
+        {
+            if (fila < opciones.Length && opciones[fila].respuestas.Length > 0)
+            {
+                continueButton.gameObject.SetActive(false);
+                MostrarOpcionesFila(fila);
+            }
+            else
+            {
+                continueButton.gameObject.SetActive(true);
+                continueButton.onClick.RemoveAllListeners();
+                continueButton.onClick.AddListener(() => StartCoroutine(AvanzarDialogo()));
+            }
         }
     }
 

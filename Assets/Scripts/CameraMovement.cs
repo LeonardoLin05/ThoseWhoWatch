@@ -8,8 +8,8 @@ public class CameraMovement : MonoBehaviour
     private Transform player;
 
     [SerializeField, Range(0f, 1000f)] private float mouseSensitivity = 500f;
-    [SerializeField] private float xRotation;
-    [SerializeField] private float yRotation;
+    public float xRotation;
+    public float yRotation;
 
     void Awake()
     {
@@ -65,23 +65,5 @@ public class CameraMovement : MonoBehaviour
     public void GirarObjeto(Transform objeto)
     {
         objeto.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-    }
-
-    /// <summary>
-    /// Cambia la rotatición X de la cámara
-    /// </summary>
-    /// <param name="newRotation">La nueva rotación que se quiere asignar a X</param>
-    public void setRotationX(float newRotation)
-    {
-        xRotation = newRotation;
-    }
-
-    /// <summary>
-    /// Cambia la rotatición Y de la cámara
-    /// </summary>
-    /// <param name="newRotation">La nueva rotación que se quiere asignar a Y</param>
-    public void setRotationY(float newRotation)
-    {
-        yRotation = newRotation;
     }
 }
