@@ -45,8 +45,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         }
         texto.gameObject.SetActive(false);
         continueButton.gameObject.SetActive(false);
-        GameObject.Find("Image").GetComponent<Image>().enabled = false;
-        GameObject.Find("Opcion1/Cuadrado").GetComponent<Image>().enabled = false;  
+        GameObject.Find("Image").GetComponent<Image>().enabled = false; 
     }
 
     public IEnumerator interact()
