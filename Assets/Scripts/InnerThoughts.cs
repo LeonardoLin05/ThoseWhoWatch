@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
-
 public class InnerThoughts : MonoBehaviour
 {
     public string pensamiento_mostrar;
