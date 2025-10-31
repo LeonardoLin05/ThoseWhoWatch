@@ -4829,6 +4829,18 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4285229942
       objectReference: {fileID: 0}
+    - target: {fileID: 4362714194862724637, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362714194862724637, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.74509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362714194862724637, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4566962441178817882, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_margin.z
       value: 2.0704956
@@ -4959,7 +4971,7 @@ PrefabInstance:
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 8804739823550197701, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4285229942
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8804739823550197701, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_HorizontalAlignment
