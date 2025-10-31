@@ -32,8 +32,8 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 			yield return new WaitForSeconds(1.5f);
 
 			// Rotamos la cámara para que mire donde queramos
-			CameraMovement.Instance.setRotationX(teleportEntrada.eulerAngles.x);
-			CameraMovement.Instance.setRotationY(teleportEntrada.eulerAngles.y);
+			CameraMovement.Instance.xRotation = teleportEntrada.eulerAngles.x;
+			CameraMovement.Instance.yRotation = teleportEntrada.eulerAngles.y;
 
 			player.position = teleportEntrada.position;
 
@@ -49,8 +49,8 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 			VariablesGlobales.DENTRO_ARMARIO = false;
 
 			// Rotamos la cámara para que mire donde queramos
-			CameraMovement.Instance.setRotationX(teleportSalida.eulerAngles.x);
-			CameraMovement.Instance.setRotationY(teleportSalida.eulerAngles.y);
+			CameraMovement.Instance.xRotation = teleportSalida.eulerAngles.x;
+			CameraMovement.Instance.yRotation = teleportSalida.eulerAngles.y;
 
 			player.position = teleportSalida.position;
 			GetComponent<MeshRenderer>().material = materialArmario;
