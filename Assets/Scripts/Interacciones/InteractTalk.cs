@@ -1,98 +1,31 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
-using UnityEngine.Events;
 
 public class InteractTalk : MonoBehaviour, IInteractable
 {
-
-    public string[] dialogo;
-    private int i;
-    public TextMeshProUGUI texto;
-    public bool hablando = false;
-    private Coroutine textoAnimado;
-
-    public UnityEvent evento;
+    [SerializeField] private string pensamientoObjeto;
+    private TextMeshProUGUI pensamiento;
     
     void Start()
     {
-        if (texto == null)
-        {
-            texto = GameObject.Find("texto_dialogo").GetComponent<TextMeshProUGUI>();
-        }
-
-        texto.gameObject.SetActive(false);
+        pensamiento = GameObject.Find("Pensamiento").GetComponent<TextMeshProUGUI>();
     }
 
     public IEnumerator interact()
     {
-        if (!hablando)
+        if (!VariablesGlobales.EN_PENSAMIENTO)
         {
-            hablando = true;
-            i = 0;
-            texto.gameObject.SetActive(true);
-
-            CameraMovement.Instance.enabled = false;
-            HeadbobSystem.Instance.enabled = false;
-            PlayerMovement.Instance.enabled = false;
-
-            textoAnimado = StartCoroutine(textoAnimar(dialogo[i]));
-        }
-        else
-        {
-            if (textoAnimado != null)
-            {
-                StopCoroutine(textoAnimado);
-                texto.text = dialogo[i];
-                textoAnimado = null;
-                VariablesGlobales.INTERACTUAR = true;
-                yield break;
-            }
-            i++;
-            if (i < dialogo.Length)
-            {
-                textoAnimado = StartCoroutine(textoAnimar(dialogo[i]));
-            }
-            else
-            {
-                // Se ejecuta este evento si es que se ha
-                // definido
-                if (evento != null)
-                {
-                    evento.Invoke();
-                }
-                
-                hablando = false;
-                texto.gameObject.SetActive(false);
-
-                CameraMovement.Instance.enabled = true;
-                HeadbobSystem.Instance.enabled = true;
-                PlayerMovement.Instance.enabled = true;
-            }
-        }
-        VariablesGlobales.INTERACTUAR = true;
-    }
-    
-    public IEnumerator textoAnimar(string dial)
-    {
-        texto.text = "";
-
-        for (int j = 0; j < dial.Length; j++)
-        {
-            texto.text = texto.text + dial[j];
-            yield return new WaitForSeconds(0.05f);
+            VariablesGlobales.EN_PENSAMIENTO = true;
+            pensamiento.text = pensamientoObjeto;
+            yield return new WaitForSeconds(2f);
+            VariablesGlobales.EN_PENSAMIENTO = false;
+            pensamiento.text = "";
         }
     }
     
     public string MensajeInteraccion()
     {
-        if (!hablando)
-        {
-            return "[E] para Hablar";
-        }
-        else
-        {
-            return "[E] para Continuar";
-        }
+        return "[E] para Interactuar";
     }
 }
