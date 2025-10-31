@@ -7,7 +7,6 @@ public class InteractDoor : MonoBehaviour, IInteractable
 {
     public bool bloqueada;
     [SerializeField] private string frasePuertaBloqueada;
-    private bool pensamientoTerminado = true;
 
     private Animator door;
     private bool open = false;
@@ -39,7 +38,6 @@ public class InteractDoor : MonoBehaviour, IInteractable
 
     private IEnumerator puertaBloqueada()
     {
-        pensamientoTerminado = true;
         pensamientos.text = frasePuertaBloqueada;
         yield return new WaitForSeconds(2f);
         pensamientos.text = "";
