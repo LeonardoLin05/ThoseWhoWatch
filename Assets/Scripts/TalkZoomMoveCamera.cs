@@ -33,7 +33,7 @@ public class TalkZoomMoveCamera : MonoBehaviour
         if (start)
         {
             camara.fieldOfView = Mathf.Lerp(camara.fieldOfView, zoomFOV, 2 * Time.deltaTime);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, cabeza, 50 * Time.deltaTime);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, cabeza, 75 * Time.deltaTime);
         }
         /*
         else
