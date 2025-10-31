@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class Zoom : MonoBehaviour
 {
-
-    public static Zoom Instance;
+    public static Zoom Instance { get; private set; }
 
     private Camera camara;
 
