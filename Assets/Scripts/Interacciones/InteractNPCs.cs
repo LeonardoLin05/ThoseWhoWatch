@@ -240,6 +240,11 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         }
     }
 
+    public bool ocupado()
+    {
+        return hablando;
+    }
+
     public string MensajeInteraccion()
     {
         if (!puedeInteractuar)

@@ -59,4 +59,9 @@ public class InteractBus : MonoBehaviour, IInteractable
             return "[E] para montarte";
         }
     }
+
+    public bool ocupado()
+    {
+        return false;
+    }
 }

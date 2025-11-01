@@ -39,4 +39,9 @@ public class InteractTeleport : MonoBehaviour, IInteractable
 	{
 		return mensajeInteraccion;
 	}
+
+	public bool ocupado()
+    {
+        return false;
+    }
 }

@@ -82,4 +82,9 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 			return "[E] para Salir";
 		}
 	}
+
+	public bool ocupado()
+    {
+        return false;
+    }
 }

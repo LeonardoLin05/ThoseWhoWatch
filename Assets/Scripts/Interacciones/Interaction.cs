@@ -8,6 +8,8 @@ public interface IInteractable
     public IEnumerator interact();
 
     public string MensajeInteraccion();
+
+    bool ocupado();
 }
 
 public class Interaction : MonoBehaviour
@@ -59,7 +61,7 @@ public class Interaction : MonoBehaviour
                 texto.text = i.MensajeInteraccion();
                 punteroInteractuar.gameObject.GetComponent<Image>().enabled = true;
 
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.E) && !i.ocupado())
                 {
                     VariablesGlobales.INTERACTUAR = false;
                     StartCoroutine(i.interact());

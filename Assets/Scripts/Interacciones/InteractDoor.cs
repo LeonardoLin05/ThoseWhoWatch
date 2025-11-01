@@ -44,7 +44,8 @@ public class InteractDoor : MonoBehaviour, IInteractable
         VariablesGlobales.EN_PENSAMIENTO = false;
     }
 
-    public string MensajeInteraccion() {
+    public string MensajeInteraccion()
+    {
         if (!open)
         {
             return "[E] para Abrir";
@@ -53,5 +54,10 @@ public class InteractDoor : MonoBehaviour, IInteractable
         {
             return "[E] para Cerrar";
         }
+    }
+    
+    public bool ocupado()
+    {
+        return false;
     }
 }

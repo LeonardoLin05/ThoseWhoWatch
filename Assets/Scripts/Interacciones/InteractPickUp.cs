@@ -104,7 +104,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
             npc.opcionSecreta = true;
         }
     }
-    
+
     private void Lanzar()
     {
         objeto.useGravity = true;
@@ -116,5 +116,10 @@ public class InteractPickUp : MonoBehaviour, IInteractable
         texto.text = "";
 
         enMano = false;
+    }
+    
+    public bool ocupado()
+    {
+        return false;
     }
 }

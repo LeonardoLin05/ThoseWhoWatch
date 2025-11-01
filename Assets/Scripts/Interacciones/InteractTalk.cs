@@ -23,7 +23,11 @@ public class InteractTalk : MonoBehaviour, IInteractable
             pensamiento.text = "";
         }
     }
-    
+    public bool ocupado()
+    {
+        return false;
+    }
+
     public string MensajeInteraccion()
     {
         return "[E] para Interactuar";
