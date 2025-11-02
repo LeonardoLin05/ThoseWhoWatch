@@ -7,6 +7,8 @@ public class InnerThoughts : MonoBehaviour
     public TextMeshProUGUI pensamiento;
     public GameObject activaTrigger;
     public InteractNPCs npc;
+    public bool desbloquear;
+    public int indice = -1;
 
     void Start()
     {
@@ -23,7 +25,7 @@ public class InnerThoughts : MonoBehaviour
             StartCoroutine(Thoughts());
         }
     }
-    
+
     private IEnumerator Thoughts()
     {
         VariablesGlobales.EN_PENSAMIENTO = true;
@@ -37,11 +39,11 @@ public class InnerThoughts : MonoBehaviour
             activaTrigger.SetActive(true);
         }
 
-        if(npc != null)
+        if (desbloquear && indice >= 0)
         {
-            npc.opcionSecreta = true;
+            npc.ActivarBoton(indice);
         }
-
+        
         VariablesGlobales.EN_PENSAMIENTO = false;
         Destroy(gameObject);
     }

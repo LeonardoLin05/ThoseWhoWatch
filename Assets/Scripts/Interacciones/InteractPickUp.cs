@@ -15,6 +15,8 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     private BoxCollider boxCollider;
     private TextMeshProUGUI texto;
     public InteractNPCs npc;
+    public bool Desbloquear;
+    public int indice;
 
     public IEnumerator interact()
     {
@@ -99,9 +101,9 @@ public class InteractPickUp : MonoBehaviour, IInteractable
         posicion = mano;
         texto.text = "[G] para Lanzar";
 
-        if(npc != null)
+        if(Desbloquear && indice >= 0)
         {
-            npc.opcionSecreta = true;
+            npc.ActivarBoton(indice);
         }
     }
 

@@ -929,6 +929,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d677e6906fb33449887739ed6e6544d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
+  bloqueada: 0
+  frasePuertaBloqueada: 
 --- !u!95 &211423521
 Animator:
   serializedVersion: 7
@@ -1937,15 +1939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be13629eda97185429087c29679d4dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractTalk
-  dialogo:
-  - Hola soy un texto muy chulo
-  - Sigo siendo un texto muy chulo
-  - "Jam\xE1s dejar\xE9 de serlo"
-  texto: {fileID: 983758427}
-  hablando: 0
-  evento:
-    m_PersistentCalls:
-      m_Calls: []
+  pensamientoObjeto: 
 --- !u!1 &546462724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2968,11 +2962,11 @@ MonoBehaviour:
   opciones:
   - respuestas: []
     saltar: 
-  siguienteFila: 
+  siguienteFila: 00000000ffffffff
   texto: {fileID: 983758427}
   botones:
-  - {fileID: 1437313614}
   - {fileID: 431306691}
+  - {fileID: 1437313614}
   continueButton: {fileID: 1009089454}
   hablando: 0
   puedeInteractuar: 1
@@ -3789,13 +3783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be13629eda97185429087c29679d4dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractTalk
-  dialogo:
-  - Va a spawnear a un bus
-  texto: {fileID: 983758427}
-  hablando: 0
-  evento:
-    m_PersistentCalls:
-      m_Calls: []
+  pensamientoObjeto: 
 --- !u!1 &1608408008
 GameObject:
   m_ObjectHideFlags: 0
@@ -4682,6 +4670,14 @@ PrefabInstance:
     - target: {fileID: 1042199005792137860, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795378666357967753, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795378666357967753, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4362714194862724637, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_fontColor.b
