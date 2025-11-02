@@ -10,7 +10,7 @@ public class TalkZoomMoveCamera : MonoBehaviour
     private float zoomFOV = 50;
     private float noZoomFOV = 100;
 
-    private bool start = false;
+    private float rotationSpeed;
 
     void Awake()
     {
@@ -30,22 +30,8 @@ public class TalkZoomMoveCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (start)
-        {
-            camara.fieldOfView = Mathf.Lerp(camara.fieldOfView, zoomFOV, 2 * Time.deltaTime);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, cabeza, 75 * Time.deltaTime);
-        }
-        /*
-        else
-        {
-            camara.fieldOfView = Mathf.Lerp(camara.fieldOfView, noZoomFOV, 2 * Time.deltaTime);
-
-            if (camara.fieldOfView == noZoomFOV)
-            {
-                Instance.enabled = false;
-            }
-        }
-        */
+        camara.fieldOfView = Mathf.Lerp(camara.fieldOfView, zoomFOV, 2 * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, cabeza, rotationSpeed * Time.deltaTime);
     }
 
     public void setCabeza(Transform cabeza)
@@ -53,18 +39,21 @@ public class TalkZoomMoveCamera : MonoBehaviour
         this.cabeza = Quaternion.LookRotation(cabeza.position - transform.position);
     }
 
-    public void StartZoomMovement(bool start)
+    /// <summary>
+    /// Empieza el movimiento de zoom y rotacion
+    /// </summary>
+    public void StartZoomMovement(float rotationSpeed)
     {
-        if (start)
-        {
-            this.start = start;
-            Instance.enabled = true;
-        }
-        else
-        {
-            this.start = start;
-            Instance.enabled = false;
-            camara.fieldOfView = noZoomFOV;
-        }
+        this.rotationSpeed = rotationSpeed;
+        Instance.enabled = true;
+    }
+
+    /// <summary>
+    /// Restablece todo como estaba antes de empezar el zoom y rotacion
+    /// </summary>
+    public void StopZoomMovement()
+    {
+        camara.fieldOfView = noZoomFOV;
+        Instance.enabled = false;
     }
 }

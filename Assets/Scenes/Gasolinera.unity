@@ -13971,6 +13971,18 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: frase.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: Para ya
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: "\xBFEres tonto?"
+      objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
       value: Water3 (4)
@@ -16214,6 +16226,18 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: frase.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: Para ya
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: "\xBFEres tonto?"
+      objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
       value: Water3
@@ -16736,6 +16760,18 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: frase.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: Para ya
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: "\xBFEres tonto?"
+      objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
       value: Water3 (3)
@@ -16820,6 +16856,8 @@ MonoBehaviour:
   pensamiento: {fileID: 566252360}
   activaTrigger: {fileID: 0}
   npc: {fileID: 0}
+  desbloquear: 0
+  indice: -1
 --- !u!65 &975009463
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17030,6 +17068,18 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: frase.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: Para ya
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: "\xBFEres tonto?"
+      objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
       value: Water3 (5)
@@ -18313,6 +18363,8 @@ MonoBehaviour:
   pensamiento: {fileID: 566252360}
   activaTrigger: {fileID: 0}
   npc: {fileID: 0}
+  desbloquear: 0
+  indice: -1
 --- !u!65 &1208647931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19599,6 +19651,18 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: frase.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: Para ya
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: "\xBFEres tonto?"
+      objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
       value: Water3 (1)
@@ -21768,6 +21832,18 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: frase.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: Para ya
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: "\xBFEres tonto?"
+      objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
       value: Water3 (2)
@@ -87660,6 +87736,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractPickUp
   npc: {fileID: 0}
+  Desbloquear: 0
+  indice: 0
 --- !u!65 &7140484233772170216
 BoxCollider:
   m_ObjectHideFlags: 0

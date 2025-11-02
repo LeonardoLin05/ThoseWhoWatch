@@ -40,7 +40,7 @@ public class NPCReact : MonoBehaviour
 
         // Forzamos al jugar a mirar al NPC
         TalkZoomMoveCamera.Instance.setCabeza(NPC);
-        TalkZoomMoveCamera.Instance.StartZoomMovement(true);
+        TalkZoomMoveCamera.Instance.StartZoomMovement(150f);
 
         texto.gameObject.SetActive(true);
 
@@ -74,7 +74,7 @@ public class NPCReact : MonoBehaviour
         texto.gameObject.SetActive(false);
 
         // Liberamos al jugador de mirar al NPC
-        TalkZoomMoveCamera.Instance.StartZoomMovement(false);
+        TalkZoomMoveCamera.Instance.StopZoomMovement();
     }
 
     private IEnumerator TextoAnimado(string frase)
