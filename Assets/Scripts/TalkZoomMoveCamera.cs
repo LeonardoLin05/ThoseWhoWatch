@@ -22,7 +22,7 @@ public class TalkZoomMoveCamera : MonoBehaviour
         {
             Instance = this;
         }
-        Instance.enabled = false;
+        enabled = false;
 
         camara = transform.GetChild(0).gameObject.GetComponent<Camera>();
     }
@@ -45,7 +45,7 @@ public class TalkZoomMoveCamera : MonoBehaviour
     public void StartZoomMovement(float rotationSpeed)
     {
         this.rotationSpeed = rotationSpeed;
-        Instance.enabled = true;
+        enabled = true;
     }
 
     /// <summary>
@@ -54,6 +54,6 @@ public class TalkZoomMoveCamera : MonoBehaviour
     public void StopZoomMovement()
     {
         camara.fieldOfView = noZoomFOV;
-        Instance.enabled = false;
+        enabled = false;
     }
 }

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6452830264855343366}
   - component: {fileID: 4534912884548373324}
-  - component: {fileID: 4915666633510372094}
   - component: {fileID: 582466831870604283}
+  - component: {fileID: 4915666633510372094}
   - component: {fileID: 9050649707043940929}
   m_Layer: 6
   m_Name: Water1
@@ -57,19 +57,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15877753, y: 0.36067095, z: 0.16598818}
   m_Center: {x: 0.000000029802322, y: 0.021631375, z: 0.0012017041}
---- !u!114 &4915666633510372094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4145214003107516928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7cebaadc20cdcc47a78d8a92cdbe41a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractPickUp
-  npc: {fileID: 0}
 --- !u!54 &582466831870604283
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -97,6 +84,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &4915666633510372094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4145214003107516928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7cebaadc20cdcc47a78d8a92cdbe41a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractPickUp
+  npc: {fileID: 0}
+  Desbloquear: 0
+  indice: 0
 --- !u!114 &9050649707043940929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,9 +111,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75549f2f0d1d84b4088d0c1eb134dc58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCReact
-  frase: 
+  frase: []
   NPC: {fileID: 0}
   texto: {fileID: 0}
+  boton: {fileID: 0}
 --- !u!1 &8867475627781322153
 GameObject:
   m_ObjectHideFlags: 0

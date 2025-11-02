@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8576622010607770028}
   - component: {fileID: 6208540636146786528}
   - component: {fileID: 3562807518568928121}
+  - component: {fileID: 9091639864718649713}
   m_Layer: 6
   m_Name: Water2
   m_TagString: Untagged
@@ -96,6 +97,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractPickUp
   npc: {fileID: 0}
+  Desbloquear: 0
+  indice: 0
+--- !u!114 &9091639864718649713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4400316118670650915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75549f2f0d1d84b4088d0c1eb134dc58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCReact
+  frase: []
+  NPC: {fileID: 0}
+  texto: {fileID: 0}
+  boton: {fileID: 0}
 --- !u!1 &7232667363257420091
 GameObject:
   m_ObjectHideFlags: 0
