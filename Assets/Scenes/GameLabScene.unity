@@ -164,6 +164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractPickUp
   npc: {fileID: 1326242043}
+  Desbloquear: 0
+  indice: 0
 --- !u!65 &75593680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1291,6 +1293,8 @@ MonoBehaviour:
   pensamiento: {fileID: 198212871}
   activaTrigger: {fileID: 0}
   npc: {fileID: 0}
+  desbloquear: 0
+  indice: -1
 --- !u!65 &392993261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1386,17 +1390,6 @@ Transform:
 --- !u!114 &425763216 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 234600720659386375, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-  m_PrefabInstance: {fileID: 1719047532184657015}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
---- !u!114 &431306691 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5726535218473580308, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
   m_PrefabInstance: {fileID: 1719047532184657015}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -1994,15 +1987,13 @@ MonoBehaviour:
   siguienteFila: 
   texto: {fileID: 983758427}
   botones:
-  - {fileID: 1437313614}
-  - {fileID: 425763216}
-  - {fileID: 36834333}
+  - boton: {fileID: 1437313614}
+  - boton: {fileID: 425763216}
+  - boton: {fileID: 36834333}
+  botonesFila: []
   continueButton: {fileID: 1009089454}
   hablando: 0
   puedeInteractuar: 1
-  opcionSecreta: 0
-  textoSecreto: 
-  saltoSecreto: 0
 --- !u!136 &546462726
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2268,15 +2259,16 @@ MonoBehaviour:
   siguienteFila: 
   texto: {fileID: 983758427}
   botones:
-  - {fileID: 1437313614}
-  - {fileID: 425763216}
-  - {fileID: 36834333}
+  - boton: {fileID: 1437313614}
+  - boton: {fileID: 425763216}
+  - boton: {fileID: 36834333}
+  botonesFila:
+  - estado: 0100000001000000
+  - estado: 0000000000000000
+  - estado: 0100000001000000
   continueButton: {fileID: 1009089454}
   hablando: 0
   puedeInteractuar: 1
-  opcionSecreta: 0
-  textoSecreto: 
-  saltoSecreto: 0
 --- !u!136 &708671223
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2965,14 +2957,12 @@ MonoBehaviour:
   siguienteFila: 00000000ffffffff
   texto: {fileID: 983758427}
   botones:
-  - {fileID: 431306691}
-  - {fileID: 1437313614}
+  - boton: {fileID: 1437313614}
+  - boton: {fileID: 425763216}
+  botonesFila: []
   continueButton: {fileID: 1009089454}
   hablando: 0
   puedeInteractuar: 1
-  opcionSecreta: 0
-  textoSecreto: Good boy
-  saltoSecreto: 1
 --- !u!1 &1343181699
 GameObject:
   m_ObjectHideFlags: 0
@@ -3267,6 +3257,8 @@ MonoBehaviour:
   pensamiento: {fileID: 198212871}
   activaTrigger: {fileID: 392993259}
   npc: {fileID: 0}
+  desbloquear: 0
+  indice: -1
 --- !u!114 &1380305605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3318,6 +3310,8 @@ MonoBehaviour:
   pensamiento: {fileID: 198212871}
   activaTrigger: {fileID: 0}
   npc: {fileID: 0}
+  desbloquear: 0
+  indice: -1
 --- !u!65 &1386768821
 BoxCollider:
   m_ObjectHideFlags: 0
