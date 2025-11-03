@@ -2,14 +2,13 @@ using UnityEngine;
 
 public class SpawnBus : MonoBehaviour
 {
-    public GameObject Autobus;
+    [SerializeField] private GameObject Autobus;
     private Animator busAnimation;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         busAnimation = Autobus.GetComponent<Animator>();
-
     }
 
     public void Spawn()
@@ -18,7 +17,6 @@ public class SpawnBus : MonoBehaviour
         {
             Autobus.SetActive(true);
         }
-            
         busAnimation.SetTrigger("Move");
     }
 }

@@ -34,7 +34,7 @@ public class Interaction : MonoBehaviour
     void Start()
     {
         mask = LayerMask.GetMask("Interactable") | LayerMask.GetMask("Default");
-
+        
         if (texto == null)
         {
             texto = GameObject.Find("texto_interactuar").GetComponent<TextMeshProUGUI>();

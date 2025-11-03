@@ -41,7 +41,7 @@ public class Perseguir : MonoBehaviour
             enemigoTrans.rotation = Quaternion.Slerp(enemigoTrans.rotation,
             Quaternion.LookRotation(player.position - enemigoTrans.position), rotationSpeed*Time.deltaTime);
 
-            if (VariablesGlobales.DENTRO_ARMARIO)
+            if (EsconderseArmario.DENTRO_ARMARIO)
             {
                 if (distancia < 8)
                 {

@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 
 [System.Serializable]
@@ -34,38 +35,45 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     [SerializeField] private DialogosOpcion[] opciones;
     [SerializeField] private int[] siguienteFila;
 
-    [SerializeField] private TextMeshProUGUI texto;
-    [SerializeField] private GameObject fondoTexto;
-
     [SerializeField] private Button[] botones;
     [SerializeField] private Button continueButton;
     [SerializeField] private BotonFila[] botonesFila;
+
+    [SerializeField] private TextMeshProUGUI texto;
+    [SerializeField] private GameObject fondoTexto;
+    [SerializeField] private GameObject puntero;
+
+    [SerializeField] private UnityEvent evento;
     
     private int fila = 0;
     private int i = 0;
     
-    void Start()
+    void Awake()
     {
         if (texto == null)
         {
-            texto = GameObject.Find("texto_dialogo").GetComponent<TextMeshProUGUI>();
+            texto = GameObject.FindGameObjectWithTag("TextoDialogo").GetComponent<TextMeshProUGUI>();
         }
-
         if(fondoTexto == null)
         {
-            fondoTexto = GameObject.Find("Image");
+            fondoTexto = GameObject.FindGameObjectWithTag("FondoDialogo");
         }
-
-        for (int j = 0; j < botones.Length; j++)
+        if(puntero == null)
         {
-            botones[j].gameObject.SetActive(false);
+            puntero = GameObject.FindGameObjectWithTag("Puntero");
+        }
+    }
+
+    void Start()
+    {
+        foreach (Button boton in botones)
+        {
+            boton.gameObject.SetActive(false);
         }
 
-        texto.gameObject.SetActive(false);
-
-        continueButton.gameObject.SetActive(false);
-        
         fondoTexto.SetActive(false);
+        texto.gameObject.SetActive(false);
+        continueButton.gameObject.SetActive(false);
     }
 
     public IEnumerator interact()
@@ -73,6 +81,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         i = 0;
         texto.gameObject.SetActive(true);
         fondoTexto.SetActive(true);
+        puntero.gameObject.SetActive(false);
 
         TalkZoomMoveCamera.Instance.setCabeza(transform);
         TalkZoomMoveCamera.Instance.StartZoomMovement(50f);
@@ -161,30 +170,42 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     private void MostrarOpciones(string[] opciones)
     {
-        continueButton.gameObject.SetActive(false);
-
+        //EstadoBoton boton;
+        
         bool opcionesVisibles = false;
 
         for (int i = 0; i < botones.Length; i++)
         {
-            if (i < opciones.Length)
+            /* Otra posible implementación, no se si es mejor o igual que la de abajo
+            boton = botonesFila[fila].estado[i];
+
+            if (boton != EstadoBoton.Oculto)
             {
-                if (botonesFila[fila].estado[i] == EstadoBoton.Visible)
+                botones[i].gameObject.SetActive(true);
+                botones[i].GetComponentInChildren<TextMeshProUGUI>().text = opciones[i];
+                if (boton == EstadoBoton.Visible)
                 {
                     opcionesVisibles = true;
-                    botones[i].gameObject.SetActive(true);
                     botones[i].interactable = true;
-                    botones[i].GetComponentInChildren<TextMeshProUGUI>().text = opciones[i];
                 }
-                else if (botonesFila[fila].estado[i] == EstadoBoton.Bloqueado)
-                {
-                    botones[i].gameObject.SetActive(true);
-                    botones[i].interactable = false;
-                    botones[i].GetComponentInChildren<TextMeshProUGUI>().text = opciones[i];
-                }
+                else if (boton == EstadoBoton.Bloqueado) botones[i].interactable = false;
+            }
+            */
+            if (botonesFila[fila].estado[i] == EstadoBoton.Visible)
+            {
+                opcionesVisibles = true;
+                botones[i].gameObject.SetActive(true);
+                botones[i].interactable = true;
+                botones[i].GetComponentInChildren<TextMeshProUGUI>().text = opciones[i];
+            }
+            else if (botonesFila[fila].estado[i] == EstadoBoton.Bloqueado)
+            {
+                botones[i].gameObject.SetActive(true);
+                botones[i].interactable = false;
+                botones[i].GetComponentInChildren<TextMeshProUGUI>().text = opciones[i];
             }
         }
-
+        // Mostramos el botón de continuar en caso de que no hay ninguna opción en Visible
         if (!opcionesVisibles)
         {
             continueButton.gameObject.SetActive(true);
@@ -193,9 +214,9 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     private void SeleccionRespuesta(int sigFila)
     {
-        for (int i = 0; i < botones.Length; i++)
+        foreach(Button boton in botones)
         {
-            botones[i].gameObject.SetActive(false);
+            boton.gameObject.SetActive(false);
         }
 
         fila = opciones[fila].saltar[sigFila];
@@ -206,9 +227,17 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     private void FinDialogo()
     {
+        if(evento != null)
+        {
+            evento.Invoke();
+            // Para que el evento solo pueda ocurrir una vez
+            evento = null;
+        }
+
         texto.gameObject.SetActive(false);
         fondoTexto.SetActive(false);
         continueButton.gameObject.SetActive(false);
+        puntero.SetActive(true);
 
         // Bloqueamos el cursor
         Cursor.lockState = CursorLockMode.Locked;
@@ -228,9 +257,9 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     {
         texto.text = "";
 
-        for (int j = 0; j < dial.Length; j++)
+        foreach(char letra in dial)
         {
-            texto.text = texto.text + dial[j];
+            texto.text += letra;
             yield return new WaitForSecondsRealtime(0.04f);
         }
         
