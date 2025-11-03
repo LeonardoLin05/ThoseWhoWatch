@@ -84,7 +84,7 @@ public class NPCReact : MonoBehaviour
         for (int i = 0; i < frase.Length; i++)
         {
             texto.text = texto.text + frase[i];
-            yield return new WaitForSecondsRealtime(0.03f);
+            yield return new WaitForSecondsRealtime(0.04f);
         }
     }
 }

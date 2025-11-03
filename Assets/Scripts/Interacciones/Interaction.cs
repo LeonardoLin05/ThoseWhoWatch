@@ -8,8 +8,6 @@ public interface IInteractable
     public IEnumerator interact();
 
     public string MensajeInteraccion();
-
-    bool ocupado();
 }
 
 public class Interaction : MonoBehaviour
@@ -22,7 +20,7 @@ public class Interaction : MonoBehaviour
 
     void Awake()
     {
-          if (Instance != null && Instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(this);
         }
@@ -30,6 +28,7 @@ public class Interaction : MonoBehaviour
         {
             Instance = this;
         }
+        enabled = true;
     }
 
     void Start()
@@ -61,9 +60,9 @@ public class Interaction : MonoBehaviour
                 texto.text = i.MensajeInteraccion();
                 punteroInteractuar.gameObject.GetComponent<Image>().enabled = true;
 
-                if (Input.GetKeyDown(KeyCode.E) && !i.ocupado())
+                if (Input.GetKeyDown(KeyCode.E))
                 {
-                    VariablesGlobales.INTERACTUAR = false;
+                    texto.text = "";
                     StartCoroutine(i.interact());
                 }
             }

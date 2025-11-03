@@ -24,42 +24,33 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 	{
 		if (!VariablesGlobales.DENTRO_ARMARIO)
 		{
-			StartCoroutine(EntrarArmario());
+			PlayerMovement.Instance.enabled = false;
+			HeadbobSystem.Instance.enabled = false;
+			Interaction.Instance.enabled = false;
+
+			VariablesGlobales.DENTRO_ARMARIO = true;
+
+			fade.SetTrigger("Fade");
+			yield return new WaitForSeconds(1.5f);
+
+			// Rotamos la cámara para que mire donde queramos
+			CameraMovement.Instance.xRotation = teleportEntrada.eulerAngles.x;
+			CameraMovement.Instance.yRotation = teleportEntrada.eulerAngles.y;
+
+			player.position = teleportEntrada.position;
+			Physics.SyncTransforms();
+
+			GetComponent<MeshRenderer>().material = materialTransparente;
 		}
 		else
 		{
-			StartCoroutine(SalirArmario());
-		}
-		Physics.SyncTransforms();
-		VariablesGlobales.INTERACTUAR = true;
-		yield break;
-	}
-
-	private IEnumerator EntrarArmario()
-    {
-        PlayerMovement.Instance.enabled = false;
-		HeadbobSystem.Instance.enabled = false;
-		VariablesGlobales.DENTRO_ARMARIO = true;
-
-		fade.SetTrigger("Fade");
-		yield return new WaitForSeconds(1.5f);
-
-		// Rotamos la cámara para que mire donde queramos
-		CameraMovement.Instance.xRotation = teleportEntrada.eulerAngles.x;
-		CameraMovement.Instance.yRotation = teleportEntrada.eulerAngles.y;
-
-		player.position = teleportEntrada.position;
-
-		GetComponent<MeshRenderer>().material = materialTransparente;
-    }
-
-	private IEnumerator SalirArmario()
-    {
-        fade.SetTrigger("Fade");
+			fade.SetTrigger("Fade");
 			yield return new WaitForSeconds(1.5f);
 
 			PlayerMovement.Instance.enabled = true;
 			HeadbobSystem.Instance.enabled = true;
+			Interaction.Instance.enabled = true;
+
 			VariablesGlobales.DENTRO_ARMARIO = false;
 
 			// Rotamos la cámara para que mire donde queramos
@@ -67,8 +58,10 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 			CameraMovement.Instance.yRotation = teleportSalida.eulerAngles.y;
 
 			player.position = teleportSalida.position;
+			Physics.SyncTransforms();
 			GetComponent<MeshRenderer>().material = materialArmario;
-    }
+		}
+	}
 
 	public string MensajeInteraccion()
 	{
@@ -82,9 +75,4 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 			return "[E] para Salir";
 		}
 	}
-
-	public bool ocupado()
-    {
-        return false;
-    }
 }

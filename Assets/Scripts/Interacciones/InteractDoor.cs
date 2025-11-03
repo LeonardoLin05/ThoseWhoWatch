@@ -26,14 +26,13 @@ public class InteractDoor : MonoBehaviour, IInteractable
             door.SetBool("open", open);
             door.SetTrigger("interact");
             Debug.Log("El objecto ha hecho algo");
-            yield break;
         }
         else
         {
             if(!VariablesGlobales.EN_PENSAMIENTO)
             StartCoroutine(puertaBloqueada());
         }
-        VariablesGlobales.INTERACTUAR = true;
+        yield break;
     }
 
     private IEnumerator puertaBloqueada()
@@ -54,10 +53,5 @@ public class InteractDoor : MonoBehaviour, IInteractable
         {
             return "[E] para Cerrar";
         }
-    }
-    
-    public bool ocupado()
-    {
-        return false;
     }
 }

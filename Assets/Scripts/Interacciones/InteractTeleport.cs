@@ -28,8 +28,8 @@ public class InteractTeleport : MonoBehaviour, IInteractable
 	{
 		if(isActiveAndEnabled)
 		{
+			Interaction.Instance.enabled = true;
 			fade.SetTrigger("Fade");
-			mensajeInteraccion = "";
 			yield return new WaitForSeconds(1.5f);
 			SceneManager.LoadScene("Gasolinera"); 
         }
@@ -39,9 +39,4 @@ public class InteractTeleport : MonoBehaviour, IInteractable
 	{
 		return mensajeInteraccion;
 	}
-
-	public bool ocupado()
-    {
-        return false;
-    }
 }

@@ -1,21 +1,22 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+
 public class InnerThoughts : MonoBehaviour
 {
-    public string pensamiento_mostrar;
-    public TextMeshProUGUI pensamiento;
-    public GameObject activaTrigger;
-    public InteractNPCs npc;
-    public bool desbloquear;
-    public int indice = -1;
+    [SerializeField] private string pensamiento_mostrar;
+    [SerializeField] private TextMeshProUGUI pensamiento;
+
+    [SerializeField] private bool oneTimeOnly = true;
+
+    [SerializeField] private GameObject activaTrigger;
+    [SerializeField] private InteractNPCs npc;
+    [SerializeField] private bool desbloquear;
+    [SerializeField] private int indice = -1;
 
     void Start()
     {
-        if (pensamiento == null)
-        {
-            pensamiento = GameObject.Find("pensamiento").GetComponent<TextMeshProUGUI>();
-        }
+        pensamiento = GameObject.Find("pensamiento").GetComponent<TextMeshProUGUI>();
     }
 
     public void OnTriggerEnter(Collider other)
@@ -43,8 +44,12 @@ public class InnerThoughts : MonoBehaviour
         {
             npc.ActivarBoton(indice);
         }
-        
+
         VariablesGlobales.EN_PENSAMIENTO = false;
-        Destroy(gameObject);
+
+        if(oneTimeOnly)
+        {
+            Destroy(gameObject);
+        }
     }
 }

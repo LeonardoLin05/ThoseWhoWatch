@@ -9,42 +9,41 @@ public class DialogoFilas
 {
     public string[] lineas;
 }
+
 [System.Serializable]
 public class DialogosOpcion
 {
     public string[] respuestas;
     public int[] saltar;
 }
+
 public enum EstadoBoton
 {
-    Oculto, Visble, Bloqueado
+    Oculto, Visible, Bloqueado
 }
+
 [System.Serializable]
 public class BotonFila
 {
     public EstadoBoton[] estado;
 }
-[System.Serializable]
-public class BotonDialogo
-{
-    public Button boton;
-}
+
 public class InteractNPCs : MonoBehaviour, IInteractable
 {
-    public DialogoFilas[] dialogos;
-    public DialogosOpcion[] opciones;
-    public int[] siguienteFila;
-    public TextMeshProUGUI texto;
+    [SerializeField] private DialogoFilas[] dialogos;
+    [SerializeField] private DialogosOpcion[] opciones;
+    [SerializeField] private int[] siguienteFila;
 
-    public BotonDialogo[] botones;
-    public BotonFila[] botonesFila;
-    public Button continueButton;
+    [SerializeField] private TextMeshProUGUI texto;
+    [SerializeField] private GameObject fondoTexto;
 
+    [SerializeField] private Button[] botones;
+    [SerializeField] private Button continueButton;
+    [SerializeField] private BotonFila[] botonesFila;
+    
     private int fila = 0;
     private int i = 0;
-    public bool hablando = false;
-    private Coroutine textoAnimado;
-    public bool puedeInteractuar = true;
+    
     void Start()
     {
         if (texto == null)
@@ -52,52 +51,68 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             texto = GameObject.Find("texto_dialogo").GetComponent<TextMeshProUGUI>();
         }
 
+        if(fondoTexto == null)
+        {
+            fondoTexto = GameObject.Find("Image");
+        }
+
         for (int j = 0; j < botones.Length; j++)
         {
-            botones[j].boton.gameObject.SetActive(false);
+            botones[j].gameObject.SetActive(false);
         }
+
         texto.gameObject.SetActive(false);
+
         continueButton.gameObject.SetActive(false);
-        GameObject.Find("Image").GetComponent<Image>().enabled = false;
+        
+        fondoTexto.SetActive(false);
     }
 
     public IEnumerator interact()
     {
-        if (!puedeInteractuar)
+        i = 0;
+        texto.gameObject.SetActive(true);
+        fondoTexto.SetActive(true);
+
+        TalkZoomMoveCamera.Instance.setCabeza(transform);
+        TalkZoomMoveCamera.Instance.StartZoomMovement(50f);
+
+        // Bloqueamos movimientos de camara, personaje e interaccion
+        CameraMovement.Instance.enabled = false;
+        PlayerMovement.Instance.enabled = false;
+        HeadbobSystem.Instance.enabled = false;
+        Interaction.Instance.enabled = false;
+        Zoom.Instance.enabled = false;
+
+        // Desbloquamos el cursor
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        // Añadimos la acción al boton de continuar
+        continueButton.onClick.RemoveAllListeners();
+        continueButton.onClick.AddListener(() => AvanzarDialogo());
+
+        // Añadimos la acción correspondiente a los botones de respuestas
+        for (int i = 0; i < botones.Length; i++)
         {
-            yield break;
+            int j = i;
+            botones[i].onClick.RemoveAllListeners();
+            botones[i].onClick.AddListener(() => SeleccionRespuesta(j));
         }
-        if (!hablando)
-        {
-            hablando = true;
-            i = 0;
-            texto.gameObject.SetActive(true);
 
-            TalkZoomMoveCamera.Instance.setCabeza(transform);
-            TalkZoomMoveCamera.Instance.StartZoomMovement(50f);
-
-            CameraMovement.Instance.enabled = false;
-            PlayerMovement.Instance.enabled = false;
-            HeadbobSystem.Instance.enabled = false;
-
-            GameObject.Find("Image").GetComponent<Image>().enabled = true;
-
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-
-            textoAnimado = StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
-        }
-        VariablesGlobales.INTERACTUAR = true;
+        StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
+        yield break;
     }
 
-    private IEnumerator AvanzarDialogo()
+    private void AvanzarDialogo()
     {
         continueButton.gameObject.SetActive(false);
+        
         i++;
 
         if (i < dialogos[fila].lineas.Length)
         {
-            textoAnimado = StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
+            StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
         }
         else
         {
@@ -106,7 +121,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             {
                 for (int j = 0; j < botones.Length && j < opciones[fila].respuestas.Length; j++)
                 {
-                    if (botonesFila[fila].estado[j] == EstadoBoton.Visble)
+                    if (botonesFila[fila].estado[j] == EstadoBoton.Visible)
                     {
                         opcionesVisibles = true;
                         break;
@@ -115,82 +130,64 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
                 if (opcionesVisibles)
                 {
-                    MostrarOpcionesFila(fila);
-                    yield break;
+                    MostrarOpcionesFila();
                 }
             }
 
-                if (fila < siguienteFila.Length && siguienteFila[fila] >= 0)
-                {
-                    FinDialogo();
-                    fila = siguienteFila[fila];
-                }
-                else
-                {
-                    FinDialogo();
-                    puedeInteractuar = false;
-                }
+            if (fila < siguienteFila.Length && siguienteFila[fila] >= 0)
+            {
+                FinDialogo();
+                fila = siguienteFila[fila];
+            }
+            else
+            {
+                FinDialogo();
+                gameObject.layer = 0;
+            }
         }
     }
 
-    private void MostrarOpcionesFila(int fila)
+    private void MostrarOpcionesFila()
     {
         if (fila < opciones.Length && opciones[fila].respuestas.Length > 0)
         {
-            MostrarOpciones(opciones[fila].respuestas, opciones[fila].saltar);
+            MostrarOpciones(opciones[fila].respuestas);
         }
         else
         {
             FinDialogo();
         }
-
     }
 
-    private void MostrarOpciones(string[] opciones, int[] saltar)
+    private void MostrarOpciones(string[] opciones)
     {
         continueButton.gameObject.SetActive(false);
-        GameObject.Find("Image").GetComponent<Image>().enabled = true;
 
         bool opcionesVisibles = false;
-        BotonFila estadosFila = botonesFila[fila];
 
         for (int i = 0; i < botones.Length; i++)
         {
             if (i < opciones.Length)
             {
-                if (botonesFila[fila].estado[i] == EstadoBoton.Visble)
+                if (botonesFila[fila].estado[i] == EstadoBoton.Visible)
                 {
                     opcionesVisibles = true;
-                    botones[i].boton.gameObject.SetActive(true);
-                    botones[i].boton.interactable = true;
-                    botones[i].boton.GetComponentInChildren<TextMeshProUGUI>().text = opciones[i];
-
-                    int salto = saltar[i];
-                    botones[i].boton.onClick.RemoveAllListeners();
-                    botones[i].boton.onClick.AddListener(() => SeleccionRespuesta(salto));
+                    botones[i].gameObject.SetActive(true);
+                    botones[i].interactable = true;
+                    botones[i].GetComponentInChildren<TextMeshProUGUI>().text = opciones[i];
                 }
                 else if (botonesFila[fila].estado[i] == EstadoBoton.Bloqueado)
                 {
-                    botones[i].boton.gameObject.SetActive(true);
-                    botones[i].boton.interactable = false;
-                    botones[i].boton.GetComponentInChildren<TextMeshProUGUI>().text = opciones[i];
+                    botones[i].gameObject.SetActive(true);
+                    botones[i].interactable = false;
+                    botones[i].GetComponentInChildren<TextMeshProUGUI>().text = opciones[i];
                 }
-                else if (botonesFila[fila].estado[i] == EstadoBoton.Oculto)
-                {
-                    botones[i].boton.gameObject.SetActive(false);
-                }
-            }
-            else
-            {
-                botones[i].boton.gameObject.SetActive(false);
             }
         }
 
         if (!opcionesVisibles)
         {
             continueButton.gameObject.SetActive(true);
-            continueButton.onClick.RemoveAllListeners();
-            continueButton.onClick.AddListener(() => StartCoroutine(AvanzarDialogo()));
         }
     }
 
@@ -198,30 +195,33 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     {
         for (int i = 0; i < botones.Length; i++)
         {
-            botones[i].boton.gameObject.SetActive(false);
+            botones[i].gameObject.SetActive(false);
         }
 
-        fila = sigFila;
+        fila = opciones[fila].saltar[sigFila];
         i = 0;
-        textoAnimado = StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
+        
+        StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
     }
 
     private void FinDialogo()
     {
-        hablando = false;
         texto.gameObject.SetActive(false);
+        fondoTexto.SetActive(false);
         continueButton.gameObject.SetActive(false);
 
+        // Bloqueamos el cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
         TalkZoomMoveCamera.Instance.StopZoomMovement();
 
+        // Desbloqueamos moviemientos de camara, jugador e interaccion
         CameraMovement.Instance.enabled = true;
         HeadbobSystem.Instance.enabled = true;
         PlayerMovement.Instance.enabled = true;
-
-        GameObject.Find("Image").GetComponent<Image>().enabled = false;
+        Interaction.Instance.enabled = true;
+        Zoom.Instance.enabled = true;
     }
 
     public IEnumerator textoAnimar(string dial)
@@ -231,54 +231,35 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         for (int j = 0; j < dial.Length; j++)
         {
             texto.text = texto.text + dial[j];
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSecondsRealtime(0.04f);
         }
+        
+        // Hacer que los botones aparezcan después de que el texto termine
         if (i < dialogos[fila].lineas.Length - 1)
         {
             continueButton.gameObject.SetActive(true);
-            continueButton.onClick.RemoveAllListeners();
-            continueButton.onClick.AddListener(() => StartCoroutine(AvanzarDialogo()));
         }
         else
         {
             if (fila < opciones.Length && opciones[fila].respuestas.Length > 0)
             {
                 continueButton.gameObject.SetActive(false);
-                MostrarOpcionesFila(fila);
+                MostrarOpcionesFila();
             }
             else
             {
                 continueButton.gameObject.SetActive(true);
-                continueButton.onClick.RemoveAllListeners();
-                continueButton.onClick.AddListener(() => StartCoroutine(AvanzarDialogo()));
             }
         }
     }
 
     public void ActivarBoton(int i)
     {
-        botonesFila[fila].estado[i] = EstadoBoton.Visble;
-    }
-
-    public bool ocupado()
-    {
-        return hablando;
+        botonesFila[fila].estado[i] = EstadoBoton.Visible;
     }
 
     public string MensajeInteraccion()
     {
-        if (!puedeInteractuar)
-        {
-            return "";
-        }
-
-        if (!hablando)
-        {
-            return "[E] para Hablar";
-        }
-        else
-        {
-            return "";
-        }
+        return "[E] para Hablar";
     }
 }

@@ -24,7 +24,7 @@ public class TalkZoomMoveCamera : MonoBehaviour
         }
         enabled = false;
 
-        camara = transform.GetChild(0).gameObject.GetComponent<Camera>();
+        camara = transform.GetComponentInChildren<Camera>();
     }
 
     // Update is called once per frame

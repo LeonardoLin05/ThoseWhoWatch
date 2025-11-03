@@ -25,7 +25,6 @@ public class InteractPickUp : MonoBehaviour, IInteractable
             enabled = true;
             interactuar = true;
         }
-        VariablesGlobales.INTERACTUAR = true;
         yield break;
     }
 
@@ -118,10 +117,5 @@ public class InteractPickUp : MonoBehaviour, IInteractable
         texto.text = "";
 
         enMano = false;
-    }
-    
-    public bool ocupado()
-    {
-        return false;
     }
 }
