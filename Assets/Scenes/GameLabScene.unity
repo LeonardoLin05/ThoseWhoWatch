@@ -119,17 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &36834333 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4122081135607380285, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-  m_PrefabInstance: {fileID: 1719047532184657015}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &75593678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,6 +1430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
   pensamiento_mostrar: Soy un trigger oculto
   pensamiento: {fileID: 198212871}
+  oneTimeOnly: 1
   activaTrigger: {fileID: 0}
   npc: {fileID: 0}
   desbloquear: 0
@@ -2136,14 +2126,13 @@ MonoBehaviour:
     saltar: 010000000200000003000000
   siguienteFila: 
   texto: {fileID: 983758427}
+  fondoTexto: {fileID: 1719047532184657016}
   botones:
-  - boton: {fileID: 1437313614}
-  - boton: {fileID: 425763216}
-  - boton: {fileID: 36834333}
-  botonesFila: []
+  - {fileID: 1437313614}
+  - {fileID: 425763216}
   continueButton: {fileID: 1009089454}
-  hablando: 0
-  puedeInteractuar: 1
+  botonesFila:
+  - estado: 0100000001000000
 --- !u!136 &546462726
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2413,17 +2402,15 @@ MonoBehaviour:
     saltar: 0300000004000000
   siguienteFila: 
   texto: {fileID: 983758427}
+  fondoTexto: {fileID: 1719047532184657016}
   botones:
-  - boton: {fileID: 1437313614}
-  - boton: {fileID: 425763216}
-  - boton: {fileID: 36834333}
+  - {fileID: 1437313614}
+  - {fileID: 425763216}
+  continueButton: {fileID: 1009089454}
   botonesFila:
   - estado: 0100000001000000
   - estado: 0000000000000000
   - estado: 0100000001000000
-  continueButton: {fileID: 1009089454}
-  hablando: 0
-  puedeInteractuar: 1
 --- !u!136 &708671223
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3116,13 +3103,13 @@ MonoBehaviour:
     saltar: 
   siguienteFila: 00000000ffffffff
   texto: {fileID: 983758427}
+  fondoTexto: {fileID: 1719047532184657016}
   botones:
-  - boton: {fileID: 1437313614}
-  - boton: {fileID: 425763216}
-  botonesFila: []
+  - {fileID: 1437313614}
+  - {fileID: 425763216}
   continueButton: {fileID: 1009089454}
-  hablando: 0
-  puedeInteractuar: 1
+  botonesFila:
+  - estado: 0100000001000000
 --- !u!1 &1336168253
 GameObject:
   m_ObjectHideFlags: 0
@@ -3490,6 +3477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
   pensamiento_mostrar: "Hola que tal est\xE1s"
   pensamiento: {fileID: 198212871}
+  oneTimeOnly: 1
   activaTrigger: {fileID: 392993259}
   npc: {fileID: 0}
   desbloquear: 0
@@ -3540,6 +3528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
   pensamiento_mostrar: Soy otro trigger
   pensamiento: {fileID: 198212871}
+  oneTimeOnly: 1
   activaTrigger: {fileID: 0}
   npc: {fileID: 0}
   desbloquear: 0
@@ -5291,6 +5280,11 @@ PrefabInstance:
       addedObject: {fileID: 276684029}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+--- !u!1 &1719047532184657016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5064250214245962, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+  m_PrefabInstance: {fileID: 1719047532184657015}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
