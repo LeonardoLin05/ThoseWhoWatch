@@ -15,7 +15,7 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 
 	// Variable global para saber si estamos dentro o fuera del armario;
 	// NOTA: se puede llamar desde otras clases pero no cambiar su valor desde ellas
-	public static bool DENTRO_ARMARIO { get; private set; } = true;
+	public static bool DENTRO_ARMARIO { get; private set; } = false;
 
 	void Start()
 	{
@@ -37,6 +37,8 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 			fade.SetTrigger("Fade");
 			yield return new WaitForSeconds(1.5f);
 
+			Interaction.Instance.enabled = true;
+
 			// Rotamos la cámara para que mire donde queramos
 			CameraMovement.Instance.xRotation = teleportEntrada.eulerAngles.x;
 			CameraMovement.Instance.yRotation = teleportEntrada.eulerAngles.y;
@@ -48,6 +50,8 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 		}
 		else
 		{
+			Interaction.Instance.enabled = false;
+
 			fade.SetTrigger("Fade");
 			yield return new WaitForSeconds(1.5f);
 

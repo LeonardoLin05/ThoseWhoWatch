@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 7540037312400114678}
   - component: {fileID: 5534872799978167898}
   - component: {fileID: 8918222530459229145}
-  - component: {fileID: 3539317937075924958}
   m_Layer: 7
   m_Name: MuroInvisible
   m_TagString: Untagged
@@ -195,17 +194,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3539317937075924958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2474787545215348958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8722e11b0983ae4b99c704f34e2ffea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CollisionInvisbleWalls
-  pensamiento: "No parec\xEDa buena idea ir por aqu\xED"
-  texto: {fileID: 0}

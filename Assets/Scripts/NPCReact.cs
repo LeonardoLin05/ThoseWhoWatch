@@ -34,10 +34,7 @@ public class NPCReact : MonoBehaviour
     private void StartConversation()
     {
         // Bloqueamos movimiento de la camara, jugador e interaccion
-        PlayerMovement.Instance.enabled = false;
-        CameraMovement.Instance.enabled = false;
-        HeadbobSystem.Instance.enabled = false;
-        Interaction.Instance.enabled = false;
+        ActivarInstances(false);
 
         // Desbloqueamos el cursor del ratón
         Cursor.lockState = CursorLockMode.None;
@@ -66,10 +63,7 @@ public class NPCReact : MonoBehaviour
     private void StopConversation()
     {
         // Desbloqueamos movimiento de la camera, jugador e interaccion
-        PlayerMovement.Instance.enabled = true;
-        CameraMovement.Instance.enabled = true;
-        HeadbobSystem.Instance.enabled = true;
-        Interaction.Instance.enabled = true;
+        ActivarInstances(true);
 
         // Bloqueamos el cursor del ratón
         Cursor.lockState = CursorLockMode.Locked;
@@ -90,11 +84,20 @@ public class NPCReact : MonoBehaviour
     {
         texto.text = "";
 
-        foreach(char letra in frase)
+        foreach (char letra in frase)
         {
             texto.text += letra;
             yield return new WaitForSecondsRealtime(0.04f);
         }
         boton.gameObject.SetActive(true);
+    }
+    
+    private void ActivarInstances(bool activar)
+    {
+        PlayerMovement.Instance.enabled = activar;
+        CameraMovement.Instance.enabled = activar;
+        HeadbobSystem.Instance.enabled = activar;
+        Interaction.Instance.enabled = activar;
+        Zoom.Instance.enabled = activar;
     }
 }
