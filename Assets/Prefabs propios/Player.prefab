@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 439020166596341543}
   - component: {fileID: 7715115340097644808}
   - component: {fileID: 4915656797322590310}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 460081888333390888}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Orientation
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,6 +14,11 @@ public class NPCReact : MonoBehaviour
     // Boton de respuesta/continuar
     [SerializeField] private Button boton;
 
+    // Lleva la cuenta de cuantas veces se ha ejecutado el script
+    // para ir aumentando a la siguiente frase que se vaya a decir
+    // Ejemplo funcionalidad: para que vaya diciendo frases cada vez más enfadado
+    private static int vecesEjecutadas = 0;
+
     void OnCollisionEnter(Collision collision)
     {
         // Solo se puede realizar si las interacciones estan activadas
@@ -28,7 +33,7 @@ public class NPCReact : MonoBehaviour
 
     private void StartConversation()
     {
-        // Bloqueamos movimiento de la camere, jugador e interaccion
+        // Bloqueamos movimiento de la camara, jugador e interaccion
         PlayerMovement.Instance.enabled = false;
         CameraMovement.Instance.enabled = false;
         HeadbobSystem.Instance.enabled = false;
@@ -45,10 +50,14 @@ public class NPCReact : MonoBehaviour
         texto.gameObject.SetActive(true);
 
         // Para que el texto aparezca de poco a poco animado
-        StartCoroutine(TextoAnimado(frase[Random.Range(0, frase.Length)]));
+        StartCoroutine(TextoAnimado(frase[vecesEjecutadas]));
+
+        if(vecesEjecutadas < frase.Length - 1)
+        {
+            vecesEjecutadas++;
+        }
 
         // Configuraciones del boton
-        boton.gameObject.SetActive(true);
         boton.onClick.RemoveAllListeners();
         boton.onClick.AddListener(() => StopConversation());
 
@@ -81,10 +90,11 @@ public class NPCReact : MonoBehaviour
     {
         texto.text = "";
 
-        for (int i = 0; i < frase.Length; i++)
+        foreach(char letra in frase)
         {
-            texto.text = texto.text + frase[i];
+            texto.text += letra;
             yield return new WaitForSecondsRealtime(0.04f);
         }
+        boton.gameObject.SetActive(true);
     }
 }

@@ -7,8 +7,8 @@ public class TalkZoomMoveCamera : MonoBehaviour
     private Camera camara;
     private Quaternion cabeza;
 
-    private float zoomFOV = 50;
-    private float noZoomFOV = 100;
+    private readonly float ZOOMFOV = 50;
+    private readonly float NOZOOMFOV= 100;
 
     private float rotationSpeed;
 
@@ -30,7 +30,7 @@ public class TalkZoomMoveCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        camara.fieldOfView = Mathf.Lerp(camara.fieldOfView, zoomFOV, 2 * Time.deltaTime);
+        camara.fieldOfView = Mathf.Lerp(camara.fieldOfView, ZOOMFOV, 2 * Time.deltaTime);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, cabeza, rotationSpeed * Time.deltaTime);
     }
 
@@ -53,7 +53,7 @@ public class TalkZoomMoveCamera : MonoBehaviour
     /// </summary>
     public void StopZoomMovement()
     {
-        camara.fieldOfView = noZoomFOV;
+        camara.fieldOfView = NOZOOMFOV;
         enabled = false;
     }
 }

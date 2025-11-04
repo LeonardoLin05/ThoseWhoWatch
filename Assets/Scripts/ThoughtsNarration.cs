@@ -27,7 +27,7 @@ public class ThoughtsNarration : MonoBehaviour
         Interaction.Instance.enabled = false;
         Zoom.Instance.enabled = false;
 
-        fade = GameObject.Find("Fade").GetComponent<Animator>();
+        fade = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         textoInteractuar2 = GameObject.Find("texto_interactuar2").GetComponent<TextMeshProUGUI>();
         textoInteractuar2.text = "[Espacio] para avanzar";
         pensamientos.SetText(lineas[0]);

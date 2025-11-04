@@ -7,6 +7,7 @@ public class InnerThoughts : MonoBehaviour
     [SerializeField] private string pensamiento_mostrar;
     [SerializeField] private TextMeshProUGUI pensamiento;
 
+    // Variable para dictar si se quiere que se destruya el gameObject o no
     [SerializeField] private bool oneTimeOnly = true;
 
     [SerializeField] private GameObject activaTrigger;
@@ -16,7 +17,7 @@ public class InnerThoughts : MonoBehaviour
 
     void Start()
     {
-        pensamiento = GameObject.Find("pensamiento").GetComponent<TextMeshProUGUI>();
+        pensamiento = GameObject.FindGameObjectWithTag("Pensamiento").GetComponent<TextMeshProUGUI>();
     }
 
     public void OnTriggerEnter(Collider other)

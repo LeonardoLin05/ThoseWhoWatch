@@ -111,7 +111,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75549f2f0d1d84b4088d0c1eb134dc58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCReact
-  frase: []
+  frase:
+  - No hagas eso
+  - Para, no hace gracia lo qu estas haciendo
+  - Me estas ENFADANDO
+  - "\xDALTIMO AVISO"
+  - ESPERO QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
   NPC: {fileID: 0}
   texto: {fileID: 0}
   boton: {fileID: 0}
