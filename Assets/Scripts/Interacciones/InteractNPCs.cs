@@ -229,6 +229,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     {
         if(evento != null)
         {
+            Debug.Log("acabe");
             evento.Invoke();
             // Para que el evento solo pueda ocurrir una vez
             evento = null;

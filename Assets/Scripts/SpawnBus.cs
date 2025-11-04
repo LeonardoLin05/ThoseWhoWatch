@@ -9,12 +9,14 @@ public class SpawnBus : MonoBehaviour
     void Start()
     {
         busAnimation = Autobus.GetComponent<Animator>();
+        Autobus.SetActive(false);
     }
 
     public void Spawn()
     {
         if (!Autobus.activeSelf)
         {
+            Debug.Log("Spawn");
             Autobus.SetActive(true);
         }
         busAnimation.SetTrigger("Move");

@@ -28,7 +28,7 @@ public class InteractTeleport : MonoBehaviour, IInteractable
 	{
 		if(isActiveAndEnabled)
 		{
-			Interaction.Instance.enabled = true;
+			Interaction.Instance.enabled = false;
 			fade.SetTrigger("Fade");
 			yield return new WaitForSeconds(1.5f);
 			SceneManager.LoadScene("Gasolinera"); 
