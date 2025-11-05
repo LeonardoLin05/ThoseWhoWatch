@@ -5,7 +5,7 @@ public class Footsteps : MonoBehaviour {
 
 public AudioClip audioFootsteps;
 private Vector3 prevPosition;
-float minDistance = 2.4f;
+float minDistance = 1.2f;
 
 void Start()
 {
