@@ -3,6 +3,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 
 [System.Serializable]
@@ -47,7 +48,8 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     
     private int fila = 0;
     private int i = 0;
-    
+    private CanvasGroup continueGroup;
+    private bool esperandoMovimiento = false;
     void Awake()
     {
         if (texto == null)
@@ -66,6 +68,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     void Start()
     {
+        continueGroup = continueButton.GetComponent<CanvasGroup>();
         foreach (Button boton in botones)
         {
             boton.gameObject.SetActive(false);
@@ -73,8 +76,17 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
         fondoTexto.SetActive(false);
         texto.gameObject.SetActive(false);
-        continueButton.gameObject.SetActive(false);
+        SetContinueButtonVisible(false);
     }
+
+    void Update()
+{
+    if (esperandoMovimiento && (Mathf.Abs(Input.GetAxis("Mouse X")) > 0.001f || Mathf.Abs(Input.GetAxis("Mouse Y")) > 0.001f))
+    {
+        Interaction.Instance.enabled = true;
+        esperandoMovimiento = false;
+    }
+}
 
     public IEnumerator interact()
     {
@@ -115,8 +127,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     private void AvanzarDialogo()
     {
-        continueButton.gameObject.SetActive(false);
-        
+        SetContinueButtonVisible(false);        
         i++;
 
         if (i < dialogos[fila].lineas.Length)
@@ -171,10 +182,11 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     private void MostrarOpciones(string[] opciones)
     {
         //EstadoBoton boton;
-        
-        bool opcionesVisibles = false;
 
-        for (int i = 0; i < botones.Length; i++)
+        bool opcionesVisibles = false;
+        int limite = Mathf.Min(botones.Length, botonesFila[fila].estado.Length, opciones.Length);
+
+        for (int i = 0; i < limite; i++)
         {
             /* Otra posible implementación, no se si es mejor o igual que la de abajo
             boton = botonesFila[fila].estado[i];
@@ -208,15 +220,15 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         // Mostramos el botón de continuar en caso de que no hay ninguna opción en Visible
         if (!opcionesVisibles)
         {
-            continueButton.gameObject.SetActive(true);
+            SetContinueButtonVisible(true);
         }
     }
 
     private void SeleccionRespuesta(int sigFila)
     {
-        foreach(Button boton in botones)
+        for(int i = 0; i < botones.Length; i++)
         {
-            boton.gameObject.SetActive(false);
+            botones[i].gameObject.SetActive(false);
         }
 
         fila = opciones[fila].saltar[sigFila];
@@ -237,7 +249,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
         texto.gameObject.SetActive(false);
         fondoTexto.SetActive(false);
-        continueButton.gameObject.SetActive(false);
+        SetContinueButtonVisible(false);
         puntero.SetActive(true);
 
         // Bloqueamos el cursor
@@ -252,6 +264,9 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         PlayerMovement.Instance.enabled = true;
         Interaction.Instance.enabled = true;
         Zoom.Instance.enabled = true;
+
+        Interaction.Instance.enabled = false;
+        esperandoMovimiento = true;
     }
 
     public IEnumerator textoAnimar(string dial)
@@ -267,18 +282,18 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         // Hacer que los botones aparezcan después de que el texto termine
         if (i < dialogos[fila].lineas.Length - 1)
         {
-            continueButton.gameObject.SetActive(true);
+            SetContinueButtonVisible(true);
         }
         else
         {
             if (fila < opciones.Length && opciones[fila].respuestas.Length > 0)
             {
-                continueButton.gameObject.SetActive(false);
+                SetContinueButtonVisible(false);
                 MostrarOpcionesFila();
             }
             else
             {
-                continueButton.gameObject.SetActive(true);
+                SetContinueButtonVisible(true);
             }
         }
     }
@@ -288,6 +303,27 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         botonesFila[fila].estado[i] = EstadoBoton.Visible;
     }
 
+    private void SetContinueButtonVisible(bool visible)
+    {
+        continueGroup = continueButton.GetComponent<CanvasGroup>();
+        
+        if (visible)
+        {
+            continueGroup.alpha = 1f;
+            continueGroup.interactable = true;
+            continueGroup.blocksRaycasts = true;
+        }
+        else
+        {
+            continueGroup.alpha = 0f;
+            continueGroup.interactable = false;
+            continueGroup.blocksRaycasts = false;
+            EventSystem.current.SetSelectedGameObject(null);
+            continueButton.animator.Play("Normal", 0, 0f);
+            var pointer = new PointerEventData(EventSystem.current);
+            ExecuteEvents.Execute(continueButton.gameObject, pointer, ExecuteEvents.pointerExitHandler);
+        }
+    }
     public string MensajeInteraccion()
     {
         return "[E] para Hablar";
