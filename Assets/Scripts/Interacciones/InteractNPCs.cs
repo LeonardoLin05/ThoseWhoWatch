@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-
 [System.Serializable]
 public class DialogoFilas
 {
@@ -45,11 +44,15 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     [SerializeField] private GameObject puntero;
 
     [SerializeField] private UnityEvent evento;
+
+    [SerializeField] private TextMeshProUGUI textoInteraccion2;
+    private string oldText;
     
     private int fila = 0;
     private int i = 0;
     private CanvasGroup continueGroup;
     private bool esperandoMovimiento = false;
+
     void Awake()
     {
         if (texto == null)
@@ -60,9 +63,13 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         {
             fondoTexto = GameObject.FindGameObjectWithTag("FondoDialogo");
         }
-        if(puntero == null)
+        if (puntero == null)
         {
             puntero = GameObject.FindGameObjectWithTag("Puntero");
+        }
+        if(textoInteraccion2)
+        {
+            textoInteraccion2 = GameObject.FindGameObjectWithTag("TextoInteractuar2").GetComponent<TextMeshProUGUI>();
         }
     }
 
@@ -80,13 +87,13 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     }
 
     void Update()
-{
-    if (esperandoMovimiento && (Mathf.Abs(Input.GetAxis("Mouse X")) > 0.001f || Mathf.Abs(Input.GetAxis("Mouse Y")) > 0.001f))
     {
-        Interaction.Instance.enabled = true;
-        esperandoMovimiento = false;
+        if (esperandoMovimiento && (Mathf.Abs(Input.GetAxis("Mouse X")) > 0.001f || Mathf.Abs(Input.GetAxis("Mouse Y")) > 0.001f))
+        {
+            Interaction.Instance.enabled = true;
+            esperandoMovimiento = false;
+        }
     }
-}
 
     public IEnumerator interact()
     {
@@ -112,6 +119,14 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         // Añadimos la acción al boton de continuar
         continueButton.onClick.RemoveAllListeners();
         continueButton.onClick.AddListener(() => AvanzarDialogo());
+
+        // Compruebas si el texto de la interacción 2 tiene algo escrito
+        if (textoInteraccion2.text != "")
+        {
+            // Guarda el texto para reestablecerlo al final
+            oldText = textoInteraccion2.text;
+            textoInteraccion2.text = "";
+        }
 
         // Añadimos la acción correspondiente a los botones de respuestas
         for (int i = 0; i < botones.Length; i++)
@@ -161,8 +176,8 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             }
             else
             {
-                FinDialogo();
                 gameObject.layer = 0;
+                FinDialogo();
             }
         }
     }
@@ -239,7 +254,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     private void FinDialogo()
     {
-        if(evento != null)
+        if(gameObject.layer == 0 && evento != null)
         {
             Debug.Log("acabe");
             evento.Invoke();
@@ -267,6 +282,13 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
         Interaction.Instance.enabled = false;
         esperandoMovimiento = true;
+
+        if(oldText != null)
+        {
+            // Restablecemos el texto de la interacción 2
+            textoInteraccion2.text = oldText;
+            oldText = null;
+        }
     }
 
     public IEnumerator textoAnimar(string dial)
@@ -301,6 +323,11 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     public void ActivarBoton(int i)
     {
         botonesFila[fila].estado[i] = EstadoBoton.Visible;
+    }
+
+    public void DesactivarBoton(int i)
+    {
+        botonesFila[fila].estado[i] = EstadoBoton.Oculto;
     }
 
     private void SetContinueButtonVisible(bool visible)

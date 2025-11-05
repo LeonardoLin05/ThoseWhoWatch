@@ -9,6 +9,8 @@ public class NPCReact : MonoBehaviour
     [SerializeField] private string[] frase;
     // El NPC que va a reaccionar
     [SerializeField] private Transform NPC;
+    // Fondo dialogo
+    [SerializeField] private Image fondoDialogo;
     // Texto del dialogo
     [SerializeField] private TextMeshProUGUI texto;
     // Boton de respuesta/continuar

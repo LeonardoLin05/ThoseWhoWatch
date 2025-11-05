@@ -6,31 +6,30 @@ public class InteractPickUp : MonoBehaviour, IInteractable
 {
     private Transform mano;
 
-    private bool interactuar = false;
     private bool lanzar = false;
-    private bool enMano = false;
+    private static bool ENMANO = false;
 
     private Transform posicion;
     private Rigidbody objeto;
     private BoxCollider boxCollider;
     private TextMeshProUGUI texto;
     public InteractNPCs npc;
-    public bool Desbloquear;
-    public int indice;
+
+    [SerializeField] private bool desbloquear;
+    [SerializeField] private int indice;
 
     public IEnumerator interact()
     {
-        if (!enMano)
+        if (!ENMANO)
         {
             enabled = true;
-            interactuar = true;
         }
         yield break;
     }
 
     public string MensajeInteraccion()
     {
-        if (!enMano)
+        if (!ENMANO)
             return "[E] para Recoger";
         else
             return "";
@@ -54,17 +53,17 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     // Update is called once per frame
     void Update()
     {
-        if (interactuar)
+        if (!ENMANO)
         {
             Recoger();
         }
-        else if (enMano && Input.GetKeyDown(KeyCode.G))
-        {
-            Lanzar();
-        }
-        if (enMano)
+        else
         {
             CameraMovement.Instance.GirarObjeto(transform);
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                Lanzar();
+            }
         }
         transform.position = posicion.position;
         Physics.SyncTransforms();
@@ -90,17 +89,16 @@ public class InteractPickUp : MonoBehaviour, IInteractable
         objeto.useGravity = false;
         objeto.freezeRotation = true;
         objeto.linearVelocity = new Vector3(0, 0, 0);
-        objeto.rotation = Quaternion.Euler(0,0,0);
-
+        objeto.rotation = Quaternion.Euler(0, 0, 0);
         boxCollider.enabled = false;
-        interactuar = false;
+
         lanzar = false;
-        enMano = true;
+        ENMANO = true;
 
         posicion = mano;
         texto.text = "[G] para Lanzar";
 
-        if(Desbloquear && indice >= 0)
+        if (desbloquear)
         {
             npc.ActivarBoton(indice);
         }
@@ -116,6 +114,11 @@ public class InteractPickUp : MonoBehaviour, IInteractable
         posicion = transform;
         texto.text = "";
 
-        enMano = false;
+        ENMANO = false;
+
+        if (desbloquear)
+        {
+            npc.DesactivarBoton(indice);
+        }
     }
 }

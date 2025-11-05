@@ -10,6 +10,8 @@ TagManager:
   - FondoDialogo
   - TextoDialogo
   - Puntero
+  - TextoInteractuar
+  - TextoInteractuar2
   layers:
   - Default
   - TransparentFX

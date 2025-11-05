@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 1950102996020841233}
   m_Layer: 5
   m_Name: texto_interactuar
-  m_TagString: Untagged
+  m_TagString: TextoInteractuar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1218,7 +1218,7 @@ GameObject:
   - component: {fileID: 752954462911415462}
   m_Layer: 5
   m_Name: texto_interactuar2
-  m_TagString: Untagged
+  m_TagString: TextoInteractuar2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -137,6 +137,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2267790971212272533}
     m_Modifications:
+    - target: {fileID: 3562807518568928121, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 4400316118670650915, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: m_Name
       value: Water2 (5)
@@ -13656,6 +13660,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water1
       objectReference: {fileID: 0}
+    - target: {fileID: 4915666633510372094, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 6452830264855343366, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.7512436
@@ -13726,6 +13734,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2267790971212272533}
     m_Modifications:
+    - target: {fileID: 3562807518568928121, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 4400316118670650915, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: m_Name
       value: Water2 (4)
@@ -14381,6 +14393,17 @@ MonoBehaviour:
   markerStartUVY: 0.31305695
   customPoints: []
   handleObject: {fileID: 0}
+--- !u!114 &168076242 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 234600720659386375, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+  m_PrefabInstance: {fileID: 118158138418793806}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &168482991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14466,6 +14489,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2267790971212272533}
     m_Modifications:
+    - target: {fileID: 3562807518568928121, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 4400316118670650915, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: m_Name
       value: Water2 (7)
@@ -14668,6 +14695,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4915666633510372094, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 6452830264855343366, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.9732784
@@ -14868,6 +14899,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water3 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6174609976752484588, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 8134514180152328266, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.5473344
@@ -16187,6 +16222,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+--- !u!1 &685402820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5064250214245962, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+  m_PrefabInstance: {fileID: 118158138418793806}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &690874691 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8483501079106270866, guid: e838e2b42febbf64193d979396cd781e, type: 3}
@@ -16341,6 +16381,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e838e2b42febbf64193d979396cd781e, type: 3}
+--- !u!114 &754623078 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 752954462911415462, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+  m_PrefabInstance: {fileID: 118158138418793806}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &756338119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16581,6 +16632,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6174609976752484588, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 8134514180152328266, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.5489771
@@ -16792,6 +16847,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water3 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6174609976752484588, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 8134514180152328266, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.5489771
@@ -17432,6 +17491,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2267790971212272533}
     m_Modifications:
+    - target: {fileID: 3562807518568928121, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 4400316118670650915, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: m_Name
       value: Water2 (1)
@@ -18910,6 +18973,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2267790971212272533}
     m_Modifications:
+    - target: {fileID: 3562807518568928121, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 4400316118670650915, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: m_Name
       value: Water2 (6)
@@ -19205,6 +19272,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2267790971212272533}
     m_Modifications:
+    - target: {fileID: 3562807518568928121, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 4400316118670650915, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: m_Name
       value: Water2 (3)
@@ -19290,6 +19361,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water3
       objectReference: {fileID: 0}
+    - target: {fileID: 6174609976752484588, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 8134514180152328266, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.3956115
@@ -19359,6 +19434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6174609976752484588, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 8134514180152328266, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.393969
@@ -19428,6 +19507,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6174609976752484588, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 8134514180152328266, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.3956115
@@ -19788,6 +19871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4915666633510372094, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 6452830264855343366, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.9732784
@@ -21315,8 +21402,9 @@ GameObject:
   - component: {fileID: 1766346735}
   - component: {fileID: 1766346734}
   - component: {fileID: 1766346733}
-  m_Layer: 0
-  m_Name: Capsule
+  - component: {fileID: 1766346737}
+  m_Layer: 6
+  m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21416,6 +21504,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1766346737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766346732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33fd0478a7f1da74cbdd15cda35c1a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractNPCs
+  dialogos:
+  - lineas:
+    - "Buenas \xBFEn qu\xE9 puedo ayudarte?"
+  - lineas:
+    - "Primer pasillo segunda estanter\xEDa a la izquierda"
+  - lineas:
+    - "\xBFNada m\xE1s?"
+  - lineas:
+    - "Pues ser\xEDan 1.50 euros"
+  - lineas: []
+  opciones:
+  - respuestas:
+    - "Estaba buscando unas botellas de agua \xBFD\xF3nde se encuentran?"
+    - Comprar
+    saltar: 0100000002000000
+  - respuestas: []
+    saltar: 
+  - respuestas:
+    - No
+    saltar: 03000000
+  siguienteFila: 0000000000000000
+  botones:
+  - {fileID: 1943179574}
+  - {fileID: 168076242}
+  continueButton: {fileID: 841668919}
+  botonesFila:
+  - estado: 0100000000000000
+  - estado: 
+  - estado: 0100000000000000
+  texto: {fileID: 0}
+  fondoTexto: {fileID: 685402820}
+  puntero: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
+  textoInteraccion2: {fileID: 754623078}
 --- !u!1001 &1767090304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21428,6 +21564,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4915666633510372094, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 6452830264855343366, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.1957326
@@ -21498,6 +21638,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2267790971212272533}
     m_Modifications:
+    - target: {fileID: 3562807518568928121, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 4400316118670650915, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: m_Name
       value: Water2
@@ -21765,6 +21909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4915666633510372094, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 6452830264855343366, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.7512436
@@ -22111,6 +22259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4915666633510372094, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 6452830264855343366, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.1957326
@@ -22238,6 +22390,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de40c6d579821d04398c3a6debca2717, type: 3}
+--- !u!114 &1943179574 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1587698667107674344, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+  m_PrefabInstance: {fileID: 118158138418793806}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &1944514709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22371,6 +22534,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2267790971212272533}
     m_Modifications:
+    - target: {fileID: 3562807518568928121, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 4400316118670650915, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: m_Name
       value: Water2 (2)
@@ -22924,6 +23091,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2267790971212272533}
     m_Modifications:
+    - target: {fileID: 3562807518568928121, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1766346737}
     - target: {fileID: 4400316118670650915, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: m_Name
       value: Water2 (8)
@@ -23951,6 +24122,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 413641693525522568, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 413641693525522568, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 413641693525522568, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 413641693525522568, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1042199005792137860, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -24039,6 +24226,22 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4855593679155064623, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -24069,16 +24272,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[0]'
-      value: Estas en la escena de la gasolinera
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[1]'
-      value: aqui van a ocurrir cosas muy spookies, si tienes mucho miedo mejor no
-        juegues\n\n\n
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[2]'
-      value: No te fies de nada ni de nadie
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -70935,7 +71137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2953313818409056956, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 102.49
+      value: 143.59
       objectReference: {fileID: 0}
     - target: {fileID: 2953313818409056956, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
       propertyPath: m_LocalPosition.y
@@ -87492,7 +87694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractPickUp
   npc: {fileID: 0}
-  Desbloquear: 0
+  desbloquear: 0
   indice: 0
 --- !u!65 &7140484233772170216
 BoxCollider:

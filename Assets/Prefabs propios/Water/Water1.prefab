@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractPickUp
   npc: {fileID: 0}
-  Desbloquear: 0
-  indice: 0
+  desbloquear: 1
+  indice: 1
 --- !u!114 &9050649707043940929
 MonoBehaviour:
   m_ObjectHideFlags: 0
