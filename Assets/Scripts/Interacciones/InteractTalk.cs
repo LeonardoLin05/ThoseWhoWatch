@@ -6,6 +6,7 @@ public class InteractTalk : MonoBehaviour, IInteractable
 {
     [SerializeField] private string pensamientoObjeto;
     private TextMeshProUGUI pensamiento;
+    public GameObject gameObject; 
     
     void Start()
     {
@@ -22,6 +23,13 @@ public class InteractTalk : MonoBehaviour, IInteractable
             VariablesGlobales.EN_PENSAMIENTO = false;
             pensamiento.text = "";
         }
+
+        if (gameObject != null)
+        {
+            gameObject.SetActive(false);
+        }
+
+        
     }
     
     public string MensajeInteraccion()

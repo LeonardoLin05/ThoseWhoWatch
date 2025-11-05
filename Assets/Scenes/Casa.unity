@@ -1345,13 +1345,18 @@ MonoBehaviour:
   - respuestas: []
     saltar: 
   siguienteFila: 
-  texto: {fileID: 1922163444}
-  fondoTexto: {fileID: 0}
   botones:
   - {fileID: 1938963265}
   - {fileID: 1097888928}
   continueButton: {fileID: 366131300}
   botonesFila: []
+  texto: {fileID: 1922163444}
+  fondoTexto: {fileID: 0}
+  puntero: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
+  textoInteraccion2: {fileID: 0}
 --- !u!65 &447222608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1792,6 +1797,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 413641693525522568, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 413641693525522568, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 413641693525522568, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 413641693525522568, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1042199005792137860, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1870,6 +1891,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1042199005792137860, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5354573064368230955, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}

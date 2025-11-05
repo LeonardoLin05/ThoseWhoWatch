@@ -200,6 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractTalk
   pensamientoObjeto: "Pens\xE9 que ser\xEDa un arma de verdad, pero result\xF3 ser
     meramente de decoraci\xF3n"
+  gameObject: {fileID: 0}
 --- !u!65 &90875247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -527,6 +528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractTalk
   pensamientoObjeto: "Como estaba vac\xEDa no me quedaba m\xE1s remedio que salir
     a comprar"
+  gameObject: {fileID: 1441956241}
 --- !u!65 &145273836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -861,6 +863,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   desbloquear: 0
   indice: -1
+  fila: 0
 --- !u!65 &225075780
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -890,6 +893,85 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225075777}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &234346260
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1642639523}
+    m_Modifications:
+    - target: {fileID: 2474787545215348958, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+      propertyPath: m_Name
+      value: MuroInvisible (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2474787545215348958, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653312915599690938, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+      propertyPath: pensamiento_mostrar
+      value: "Ten\xEDa much\xEDsima sed asi que lo mejor era volver a casa para beber
+        un trago de agua"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345932527851078094, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345932527851078094, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345932527851078094, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 57.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345932527851078094, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.5887
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345932527851078094, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345932527851078094, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345932527851078094, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345932527851078094, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345932527851078094, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345932527851078094, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345932527851078094, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345932527851078094, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918222530459229145, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5534872799978167898, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
 --- !u!4 &252915283 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6345932527851078094, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
@@ -1286,6 +1368,7 @@ MonoBehaviour:
   evento:
     m_PersistentCalls:
       m_Calls: []
+  textoInteraccion2: {fileID: 0}
 --- !u!65 &447222608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1564,6 +1647,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   desbloquear: 0
   indice: -1
+  fila: 0
 --- !u!65 &464500345
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1834,7 +1918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4855593679155064623, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5354573064368230955, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_Name
@@ -2513,8 +2597,8 @@ MonoBehaviour:
   - lineas:
     - "\xBFEsa parcela de ah\xED atr\xE1s es suya? "
   - lineas:
-    - "\xBFY acabas de volver a salir de cada?"
-    - "Lo digo porque hace momento he visto a una persona salir pero la he saludado
+    - "\xBFY acabas de volver a salir de casa?"
+    - "Lo digo porque un hace momento he visto a una persona salir pero la he saludado
       y no me ha contestado \xBFEras tu?"
   - lineas:
     - No estoy muy enterada del tema porque estoy ya mayor...
@@ -2658,6 +2742,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  textoInteraccion2: {fileID: 0}
 --- !u!114 &595363842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4609,6 +4694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractTalk
   pensamientoObjeto: Desgraciadamnete el agua del grifo no era potable
+  gameObject: {fileID: 0}
 --- !u!65 &906006432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5697,6 +5783,16 @@ MonoBehaviour:
   markerStartUVY: 0.49917603
   customPoints: []
   handleObject: {fileID: 0}
+--- !u!1 &1441956241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2474787545215348958, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+  m_PrefabInstance: {fileID: 234346260}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1441956242 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6345932527851078094, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+  m_PrefabInstance: {fileID: 234346260}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1444920573 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6345932527851078094, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
@@ -6761,6 +6857,7 @@ Transform:
   - {fileID: 1948467881}
   - {fileID: 1071214823}
   - {fileID: 1444920573}
+  - {fileID: 1441956242}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1643545025
@@ -14707,14 +14804,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c324188504f846499d25b0b4cfe30f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
-  pensamiento_mostrar: "Estaba sediento as\xED que decid\xED ir a la nevera a por
-    un poco de agua "
+  pensamiento_mostrar: "Tom\xE9 el bus para llegar ya que no me apetec\xEDa andar
+    mucho a estas horas"
   pensamiento: {fileID: 0}
   oneTimeOnly: 1
   activaTrigger: {fileID: 0}
   npc: {fileID: 0}
   desbloquear: 0
   indice: -1
+  fila: 0
 --- !u!65 &1812844000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15299,7 +15397,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5f741c2e50a441644ba118703539198e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 395.73654
+      value: 432.45
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f741c2e50a441644ba118703539198e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15307,7 +15405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f741c2e50a441644ba118703539198e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 589.5075
+      value: 457.05
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f741c2e50a441644ba118703539198e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15752,7 +15850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2953313818409056956, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 443.83
+      value: 443.591
       objectReference: {fileID: 0}
     - target: {fileID: 2953313818409056956, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15760,7 +15858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2953313818409056956, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 574.657
+      value: 573.608
       objectReference: {fileID: 0}
     - target: {fileID: 2953313818409056956, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16058,7 +16156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &919132147561858723
 Animator:
   serializedVersion: 7
