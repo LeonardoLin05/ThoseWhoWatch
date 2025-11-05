@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c324188504f846499d25b0b4cfe30f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
-  pensamiento_mostrar: "No deber\xEDa ir por aqu\xED"
+  pensamiento_mostrar: "No deber\xEDa adentrarme en el bosque"
   pensamiento: {fileID: 0}
   oneTimeOnly: 0
   activaTrigger: {fileID: 0}
