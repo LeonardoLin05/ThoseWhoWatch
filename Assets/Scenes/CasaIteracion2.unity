@@ -181,6 +181,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7080858968819370759, guid: e711389017b7936479ed42454596049c, type: 3}
   m_PrefabInstance: {fileID: 305976024}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &90875241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1661686806259504, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
+  m_PrefabInstance: {fileID: 1082466865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &90875246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90875241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be13629eda97185429087c29679d4dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTalk
+  pensamientoObjeto: "Pens\xE9 que ser\xEDa un arma de verdad, pero result\xF3 ser
+    meramente de decoraci\xF3n"
+--- !u!65 &90875247
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90875241}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.6578294, y: 0.194218, z: 0.06731701}
+  m_Center: {x: -0.15561855, y: -0.036646, z: 0.007965501}
 --- !u!1001 &104001600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -439,6 +479,83 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5064250214245962, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
   m_PrefabInstance: {fileID: 512514322}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &145273833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 145273834}
+  - component: {fileID: 145273837}
+  - component: {fileID: 145273836}
+  - component: {fileID: 145273835}
+  m_Layer: 6
+  m_Name: InteractuableNevera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &145273834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145273833}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -4.201, y: 0.902, z: -2.003}
+  m_LocalScale: {x: -0.5287824, y: 1, z: 0.62146086}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 682766750}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &145273835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145273833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be13629eda97185429087c29679d4dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTalk
+  pensamientoObjeto: "Como estaba vac\xEDa no me quedaba m\xE1s remedio que salir
+    a comprar"
+--- !u!65 &145273836
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145273833}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &145273837
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145273833}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!28 &148859614
 Texture2D:
   m_ObjectHideFlags: 0
@@ -691,6 +808,88 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7080858968819370759, guid: e711389017b7936479ed42454596049c, type: 3}
   m_PrefabInstance: {fileID: 1954815877}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &225075777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 225075778}
+  - component: {fileID: 225075781}
+  - component: {fileID: 225075780}
+  - component: {fileID: 225075779}
+  m_Layer: 0
+  m_Name: "TriggerBa\xF1o"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &225075778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225075777}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -2.919, y: 0.902, z: 2.07}
+  m_LocalScale: {x: -1.409147, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 682766750}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &225075779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225075777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c324188504f846499d25b0b4cfe30f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
+  pensamiento_mostrar: "No era el ba\xF1o m\xE1s limpio, pero hacia su funci\xF3n"
+  pensamiento: {fileID: 0}
+  oneTimeOnly: 1
+  activaTrigger: {fileID: 0}
+  npc: {fileID: 0}
+  desbloquear: 0
+  indice: -1
+--- !u!65 &225075780
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225075777}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &225075781
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225075777}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &252915283 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6345932527851078094, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
@@ -1311,6 +1510,89 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7080858968819370759, guid: e711389017b7936479ed42454596049c, type: 3}
   m_PrefabInstance: {fileID: 837452708}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &464500342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 464500343}
+  - component: {fileID: 464500346}
+  - component: {fileID: 464500345}
+  - component: {fileID: 464500344}
+  m_Layer: 0
+  m_Name: TriggerSed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &464500343
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464500342}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 1.951, y: 0.902, z: 0.49}
+  m_LocalScale: {x: 5.935, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 682766750}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &464500344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464500342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c324188504f846499d25b0b4cfe30f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
+  pensamiento_mostrar: "Estaba sediento as\xED que decid\xED ir a la nevera a por
+    un poco de agua "
+  pensamiento: {fileID: 0}
+  oneTimeOnly: 1
+  activaTrigger: {fileID: 0}
+  npc: {fileID: 0}
+  desbloquear: 0
+  indice: -1
+--- !u!65 &464500345
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464500342}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &464500346
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464500342}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &467771418 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7080858968819370759, guid: e711389017b7936479ed42454596049c, type: 3}
@@ -1557,6 +1839,82 @@ PrefabInstance:
     - target: {fileID: 5354573064368230955, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: lineas.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[0]'
+      value: "Para todo el que est\xE9 leyendo esto"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[1]'
+      value: 'Hola, mi nombre es Goto  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[2]'
+      value: Goto Setien\n\n
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[3]'
+      value: "Y lo que voy a contar a continuaci\xF3n me pas\xF3 hace aproximadamente
+        1 a\xF1o\\n "
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[4]'
+      value: "Ahora que he superado el trauma que me gener\xF3 aquella situaci\xF3n,
+        creo que estoy listo para contar lo sucedido aquella noche"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[5]'
+      value: saltar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[6]'
+      value: "Estaba harto de la ciudad y su gente, del estr\xE9s que esta me produc\xEDa  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[7]'
+      value: 'Aparte odiaba a mi jefe, y para que mentir, mi trabajo en general tambien\n '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[8]'
+      value: Necesitaba un cambio urgente\n
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[9]'
+      value: "Por lo que la \xFAnica soluci\xF3n que encontr\xE9 fue mudarme lejos
+        de todo, dejar mi vida atr\xE1s y comenzar una nueva, pero esta vez con la
+        tranquilidad que estuve buscando todo este tiempo "
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[10]'
+      value: saltar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[11]'
+      value: "Y ese lugar acab\xF3 siendo una casita aparentemente acogedora en el
+        bosque"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[12]'
+      value: "No ten\xEDa vecinos y me pod\xEDa ganar el sueldo cortando le\xF1a"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[13]'
+      value: "Todo parec\xEDa ir bien, disfrutaba del amanecer y del sonido de los
+        p\xE1jaros cada ma\xF1ana\\n\\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[14]'
+      value: "Pero como no, con mi mala suerte, lo que parec\xEDa ser tan de luz
+        y color escond\xEDa algo oscuro"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: 'lineas.Array.data[15]'
+      value: "Y al final ese deseo hecho realidad se esfum\xF3 a los pocos d\xEDas
+        de mudarme"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4233,6 +4591,45 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7080858968819370759, guid: e711389017b7936479ed42454596049c, type: 3}
   m_PrefabInstance: {fileID: 885783184}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &906006427 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884355705425796, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
+  m_PrefabInstance: {fileID: 1082466865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &906006431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906006427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be13629eda97185429087c29679d4dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTalk
+  pensamientoObjeto: Desgraciadamnete el agua del grifo no era potable
+--- !u!65 &906006432
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906006427}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.24025303, y: 0.164033, z: 0.28549105}
+  m_Center: {x: -0.00018298256, y: 0.0479905, z: -0.12890303}
 --- !u!1 &934962994 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1927800148362820, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
@@ -4650,6 +5047,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1661686806259504, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1771591110766920, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -4657,6 +5058,10 @@ PrefabInstance:
     - target: {fileID: 1803977323799612, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884355705425796, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1927800148362820, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
       propertyPath: m_Layer
@@ -4766,12 +5171,37 @@ PrefabInstance:
     - {fileID: 64952830322587560, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
     - {fileID: 64503389639507682, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
     - {fileID: 64145879506772046, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
+    - {fileID: 64356752726814068, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4950517545189902, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1579132849}
+    - targetCorrespondingSourceObject: {fileID: 4950517545189902, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 464500343}
+    - targetCorrespondingSourceObject: {fileID: 4950517545189902, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 225075778}
+    - targetCorrespondingSourceObject: {fileID: 4950517545189902, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 145273834}
+    - targetCorrespondingSourceObject: {fileID: 4950517545189902, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1812843998}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1661686806259504, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 90875247}
+    - targetCorrespondingSourceObject: {fileID: 1661686806259504, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 90875246}
+    - targetCorrespondingSourceObject: {fileID: 1884355705425796, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 906006432}
+    - targetCorrespondingSourceObject: {fileID: 1884355705425796, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 906006431}
     - targetCorrespondingSourceObject: {fileID: 1927800148362820, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 934962999}
@@ -14231,6 +14661,89 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7080858968819370759, guid: e711389017b7936479ed42454596049c, type: 3}
   m_PrefabInstance: {fileID: 1987828097}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1812843997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1812843998}
+  - component: {fileID: 1812844001}
+  - component: {fileID: 1812844000}
+  - component: {fileID: 1812843999}
+  m_Layer: 0
+  m_Name: TriggerBus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1812843998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812843997}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.65, y: -6, z: -44.3}
+  m_LocalScale: {x: 40.832207, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 682766750}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1812843999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812843997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c324188504f846499d25b0b4cfe30f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
+  pensamiento_mostrar: "Estaba sediento as\xED que decid\xED ir a la nevera a por
+    un poco de agua "
+  pensamiento: {fileID: 0}
+  oneTimeOnly: 1
+  activaTrigger: {fileID: 0}
+  npc: {fileID: 0}
+  desbloquear: 0
+  indice: -1
+--- !u!65 &1812844000
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812843997}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1812844001
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812843997}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1816391553 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7080858968819370759, guid: e711389017b7936479ed42454596049c, type: 3}
