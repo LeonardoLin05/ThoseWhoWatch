@@ -1,42 +1,36 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine;
-using System;
 
 public class InteractTeleport : MonoBehaviour, IInteractable
 {
 	private Animator fade;
 
-	private string mensajeInteraccion;
-
 	void OnEnable()
 	{
-		mensajeInteraccion = "[E] para Viajar";
+		gameObject.layer = 6;
 	}
 
     void OnDisable()
-    {
-		mensajeInteraccion = "";
+	{
+		gameObject.layer = 0;
     }
 
     void Start()
 	{
-		fade = GameObject.Find("Fade").GetComponent<Animator>();
+		fade = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
 	}
 
     public IEnumerator interact()
 	{
-		if(isActiveAndEnabled)
-		{
-			Interaction.Instance.enabled = false;
-			fade.SetTrigger("Fade");
-			yield return new WaitForSeconds(1.5f);
-			SceneManager.LoadScene("Gasolinera"); 
-        }
+		Interaction.Instance.enabled = false;
+		fade.SetTrigger("Fade");
+		yield return new WaitForSeconds(1.5f);
+		SceneManager.LoadScene("Gasolinera"); 
 	}
 
 	public string MensajeInteraccion()
 	{
-		return mensajeInteraccion;
+		return "[E] para Viajar";
 	}
 }

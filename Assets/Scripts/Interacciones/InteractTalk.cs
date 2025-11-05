@@ -6,8 +6,7 @@ public class InteractTalk : MonoBehaviour, IInteractable
 {
     [SerializeField] private string pensamientoObjeto;
     private TextMeshProUGUI pensamiento;
-    public GameObject gameObject; 
-    
+    public GameObject gameObjectDesactivar;
     void Start()
     {
         pensamiento = GameObject.Find("Pensamiento").GetComponent<TextMeshProUGUI>();
@@ -24,9 +23,9 @@ public class InteractTalk : MonoBehaviour, IInteractable
             pensamiento.text = "";
         }
 
-        if (gameObject != null)
+        if (gameObjectDesactivar != null)
         {
-            gameObject.SetActive(false);
+            gameObjectDesactivar.SetActive(false);
         }
 
         

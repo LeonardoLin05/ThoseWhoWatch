@@ -109,11 +109,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         TalkZoomMoveCamera.Instance.StartZoomMovement(50f);
 
         // Bloqueamos movimientos de camara, personaje e interaccion
-        CameraMovement.Instance.enabled = false;
-        PlayerMovement.Instance.enabled = false;
-        HeadbobSystem.Instance.enabled = false;
-        Interaction.Instance.enabled = false;
-        Zoom.Instance.enabled = false;
+        ActivarInstances(false);
 
         // Desbloquamos el cursor
         Cursor.lockState = CursorLockMode.None;
@@ -199,14 +195,13 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     private void MostrarOpciones(string[] opciones)
     {
-        //EstadoBoton boton;
+        EstadoBoton boton;
 
         bool opcionesVisibles = false;
         int limite = Mathf.Min(botones.Length, botonesFila[fila].estado.Length, opciones.Length);
 
         for (int i = 0; i < limite; i++)
         {
-            /* Otra posible implementación, no se si es mejor o igual que la de abajo
             boton = botonesFila[fila].estado[i];
 
             if (boton != EstadoBoton.Oculto)
@@ -218,24 +213,11 @@ public class InteractNPCs : MonoBehaviour, IInteractable
                     opcionesVisibles = true;
                     botones[i].interactable = true;
                 }
-                else if (boton == EstadoBoton.Bloqueado) botones[i].interactable = false;
-            }
-            */
-            if (botonesFila[fila].estado[i] == EstadoBoton.Visible)
-            {
-                opcionesVisibles = true;
-                botones[i].gameObject.SetActive(true);
-                botones[i].interactable = true;
-                botones[i].GetComponentInChildren<TextMeshProUGUI>().text = opciones[i];
-            }
-            else if (botonesFila[fila].estado[i] == EstadoBoton.Bloqueado)
-            {
-                botones[i].gameObject.SetActive(true);
-                botones[i].interactable = false;
-                botones[i].GetComponentInChildren<TextMeshProUGUI>().text = opciones[i];
+                // Si el botón esta bloqueado
+                else botones[i].interactable = false;
             }
         }
-        // Mostramos el botón de continuar en caso de que no hay ninguna opción en Visible
+        // Mostramos el botón de continuar en caso de que no haya ninguna opción en Visible
         if (!opcionesVisibles)
         {
             SetContinueButtonVisible(true);
@@ -244,9 +226,10 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     private void SeleccionRespuesta(int sigFila)
     {
-        for(int i = 0; i < botones.Length; i++)
+        // Hacemos que ningún boton se vea en pantalla
+        foreach(Button boton in botones)
         {
-            botones[i].gameObject.SetActive(false);
+            boton.gameObject.SetActive(false);
         }
 
         fila = opciones[fila].saltar[sigFila];
@@ -257,12 +240,12 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     private void FinDialogo()
     {
+        // Ejecutamos el evento si es que hay uno asignado
+        // NOTA: solo se ejecuta si es la última conversación que puedes
+        // hacer con el NPC, es decir, que ya no puedes volver a hablar con el NPC de nuevo
         if(gameObject.layer == 0 && evento != null)
         {
-            Debug.Log("acabe");
             evento.Invoke();
-            // Para que el evento solo pueda ocurrir una vez
-            evento = null;
         }
 
         texto.gameObject.SetActive(false);
@@ -277,11 +260,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         TalkZoomMoveCamera.Instance.StopZoomMovement();
 
         // Desbloqueamos moviemientos de camara, jugador e interaccion
-        CameraMovement.Instance.enabled = true;
-        HeadbobSystem.Instance.enabled = true;
-        PlayerMovement.Instance.enabled = true;
-        Interaction.Instance.enabled = true;
-        Zoom.Instance.enabled = true;
+        ActivarInstances(true);
 
         Interaction.Instance.enabled = false;
         esperandoMovimiento = true;
@@ -323,18 +302,28 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         }
     }
 
+    /// <summary>
+    /// Hace que un botón sea visible
+    /// </summary>
+    /// <param name="fila"> La fila donde se encuentra el botón </param>
+    /// <param name="i"> Que botón de la fila es el que hay que activar </param>
     public void ActivarBoton(int fila, int i)
     {
         botonesFila[fila].estado[i] = EstadoBoton.Visible;
     }
 
+    /// <summary>
+    /// Hace que un botón se vuelva oculto
+    /// </summary>
+    /// <param name="fila"> La fila donde se encuentra el botón </param>
+    /// <param name="i"> Que botón de la fila es el que hay que activar </param>
     public void DesactivarBoton(int fila, int i)
     {
         botonesFila[fila].estado[i] = EstadoBoton.Oculto;
     }
 
     private void SetContinueButtonVisible(bool visible)
-    {        
+    {
         if (visible)
         {
             continueGroup.alpha = 1f;
@@ -352,6 +341,21 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             ExecuteEvents.Execute(continueButton.gameObject, pointer, ExecuteEvents.pointerExitHandler);
         }
     }
+    
+    /// <summary>
+    /// Activa o desactiva una serie de scripts
+    /// </summary>
+    /// <param name="activar"> true para activar y false para desactivar </param>
+    /// NOTA: no quitar el static o el public, se hace uso de esta función en NPCReact
+    public static void ActivarInstances(bool activar)
+    {
+        PlayerMovement.Instance.enabled = activar;
+        CameraMovement.Instance.enabled = activar;
+        HeadbobSystem.Instance.enabled = activar;
+        Interaction.Instance.enabled = activar;
+        Zoom.Instance.enabled = activar;
+    }
+
     public string MensajeInteraccion()
     {
         return "[E] para Hablar";
