@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class NPCReact : MonoBehaviour
 {
@@ -10,16 +11,50 @@ public class NPCReact : MonoBehaviour
     // El NPC que va a reaccionar
     [SerializeField] private Transform NPC;
     // Fondo dialogo
-    [SerializeField] private Image fondoDialogo;
+    [SerializeField] private GameObject fondoDialogo;
+    // Texto interaccion (no la 2)
+    [SerializeField] private TextMeshProUGUI textoInteraccion;
     // Texto del dialogo
     [SerializeField] private TextMeshProUGUI texto;
     // Boton de respuesta/continuar
     [SerializeField] private Button boton;
+    // Puntero en pantalla
+    [SerializeField] private GameObject puntero;
+
+    private CanvasGroup continueGroup;
+
+    private string oldText;
 
     // Lleva la cuenta de cuantas veces se ha ejecutado el script
     // para ir aumentando a la siguiente frase que se vaya a decir
     // Ejemplo funcionalidad: para que vaya diciendo frases cada vez más enfadado
     private static int vecesEjecutadas = 0;
+
+    void Awake()
+    {
+        if (fondoDialogo == null)
+        {
+            fondoDialogo = GameObject.FindGameObjectWithTag("FondoDialogo");
+        }
+        if (texto == null)
+        {
+            texto = GameObject.FindGameObjectWithTag("TextoDialogo").GetComponent<TextMeshProUGUI>();
+        }
+    }
+
+    void Start()
+    {
+        if (puntero == null)
+        {
+            puntero = GameObject.FindGameObjectWithTag("Puntero");
+        }
+        if (textoInteraccion == null)
+        {
+            textoInteraccion = GameObject.FindGameObjectWithTag("TextoInteractuar").GetComponent<TextMeshProUGUI>();
+        }
+        
+        continueGroup = boton.GetComponent<CanvasGroup>();
+    }
 
     void OnCollisionEnter(Collision collision)
     {
@@ -47,6 +82,17 @@ public class NPCReact : MonoBehaviour
         TalkZoomMoveCamera.Instance.StartZoomMovement(150f);
 
         texto.gameObject.SetActive(true);
+        fondoDialogo.SetActive(true);
+
+        puntero.SetActive(false);
+
+        // Comprobamos si el texto de interaccion tiene algo escrito
+        if (textoInteraccion.text != "")
+        {
+            // Lo guardamos para reestablecerlo más adelante
+            oldText = textoInteraccion.text;
+            textoInteraccion.text = "";
+        }
 
         // Para que el texto aparezca de poco a poco animado
         StartCoroutine(TextoAnimado(frase[vecesEjecutadas]));
@@ -73,10 +119,20 @@ public class NPCReact : MonoBehaviour
 
         // Configuraciones del boton
         boton.onClick.RemoveAllListeners();
-        boton.gameObject.SetActive(false);
+        SetContinueButtonVisible(false);
 
         texto.text = "";
         texto.gameObject.SetActive(false);
+        fondoDialogo.SetActive(false);
+
+        puntero.SetActive(true);
+
+        if(oldText != null)
+        {
+            // Restablecemos el texto que había en interacción
+            textoInteraccion.text = oldText;
+            oldText = null;
+        }
 
         // Liberamos al jugador de mirar al NPC
         TalkZoomMoveCamera.Instance.StopZoomMovement();
@@ -91,9 +147,9 @@ public class NPCReact : MonoBehaviour
             texto.text += letra;
             yield return new WaitForSecondsRealtime(0.04f);
         }
-        boton.gameObject.SetActive(true);
+        SetContinueButtonVisible(true);
     }
-    
+
     private void ActivarInstances(bool activar)
     {
         PlayerMovement.Instance.enabled = activar;
@@ -101,5 +157,25 @@ public class NPCReact : MonoBehaviour
         HeadbobSystem.Instance.enabled = activar;
         Interaction.Instance.enabled = activar;
         Zoom.Instance.enabled = activar;
+    }
+    
+    private void SetContinueButtonVisible(bool visible)
+    {
+        if (visible)
+        {
+            continueGroup.alpha = 1f;
+            continueGroup.interactable = true;
+            continueGroup.blocksRaycasts = true;
+        }
+        else
+        {
+            continueGroup.alpha = 0f;
+            continueGroup.interactable = false;
+            continueGroup.blocksRaycasts = false;
+            EventSystem.current.SetSelectedGameObject(null);
+            boton.animator.Play("Normal", 0, 0f);
+            var pointer = new PointerEventData(EventSystem.current);
+            ExecuteEvents.Execute(boton.gameObject, pointer, ExecuteEvents.pointerExitHandler);
+        }
     }
 }

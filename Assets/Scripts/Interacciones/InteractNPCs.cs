@@ -46,11 +46,14 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     [SerializeField] private UnityEvent evento;
 
     [SerializeField] private TextMeshProUGUI textoInteraccion2;
+
+    private CanvasGroup continueGroup;
+
     private string oldText;
     
     private int fila = 0;
     private int i = 0;
-    private CanvasGroup continueGroup;
+    
     private bool esperandoMovimiento = false;
 
     void Awake()
@@ -67,7 +70,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         {
             puntero = GameObject.FindGameObjectWithTag("Puntero");
         }
-        if(textoInteraccion2)
+        if(textoInteraccion2 == null)
         {
             textoInteraccion2 = GameObject.FindGameObjectWithTag("TextoInteractuar2").GetComponent<TextMeshProUGUI>();
         }
@@ -320,20 +323,18 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         }
     }
 
-    public void ActivarBoton(int i)
+    public void ActivarBoton(int fila, int i)
     {
         botonesFila[fila].estado[i] = EstadoBoton.Visible;
     }
 
-    public void DesactivarBoton(int i)
+    public void DesactivarBoton(int fila, int i)
     {
         botonesFila[fila].estado[i] = EstadoBoton.Oculto;
     }
 
     private void SetContinueButtonVisible(bool visible)
-    {
-        continueGroup = continueButton.GetComponent<CanvasGroup>();
-        
+    {        
         if (visible)
         {
             continueGroup.alpha = 1f;

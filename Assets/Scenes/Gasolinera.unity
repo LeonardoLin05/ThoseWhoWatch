@@ -14393,6 +14393,33 @@ MonoBehaviour:
   markerStartUVY: 0.31305695
   customPoints: []
   handleObject: {fileID: 0}
+--- !u!1 &164237218 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4855593679155064623, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+  m_PrefabInstance: {fileID: 118158138418793806}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &164237223
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164237218}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be89b4aad8bbf264585e52eda46b51a6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &168076242 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 234600720659386375, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
@@ -17293,6 +17320,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   desbloquear: 0
   indice: -1
+  fila: 0
 --- !u!65 &975009463
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18759,6 +18787,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   desbloquear: 0
   indice: -1
+  fila: 0
 --- !u!65 &1208647931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21518,14 +21547,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractNPCs
   dialogos:
   - lineas:
-    - "Buenas \xBFEn qu\xE9 puedo ayudarte?"
+    - "\xBFEn qu\xE9 puedo ayudarte?"
   - lineas:
     - "Primer pasillo segunda estanter\xEDa a la izquierda"
+    - Y por favor, ten cuidado de no tirar nada al suelo
   - lineas:
     - "\xBFNada m\xE1s?"
   - lineas:
     - "Pues ser\xEDan 1.50 euros"
-  - lineas: []
   opciones:
   - respuestas:
     - "Estaba buscando unas botellas de agua \xBFD\xF3nde se encuentran?"
@@ -24220,11 +24249,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1950102996020841233, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_fontSize
-      value: 45
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 1950102996020841233, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_fontSizeBase
-      value: 45
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_AnchorMax.y
@@ -24241,6 +24270,10 @@ PrefabInstance:
     - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122081135607380285, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_Transition
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4855593679155064623, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_IsActive
@@ -24285,7 +24318,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4855593679155064623, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 164237223}
   m_SourcePrefab: {fileID: 100100000, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
 --- !u!4 &119043678762439143
 Transform:
@@ -87696,6 +87732,7 @@ MonoBehaviour:
   npc: {fileID: 0}
   desbloquear: 0
   indice: 0
+  fila: 0
 --- !u!65 &7140484233772170216
 BoxCollider:
   m_ObjectHideFlags: 0

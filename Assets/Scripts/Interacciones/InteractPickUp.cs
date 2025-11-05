@@ -7,6 +7,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     private Transform mano;
 
     private bool lanzar = false;
+    private bool interactuar = false;
     private static bool ENMANO = false;
 
     private Transform posicion;
@@ -15,13 +16,15 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     private TextMeshProUGUI texto;
     public InteractNPCs npc;
 
-    [SerializeField] private bool desbloquear;
+    [SerializeField] private bool desbloquear = false;
     [SerializeField] private int indice;
+    [SerializeField] private int fila;
 
     public IEnumerator interact()
     {
         if (!ENMANO)
         {
+            interactuar = true;
             enabled = true;
         }
         yield break;
@@ -53,11 +56,11 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     // Update is called once per frame
     void Update()
     {
-        if (!ENMANO)
+        if (interactuar && !ENMANO)
         {
             Recoger();
         }
-        else
+        else if(ENMANO)
         {
             CameraMovement.Instance.GirarObjeto(transform);
             if (Input.GetKeyDown(KeyCode.G))
@@ -93,6 +96,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
         boxCollider.enabled = false;
 
         lanzar = false;
+        interactuar = false;
         ENMANO = true;
 
         posicion = mano;
@@ -100,7 +104,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
 
         if (desbloquear)
         {
-            npc.ActivarBoton(indice);
+            npc.ActivarBoton(fila, indice);
         }
     }
 
@@ -118,7 +122,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
 
         if (desbloquear)
         {
-            npc.DesactivarBoton(indice);
+            npc.DesactivarBoton(fila, indice);
         }
     }
 }
