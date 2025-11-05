@@ -12,8 +12,9 @@ public class InnerThoughts : MonoBehaviour
 
     [SerializeField] private GameObject activaTrigger;
     [SerializeField] private InteractNPCs npc;
-    [SerializeField] private bool desbloquear;
-    [SerializeField] private int indice = -1;
+    [SerializeField] private bool desbloquear = false;
+    [SerializeField] private int indice;
+    [SerializeField] private int fila;
 
     void Start()
     {
@@ -41,9 +42,9 @@ public class InnerThoughts : MonoBehaviour
             activaTrigger.SetActive(true);
         }
 
-        if (desbloquear && indice >= 0)
+        if (desbloquear)
         {
-            npc.ActivarBoton(indice);
+            npc.ActivarBoton(fila, indice);
         }
 
         VariablesGlobales.EN_PENSAMIENTO = false;
