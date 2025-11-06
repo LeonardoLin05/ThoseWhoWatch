@@ -197,6 +197,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13716,6 +13729,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13794,6 +13820,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14576,6 +14615,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14778,6 +14830,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14922,6 +14987,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
       value: Water3 (5)
@@ -16655,6 +16733,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
       value: Water3 (3)
@@ -16870,6 +16961,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
       value: Water3 (4)
@@ -17579,6 +17683,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19062,6 +19179,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19361,6 +19491,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19386,6 +19529,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
       value: Water3
@@ -19459,6 +19615,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
       value: Water3 (2)
@@ -19532,6 +19701,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
       value: Water3 (1)
@@ -19585,6 +19767,81 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+--- !u!1 &1486415382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1486415383}
+  - component: {fileID: 1486415385}
+  - component: {fileID: 1486415384}
+  m_Layer: 0
+  m_Name: Pensamiento_llegar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1486415383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486415382}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.34, y: 1.42, z: 4.8}
+  m_LocalScale: {x: 50, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2267790971212272533}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1486415384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486415382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c324188504f846499d25b0b4cfe30f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
+  pensamiento_mostrar: "Sent\xEDa una sensaci\xF3n de incomodez de lo tranquilo que
+    estaba la gasolinera"
+  pensamiento: {fileID: 0}
+  oneTimeOnly: 1
+  activaTrigger: {fileID: 0}
+  npc: {fileID: 0}
+  desbloquear: 0
+  indice: 0
+  fila: 0
+--- !u!65 &1486415385
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486415382}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1491547662
 GameObject:
   m_ObjectHideFlags: 0
@@ -19956,6 +20213,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21661,6 +21931,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21739,6 +22022,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22006,6 +22302,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22356,6 +22665,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22635,6 +22957,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23316,6 +23651,19 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 104940450}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[1]'
+      value: Para, no hace gracia lo que estas haciendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[3]'
+      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[4]'
+      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
+        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45003,6 +45351,7 @@ Transform:
   - {fileID: 6140557396902875421}
   - {fileID: 6140557397347198704}
   - {fileID: 2077907276679515673}
+  - {fileID: 1486415383}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -87.041, z: 0}
 --- !u!4 &2269675043605892679

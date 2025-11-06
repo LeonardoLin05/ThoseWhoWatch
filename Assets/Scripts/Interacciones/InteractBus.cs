@@ -41,7 +41,6 @@ public class InteractBus : MonoBehaviour, IInteractable
 
             SceneManager.LoadScene("Gasolinera");
         }
-        VariablesGlobales.INTERACTUAR = true;
     }
 
     public string MensajeInteraccion()

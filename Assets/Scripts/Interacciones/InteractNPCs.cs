@@ -280,7 +280,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         foreach(char letra in dial)
         {
             texto.text += letra;
-            yield return new WaitForSecondsRealtime(0.04f);
+            yield return VariablesGlobales.esperarTexto;
         }
         
         // Hacer que los botones aparezcan después de que el texto termine

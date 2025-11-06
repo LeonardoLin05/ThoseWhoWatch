@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EsconderseArmario : MonoBehaviour, IInteractable
 {
-	[SerializeField] private Transform teleportEntrada;
+    [SerializeField] private Transform teleportEntrada;
 	[SerializeField] private Transform teleportSalida;
 
 	private Transform player;
@@ -12,6 +12,8 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 	private Material materialArmario;
 
 	private Animator fade;
+
+	private WaitForSeconds _waitForSeconds1_5 = new(1.5f);
 
 	// Variable global para saber si estamos dentro o fuera del armario;
 	// NOTA: se puede llamar desde otras clases pero no cambiar su valor desde ellas
@@ -35,7 +37,7 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 			DENTRO_ARMARIO = true;
 
 			fade.SetTrigger("Fade");
-			yield return new WaitForSeconds(1.5f);
+			yield return _waitForSeconds1_5;
 
 			Interaction.Instance.enabled = true;
 
@@ -53,7 +55,7 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 			Interaction.Instance.enabled = false;
 
 			fade.SetTrigger("Fade");
-			yield return new WaitForSeconds(1.5f);
+			yield return _waitForSeconds1_5;
 
 			PlayerMovement.Instance.enabled = true;
 			HeadbobSystem.Instance.enabled = true;

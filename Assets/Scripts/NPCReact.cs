@@ -145,7 +145,7 @@ public class NPCReact : MonoBehaviour
         foreach (char letra in frase)
         {
             texto.text += letra;
-            yield return new WaitForSecondsRealtime(0.04f);
+            yield return VariablesGlobales.esperarTexto;
         }
         SetContinueButtonVisible(true);
     }

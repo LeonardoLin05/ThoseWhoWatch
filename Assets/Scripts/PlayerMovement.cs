@@ -29,12 +29,6 @@ public class PlayerMovement : MonoBehaviour
         characterController = GetComponent<CharacterController>();
     }
 
-    void Start()
-    {
-        // Para carga de nueva escena principalmente
-        VariablesGlobales.INTERACTUAR = true;
-    }
-
     void Update()
     {
         // Aplicamos la gravedad

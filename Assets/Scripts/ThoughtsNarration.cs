@@ -12,7 +12,6 @@ public class ThoughtsNarration : MonoBehaviour
     private Animator fade;
 
     private int numeroLinea;
-    
 
     void Awake()
     {
@@ -29,8 +28,18 @@ public class ThoughtsNarration : MonoBehaviour
 
         fade = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         textoInteractuar2 = GameObject.Find("texto_interactuar2").GetComponent<TextMeshProUGUI>();
-        textoInteractuar2.text = "[Espacio] para avanzar";
-        pensamientos.SetText(lineas[0]);
+
+        // Comprobamos si lineas tiene algo escrito
+        if (lineas.Length > 0)
+        {
+            textoInteractuar2.text = "[Espacio] para avanzar";
+            pensamientos.SetText(lineas[0]);
+        }
+        // En caso contrario salimos del pensamiento
+        else
+        {
+            SalirPensamiento();
+        }
     }
 
     // Update is called once per frame
@@ -41,19 +50,12 @@ public class ThoughtsNarration : MonoBehaviour
             AvanzarPensamiento();
         }
     }
-    
+
     private void AvanzarPensamiento()
     {
         if (numeroLinea >= lineas.Length)
         {
-            fade.SetTrigger("FadeOut");
-            textoInteractuar2.text = "";
-            gameObject.SetActive(false);
-
-            CameraMovement.Instance.enabled = true;
-            PlayerMovement.Instance.enabled = true;
-            Interaction.Instance.enabled = true;
-            Zoom.Instance.enabled = true;
+            SalirPensamiento();
         }
         else
         {
@@ -67,7 +69,19 @@ public class ThoughtsNarration : MonoBehaviour
             {
                 pensamientos.text = pensamientos.text + "\n" + lineas[numeroLinea];
             }
-            numeroLinea++; 
+            numeroLinea++;
         }
+    }
+    
+    private void SalirPensamiento()
+    {
+        fade.SetTrigger("FadeOut");
+        textoInteractuar2.text = "";
+        gameObject.SetActive(false);
+
+        CameraMovement.Instance.enabled = true;
+        PlayerMovement.Instance.enabled = true;
+        Interaction.Instance.enabled = true;
+        Zoom.Instance.enabled = true;
     }
 }
