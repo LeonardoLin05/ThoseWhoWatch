@@ -102,7 +102,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
         posicion = mano;
         texto.text = "[G] para Lanzar";
 
-        if (desbloquear)
+        if (npc.gameObject.layer == 6 && desbloquear)
         {
             npc.ActivarBoton(fila, indice);
         }
@@ -120,7 +120,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
 
         ENMANO = false;
 
-        if (desbloquear)
+        if (npc.gameObject.layer == 6 && desbloquear)
         {
             npc.DesactivarBoton(fila, indice);
         }
