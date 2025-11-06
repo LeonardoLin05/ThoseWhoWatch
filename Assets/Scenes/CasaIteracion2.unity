@@ -527,7 +527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractTalk
   pensamientoObjeto: "Como estaba vac\xEDa no me quedaba m\xE1s remedio que salir
-    a comprar"
+    a comprar."
   gameObjectDesactivar: {fileID: 1441956241}
 --- !u!65 &145273836
 BoxCollider:
@@ -558,52 +558,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145273833}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!28 &148859614
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 4
-  m_Width: 12
-  m_Height: 12
-  m_CompleteImageSize: 760
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 4
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 1
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 760
-  _typelessdata: 0000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc0000000000000000000000000000000000000000ffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffcc0000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc000000000000000000000000000000000000000000000000000000007f7f7f667f7f7f66000000000000000000000000000000007f7f7f667f7f7f6600000000000000007f7f7f667f7f7f66bfbfbf99bfbfbf997f7f7f667f7f7f667f7f7f667f7f7f66bfbfbf99bfbfbf997f7f7f667f7f7f6600000000000000007f7f7f667f7f7f66000000000000000000000000000000007f7f7f667f7f7f660000000000000000000000007f7f7f66000000007f7f7f66bfbfbf997f7f7f66000000007f7f7f6600000000bfbfbf99
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &161809020
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,7 +810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c324188504f846499d25b0b4cfe30f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
-  pensamiento_mostrar: "No era el ba\xF1o m\xE1s limpio, pero hacia su funci\xF3n"
+  pensamiento_mostrar: "No era el ba\xF1o m\xE1s limpio, pero hac\xEDa su funci\xF3n."
   pensamiento: {fileID: 0}
   oneTimeOnly: 1
   activaTrigger: {fileID: 0}
@@ -1221,6 +1175,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e711389017b7936479ed42454596049c, type: 3}
+--- !u!28 &323002852
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 4
+  m_Width: 12
+  m_Height: 12
+  m_CompleteImageSize: 760
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 4
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 1
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 760
+  _typelessdata: 0000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc0000000000000000000000000000000000000000ffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffcc0000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffccffffffcc000000000000000000000000000000000000000000000000000000007f7f7f667f7f7f66000000000000000000000000000000007f7f7f667f7f7f6600000000000000007f7f7f667f7f7f66bfbfbf99bfbfbf997f7f7f667f7f7f667f7f7f667f7f7f66bfbfbf99bfbfbf997f7f7f667f7f7f6600000000000000007f7f7f667f7f7f66000000000000000000000000000000007f7f7f667f7f7f660000000000000000000000007f7f7f66000000007f7f7f66bfbfbf997f7f7f66000000007f7f7f6600000000bfbfbf99
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!114 &366131300 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2908892798569661324, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
@@ -1331,6 +1331,52 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2088157564}
   m_SourcePrefab: {fileID: 100100000, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
+--- !u!28 &409139753
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 4
+  m_Width: 2
+  m_Height: 2
+  m_CompleteImageSize: 20
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 2
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 1
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 20
+  _typelessdata: 414141ff414141ff414141ff414141ff414141ff
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &447222605 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5f741c2e50a441644ba118703539198e, type: 3}
@@ -1640,7 +1686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
   pensamiento_mostrar: "Estaba sediento as\xED que decid\xED ir a la nevera a por
-    un poco de agua "
+    un poco de agua."
   pensamiento: {fileID: 0}
   oneTimeOnly: 1
   activaTrigger: {fileID: 0}
@@ -1804,22 +1850,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 413641693525522568, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413641693525522568, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413641693525522568, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413641693525522568, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1042199005792137860, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1900,26 +1930,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4855593679155064623, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5354573064368230955, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1930,25 +1940,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[0]'
-      value: "Para todo el que est\xE9 leyendo esto"
+      value: "Para todo el que est\xE9 leyendo esto."
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[1]'
-      value: 'Hola, mi nombre es Goto  '
+      value: Hola, mi nombre es Goto,
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[2]'
-      value: Goto Setien\n\n
+      value: "Goto Seti\xE9n.\\n\\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[3]'
       value: "Y lo que voy a contar a continuaci\xF3n me pas\xF3 hace aproximadamente
-        1 a\xF1o\\n "
+        1 a\xF1o.\\n "
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[4]'
       value: "Ahora que he superado el trauma que me gener\xF3 aquella situaci\xF3n,
-        creo que estoy listo para contar lo sucedido aquella noche"
+        creo que estoy listo para contar lo sucedido aquella noche."
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[5]'
@@ -1956,21 +1966,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[6]'
-      value: "Estaba harto de la ciudad y su gente, del estr\xE9s que esta me produc\xEDa  "
+      value: "Estaba harto de la ciudad y su gente, del estr\xE9s que esta me produc\xEDa."
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[7]'
-      value: 'Aparte odiaba a mi jefe, y para que mentir, mi trabajo en general tambien\n '
+      value: "Aparte odiaba a mi jefe, y para que mentir, mi trabajo en general tambi\xE9n.\\n "
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[8]'
-      value: Necesitaba un cambio urgente\n
+      value: Necesitaba un cambio urgente.\n
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[9]'
       value: "Por lo que la \xFAnica soluci\xF3n que encontr\xE9 fue mudarme lejos
         de todo, dejar mi vida atr\xE1s y comenzar una nueva, pero esta vez con la
-        tranquilidad que estuve buscando todo este tiempo "
+        tranquilidad que estuve buscando todo este tiempo."
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[10]'
@@ -1978,27 +1988,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[11]'
-      value: "Y ese lugar acab\xF3 siendo una casita aparentemente acogedora en el
-        bosque"
+      value: "Ese lugar acab\xF3 siendo una casita aparentemente acogedora en el
+        bosque."
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[12]'
-      value: "No ten\xEDa vecinos y me pod\xEDa ganar el sueldo cortando le\xF1a"
+      value: "No ten\xEDa vecinos y me pod\xEDa ganar el sueldo cortando le\xF1a."
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[13]'
       value: "Todo parec\xEDa ir bien, disfrutaba del amanecer y del sonido de los
-        p\xE1jaros cada ma\xF1ana\\n\\n"
+        p\xE1jaros cada ma\xF1ana.\\n\\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[14]'
       value: "Pero como no, con mi mala suerte, lo que parec\xEDa ser tan de luz
-        y color escond\xEDa algo oscuro"
+        y color escond\xEDa algo oscuro."
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[15]'
       value: "Y al final ese deseo hecho realidad se esfum\xF3 a los pocos d\xEDas
-        de mudarme"
+        de mudarme."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045936228529506665, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2348,6 +2362,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555469952}
   m_Mesh: {fileID: 1839924270}
+--- !u!28 &576190462
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 4
+  m_Width: 2
+  m_Height: 2
+  m_CompleteImageSize: 20
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 2
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 1
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 20
+  _typelessdata: 383838ff383838ff383838ff383838ff383838ff
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1001 &584548969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2591,102 +2651,102 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractNPCs
   dialogos:
   - lineas:
-    - "Buenas jovenzuelo, \xBFQue le trae por aqu\xED?"
+    - "Buenas jovenzuelo, \xBFQu\xE9 le trae por aqu\xED?"
   - lineas:
-    - "\xBFOsea que eres nuevo por la zona no? "
+    - "\xBFOsea que eres nuevo por la zona no?"
   - lineas:
     - "\xBFEsa parcela de ah\xED atr\xE1s es suya? "
   - lineas:
     - "\xBFY acabas de volver a salir de casa?"
     - "Lo digo porque un hace momento he visto a una persona salir pero la he saludado
-      y no me ha contestado \xBFEras tu?"
+      y no me ha contestado \xBFEras t\xFA?"
   - lineas:
     - No estoy muy enterada del tema porque estoy ya mayor...
     - "Pero corre el rumor de que hay algo extra\xF1o en este bosque seg\xFAn la
-      gente que vive en los alrededores  "
+      gente que vive en los alrededores."
   - lineas:
     - Sobre todo ruidos en las noches, como si fueran gritos.
     - "Pero a\xFAn m\xE1s raro es que dicen que la gente que entra desaparece sin
-      dejar rastro.  "
+      dejar rastro."
   - lineas:
     - "Estaba de camino para visitar a mi nieto en la ciudad, pero el autob\xFAs
-      en el que iba se averi\xF3 al poco de salir y se di\xF3 media vuelta"
-    - 'El conductor me dijo que me bajara en esta parada que en nada iba a pasar
-      otro  '
+      en el que iba se averi\xF3 al poco de salir y se di\xF3 media vuelta."
+    - El conductor me dijo que me bajara en esta parada que en nada iba a pasar otro.
   - lineas:
-    - "Ni idea joven, si supiera se lo dir\xEDa. Por si acaso no se fie de nadie
-      que vea en el bosque, de nadie  "
+    - "Ni idea joven, si supiera se lo dir\xEDa.."
+    - Por si acaso no se fie de nadie que vea en el bosque.
+    - De nadie.
   - lineas:
-    - ' Pienso lo mismo, pero por si acaso ve con cuidado por lo que pueda pasar,
-      nunca se sabe'
+    - ' Pienso lo mismo, pero por si acaso vaya con cuidado por lo que pueda pasar,
+      nunca se sabe.'
   - lineas:
-    - "No mucho, o eso creo, a veces pierdo la noci\xF3n del tiempo"
+    - "No mucho, o eso creo, a veces pierdo la noci\xF3n del tiempo."
     - "Aunque le tengo que comentar que el conductor de antes era un poco particular,
       no llevaba el t\xEDpico uniforme de trabajo y no paraba de mirarme, como si
-      me estuviera vigilando por alg\xFAn motivo. "
-    - En verdad agradezco haberme bajado, mejor esperar al siguiente
+      me estuviera vigilando por alg\xFAn motivo."
+    - En verdad agradezco haberme bajado, mejor esperar al siguiente.
   - lineas:
-    - "Dios te oiga porque se me est\xE1 acabando la paciencia"
+    - "Dios te oiga, porque se me est\xE1 acabando la paciencia."
     - "Aunque le tengo que comentar que el conductor de antes era un poco particular,
       no llevaba el t\xEDpico uniforme de trabajo y no paraba de mirarme, como si
-      me estuviera vigilando por alg\xFAn motivo. "
+      me estuviera vigilando por alg\xFAn motivo."
     - En verdad agradezco haberme bajado, mejor esperar al siguiente
   - lineas:
-    - "Entiendo su preocupaci\xF3n pero no necesito la ayuda de otros, estoy bien"
+    - "Entiendo su preocupaci\xF3n pero no necesito la ayuda de otros, estoy bien."
   - lineas:
-    - Mire que coincidencia, parece que ya viene el atubus a lo lejos,  buena suerte
+    - "Mire que coincidencia, parece que ya viene el autob\xFAs a lo lejos,  buena
+      suerte."
   - lineas:
-    - "Si la vista no me falla ah\xED pone que es el 591 el que lleva a la gasolinera"
+    - "Si la vista no me falla ah\xED pone que es el 591 el que lleva a la gasolinera."
     - "Yo estoy esperando al 571 que es el que me dej\xF3 aqu\xED tirada y el que
-      me dijeron en la estaci\xF3n de buses que llevaba a la ciuadad"
+      me dijeron en la estaci\xF3n de buses que llevaba a la ciuadad."
   - lineas:
-    - Muy segura
+    - Muy segura.
   - lineas:
-    - Adios
+    - Adios.
   opciones:
   - respuestas:
-    - Me he mudado hace poco
-    - Voy a comprar un par de botellas que me he quedado sin agua
-    - Acabar dialogo
-    saltar: 01000000020000000f000000
+    - Me he mudado hace poco.
+    - Voy a comprar un par de botellas que me he quedado sin agua.
+    saltar: 0100000002000000
   - respuestas:
-    - "\xBFSi por? "
+    - "\xBFS\xED por? "
     saltar: 03000000
   - respuestas:
-    - "\xBFSi por? "
+    - "\xBFS\xED por? "
     saltar: 03000000
   - respuestas:
-    - "\xBFEh? No se que habr\xE1 visto pero no era yo"
+    - "\xBFC\xF3mo? no se que habr\xE1 visto pero no era yo."
     saltar: 04000000
   - respuestas:
-    - "\xBFComo, \xBFA que se refiere? \xBFQue cosas extra\xF1as exactamente?"
-    - "\xBFPero, y usted porque est\xE1 aqu\xED sabiendo eso? "
+    - "\xBFC\xF3mo, \xBFA que se refiere? \xBFQu\xE9 cosas extra\xF1as exactamente?"
+    - "\xBFPero, usted porque est\xE1 aqu\xED sabiendo eso? "
     saltar: 0500000006000000
   - respuestas:
     - "\xBFY no se han denunciado esas desapariciones? \xBFNadie hace nada al respecto?"
     - "No parece muy real, yo creo que los lugare\xF1os intentan meter miedo a la
-      gente de fuera para que no vengan y que siga siendo un lugar tranquilo"
+      gente de fuera para que no vengan y que siga siendo un lugar tranquilo."
     saltar: 0700000008000000
   - respuestas:
-    - "\xBFCuanto tiempo lleva esperando?"
+    - "\xBFCu\xE1nto tiempo lleva esperando?"
     - "Si es real lo que ha dicho antes, en nada va a anochecer, esperemos que pase
-      cuanto antes el autob\xFAs"
+      cuanto antes el autob\xFAs."
     saltar: 090000000a000000
   - respuestas:
-    - "Gracias por el consejo supongo...\_ \xBFY usted a donde va?"
+    - "Gracias por el consejo supongo...\_ \xBFUsted a donde va?"
     saltar: 06000000
   - respuestas:
-    - "Lo tendr\xE9 en cuenta... \xBFY usted a donde va?"
+    - "Lo tendr\xE9 en cuenta... \xBFUsted a donde va?"
     saltar: 06000000
   - respuestas:
-    - " Pienso que no deber\xEDa viajar sola"
+    - " Pienso que no deber\xEDa viajar sola."
     saltar: 0b000000
   - respuestas:
-    - " Pienso que no deber\xEDa viajar sola"
+    - " Pienso que no deber\xEDa viajar sola."
     saltar: 0b000000
   - respuestas:
     - "Igualmente me gustar\xEDa acompa\xF1arla pero me bajo en la siguiente parada,
-      la de la gasolinera, y la ciudad queda muy lejos"
+      la de la gasolinera, y la ciudad queda muy lejos."
     saltar: 0c000000
   - respuestas:
     - "\xBFBuena suerte? \xBFUsted no sube? "
@@ -2700,7 +2760,7 @@ MonoBehaviour:
   - respuestas: []
     saltar: 
   - respuestas:
-    - "Lo tendr\xE9 en cuenta... \xBFY usted a donde va?"
+    - "Lo tendr\xE9 en cuenta... \xBFUsted a donde va?"
     saltar: 06000000
   siguienteFila: 00000000
   botones:
@@ -3010,52 +3070,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4950517545189902, guid: b4d0d3252571eb9468266301b65df7d2, type: 3}
   m_PrefabInstance: {fileID: 1082466865}
   m_PrefabAsset: {fileID: 0}
---- !u!28 &683191668
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 4
-  m_Width: 2
-  m_Height: 2
-  m_CompleteImageSize: 20
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 2
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 1
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 20
-  _typelessdata: 383838ff383838ff383838ff383838ff383838ff
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!4 &700728319 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7080858968819370759, guid: e711389017b7936479ed42454596049c, type: 3}
@@ -3410,6 +3424,52 @@ MonoBehaviour:
   markerStartUVY: 0.4962492
   customPoints: []
   handleObject: {fileID: 0}
+--- !u!28 &794776081
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 4
+  m_Width: 10
+  m_Height: 2
+  m_CompleteImageSize: 112
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 4
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 1
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 112
+  _typelessdata: ffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffcc
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &801311797
 GameObject:
   m_ObjectHideFlags: 0
@@ -3991,11 +4051,11 @@ MonoBehaviour:
   infoTexture: {fileID: 0}
   infoTexture2: {fileID: 0}
   infoTextures: []
-  plusSignTexture: {fileID: 148859614}
-  minSignTexture: {fileID: 2079637844}
-  signPostHeaderBG: {fileID: 683191668}
-  signPostListBG: {fileID: 1902050280}
-  signPostListSelBG: {fileID: 842542104}
+  plusSignTexture: {fileID: 323002852}
+  minSignTexture: {fileID: 794776081}
+  signPostHeaderBG: {fileID: 576190462}
+  signPostListBG: {fileID: 409139753}
+  signPostListSelBG: {fileID: 1347259851}
   editorSkin: 0
   showAllPrefabs: 1
   standardPrefabsFlag: 0
@@ -4568,52 +4628,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7080858968819370759, guid: e711389017b7936479ed42454596049c, type: 3}
   m_PrefabInstance: {fileID: 1223081198}
   m_PrefabAsset: {fileID: 0}
---- !u!28 &842542104
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 4
-  m_Width: 2
-  m_Height: 2
-  m_CompleteImageSize: 20
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 2
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 1
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 20
-  _typelessdata: 4d4d4dff4d4d4dff4d4d4dff4d4d4dff4d4d4dff
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &885783184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5475,6 +5489,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Footsteps
   audioFootsteps: {fileID: 8300000, guid: 9f1642ed00669024fb473c3a2c4597ea, type: 3}
+--- !u!28 &1347259851
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 4
+  m_Width: 2
+  m_Height: 2
+  m_CompleteImageSize: 20
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 2
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 1
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 20
+  _typelessdata: 4d4d4dff4d4d4dff4d4d4dff4d4d4dff4d4d4dff
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!4 &1357549871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6345932527851078094, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
@@ -14805,7 +14865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
   pensamiento_mostrar: "Tom\xE9 el bus para llegar ya que no me apetec\xEDa andar
-    mucho a estas horas"
+    mucho a estas horas."
   pensamiento: {fileID: 0}
   oneTimeOnly: 1
   activaTrigger: {fileID: 0}
@@ -15170,52 +15230,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7080858968819370759, guid: e711389017b7936479ed42454596049c, type: 3}
   m_PrefabInstance: {fileID: 1625344174}
   m_PrefabAsset: {fileID: 0}
---- !u!28 &1902050280
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 4
-  m_Width: 2
-  m_Height: 2
-  m_CompleteImageSize: 20
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 2
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 1
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 20
-  _typelessdata: 414141ff414141ff414141ff414141ff414141ff
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &1908924966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15896,52 +15910,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1298798349}
   m_SourcePrefab: {fileID: 100100000, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
---- !u!28 &2079637844
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 4
-  m_Width: 10
-  m_Height: 2
-  m_CompleteImageSize: 112
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 4
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 1
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 112
-  _typelessdata: ffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffccffffffcc
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &2088157562 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100132, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}

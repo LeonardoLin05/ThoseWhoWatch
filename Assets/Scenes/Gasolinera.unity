@@ -14432,33 +14432,6 @@ MonoBehaviour:
   markerStartUVY: 0.31305695
   customPoints: []
   handleObject: {fileID: 0}
---- !u!1 &164237218 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4855593679155064623, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-  m_PrefabInstance: {fileID: 118158138418793806}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &164237223
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164237218}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: be89b4aad8bbf264585e52eda46b51a6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &168076242 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 234600720659386375, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
@@ -16564,6 +16537,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000011162724236, guid: df9c3c7aaeeef154bb7184ad6f179ece, type: 3}
   m_PrefabInstance: {fileID: 136051648}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &770739172 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6934253831184577036, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+  m_PrefabInstance: {fileID: 118158138418793806}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &773014486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17417,7 +17401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c324188504f846499d25b0b4cfe30f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
-  pensamiento_mostrar: "Por alg\xFAn motivo decid\xED entrar en el ba\xF1o"
+  pensamiento_mostrar: "Por alg\xFAn motivo decid\xED entrar en el ba\xF1o."
   pensamiento: {fileID: 566252360}
   oneTimeOnly: 1
   activaTrigger: {fileID: 0}
@@ -18897,7 +18881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c324188504f846499d25b0b4cfe30f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
-  pensamiento_mostrar: "Sab\xEDa que no deb\xEDa meterme pero a\xFAn as\xED lo hice"
+  pensamiento_mostrar: "Sab\xEDa que no deb\xEDa meterme pero a\xFAn as\xED lo hice."
   pensamiento: {fileID: 566252360}
   oneTimeOnly: 1
   activaTrigger: {fileID: 0}
@@ -19812,8 +19796,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c324188504f846499d25b0b4cfe30f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
-  pensamiento_mostrar: "Sent\xEDa una sensaci\xF3n de incomodez de lo tranquilo que
-    estaba la gasolinera"
+  pensamiento_mostrar: "Sent\xEDa una sensaci\xF3n de incomodez. de lo tranquilo
+    que estaba la gasolinera"
   pensamiento: {fileID: 0}
   oneTimeOnly: 1
   activaTrigger: {fileID: 0}
@@ -21819,31 +21803,47 @@ MonoBehaviour:
   - lineas:
     - "\xBFEn qu\xE9 puedo ayudarte?"
   - lineas:
-    - "Primer pasillo segunda estanter\xEDa a la izquierda"
-    - Y por favor, ten cuidado de no tirar nada al suelo
+    - "Primer pasillo segunda estanter\xEDa a la izquierda."
+    - Y por favor, ten cuidado de no tirar nada al suelo.
   - lineas:
     - "\xBFNada m\xE1s?"
   - lineas:
-    - "Pues ser\xEDan 1.50 euros"
+    - "Pues ser\xEDan 2 euros."
+  - lineas:
+    - Pero...
+    - Esto es salsa.
+    - "\xBFEst\xE1s seguro que quer\xEDas esto?"
+  - lineas:
+    - " El agua est\xE1 en el primer pasillo segunda estanter\xEDa a la izquierda."
   opciones:
   - respuestas:
     - "Estaba buscando unas botellas de agua \xBFD\xF3nde se encuentran?"
-    - Comprar
-    saltar: 0100000002000000
+    - Quiero comprar esto.
+    - Quiero comprar esta botella de agua.
+    saltar: 010000000200000004000000
   - respuestas: []
     saltar: 
   - respuestas:
     - No
     saltar: 03000000
-  siguienteFila: 0000000000000000
+  - respuestas: []
+    saltar: 
+  - respuestas:
+    - "Perd\xF3n me he equivocado"
+    - "No hay problema, beber\xE9 salsa entonces."
+    saltar: 0500000003000000
+  siguienteFila: ffffffff00000000ffffffffffffffffffffffff00000000
   botones:
   - {fileID: 1943179574}
   - {fileID: 168076242}
+  - {fileID: 770739172}
   continueButton: {fileID: 841668919}
   botonesFila:
-  - estado: 0100000000000000
+  - estado: 010000000000000000000000
   - estado: 
   - estado: 0100000000000000
+  - estado: 
+  - estado: 0100000001000000
   texto: {fileID: 0}
   fondoTexto: {fileID: 685402820}
   puntero: {fileID: 0}
@@ -24731,14 +24731,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1950102996020841233, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: m_fontSize
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1950102996020841233, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 35
-      objectReference: {fileID: 0}
     - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -24755,25 +24747,9 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4122081135607380285, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: m_Transition
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4855593679155064623, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4906949736606311075, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5354573064368230955, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5354573064368230955, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7083849911922385223, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_IsActive
@@ -24787,25 +24763,10 @@ PrefabInstance:
       propertyPath: lineas.Array.size
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: 'lineas.Array.data[0]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: 'lineas.Array.data[1]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      propertyPath: 'lineas.Array.data[2]'
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4855593679155064623, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 164237223}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
 --- !u!4 &119043678762439143
 Transform:
@@ -77940,6 +77901,7 @@ GameObject:
   - component: {fileID: 7140484233772170216}
   - component: {fileID: 7140484233772170215}
   - component: {fileID: 7140484233772170217}
+  - component: {fileID: 7140484233772170218}
   m_Layer: 6
   m_Name: Sauce.008
   m_TagString: Untagged
@@ -88214,9 +88176,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7cebaadc20cdcc47a78d8a92cdbe41a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractPickUp
-  npc: {fileID: 0}
-  desbloquear: 0
-  indice: 0
+  npc: {fileID: 1766346737}
+  desbloquear: 1
+  indice: 2
   fila: 0
 --- !u!65 &7140484233772170216
 BoxCollider:
@@ -88266,6 +88228,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &7140484233772170218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6006562652138160663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75549f2f0d1d84b4088d0c1eb134dc58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCReact
+  frase:
+  - No hagas eso
+  - Para, no hace gracia lo que estas haciendo
+  - Me estas ENFADANDO
+  - "\xDALTIMO AVISO o llamo al vigilante que pasa"
+  - EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO QUE TE
+    OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+  NPC: {fileID: 1766346736}
+  fondoDialogo: {fileID: 0}
+  textoInteraccion: {fileID: 0}
+  texto: {fileID: 104940450}
+  boton: {fileID: 841668919}
+  puntero: {fileID: 0}
 --- !u!4 &7141954367264296471
 Transform:
   m_ObjectHideFlags: 0
