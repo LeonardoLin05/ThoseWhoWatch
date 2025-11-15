@@ -31,6 +31,11 @@ public class BotonFila
 
 public class InteractNPCs : MonoBehaviour, IInteractable
 {
+    // Por si quieres que el gameObject esté desactivado al empezar la escena
+    [SerializeField] bool activarStart = true;
+    // Para la velocidad de giro de la cámara que hay para mirar al NPC
+    [SerializeField] float velocidadGiro = 50f;
+
     [SerializeField] private DialogoFilas[] dialogos;
     [SerializeField] private DialogosOpcion[] opciones;
     [SerializeField] private int[] siguienteFila;
@@ -42,6 +47,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     [SerializeField] private TextMeshProUGUI texto;
     [SerializeField] private GameObject fondoTexto;
     [SerializeField] private GameObject puntero;
+    [SerializeField] private Transform npcHips;
 
     [SerializeField] private UnityEvent evento;
 
@@ -87,6 +93,10 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         fondoTexto.SetActive(false);
         texto.gameObject.SetActive(false);
         SetContinueButtonVisible(false);
+        if(!activarStart)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     void Update()
@@ -105,8 +115,8 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         fondoTexto.SetActive(true);
         puntero.gameObject.SetActive(false);
 
-        TalkZoomMoveCamera.Instance.setCabeza(transform);
-        TalkZoomMoveCamera.Instance.StartZoomMovement(50f);
+        TalkZoomMoveCamera.Instance.setCabeza(npcHips);
+        TalkZoomMoveCamera.Instance.StartZoomMovement(velocidadGiro);
 
         // Bloqueamos movimientos de camara, personaje e interaccion
         ActivarInstances(false);
@@ -361,15 +371,21 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     /// </summary>
     public void EmpezarConversacion()
     {
+        
+        if(!gameObject.activeInHierarchy)
+        {
+            gameObject.SetActive(true);
+        }
+        
         StartCoroutine(interact());
     }
 
     /// <summary>
     /// Para llamarlo en el inspector a través de un UnityEvent
     /// </summary>
-    public void DestroyGameObject()
+    public void DestroyGameObject(float time)
     {
-        Destroy(gameObject);
+        Destroy(gameObject, time);
     }
 
     public string MensajeInteraccion()

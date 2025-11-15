@@ -24,8 +24,6 @@ public class InteractDoor : MonoBehaviour, IInteractable
         {
             open = !open;
             door.SetBool("open", open);
-            door.SetTrigger("interact");
-            Debug.Log("El objecto ha hecho algo");
         }
         else
         {
@@ -41,6 +39,18 @@ public class InteractDoor : MonoBehaviour, IInteractable
         yield return new WaitForSeconds(2f);
         pensamientos.text = "";
         VariablesGlobales.EN_PENSAMIENTO = false;
+    }
+
+    // IGNORAR: para evento gasolinera
+    public void EventoGasolineraEncerrar()
+    {
+        if(open)
+        {
+            open = !open;
+        }
+        door.SetBool("open", open);
+        bloqueada = true;
+        frasePuertaBloqueada = "Me había encerrado con llave";
     }
 
     public string MensajeInteraccion()
