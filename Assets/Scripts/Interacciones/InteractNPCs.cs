@@ -356,6 +356,22 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         Zoom.Instance.enabled = activar;
     }
 
+    /// <summary>
+    /// Para llamarlo en el inspector a través de un UnityEvent
+    /// </summary>
+    public void EmpezarConversacion()
+    {
+        StartCoroutine(interact());
+    }
+
+    /// <summary>
+    /// Para llamarlo en el inspector a través de un UnityEvent
+    /// </summary>
+    public void DestroyGameObject()
+    {
+        Destroy(gameObject);
+    }
+
     public string MensajeInteraccion()
     {
         return "[E] para Hablar";
