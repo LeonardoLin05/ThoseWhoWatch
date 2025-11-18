@@ -120,7 +120,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
 
         ENMANO = false;
 
-        if (npc.gameObject.layer == 6 && desbloquear)
+        if (npc != null && npc.gameObject.layer == 6 && desbloquear)
         {
             npc.DesactivarBoton(fila, indice);
         }

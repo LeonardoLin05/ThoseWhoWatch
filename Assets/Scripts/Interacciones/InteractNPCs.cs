@@ -59,8 +59,6 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     
     private int fila = 0;
     private int i = 0;
-    
-    private bool esperandoMovimiento = false;
 
     void Awake()
     {
@@ -97,14 +95,16 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         {
             gameObject.SetActive(false);
         }
+        enabled = false;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (esperandoMovimiento && (Mathf.Abs(Input.GetAxis("Mouse X")) > 0.001f || Mathf.Abs(Input.GetAxis("Mouse Y")) > 0.001f))
+        if(Input.GetMouseButtonDown(0))
         {
-            Interaction.Instance.enabled = true;
-            esperandoMovimiento = false;
+            StopAllCoroutines();
+            texto.text = dialogos[fila].lineas[i];
+            botonesMostrar();
         }
     }
 
@@ -180,8 +180,8 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
             if (fila < siguienteFila.Length && siguienteFila[fila] >= 0)
             {
-                FinDialogo();
                 fila = siguienteFila[fila];
+                FinDialogo();
             }
             else
             {
@@ -272,9 +272,6 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         // Desbloqueamos moviemientos de camara, jugador e interaccion
         ActivarInstances(true);
 
-        Interaction.Instance.enabled = false;
-        esperandoMovimiento = true;
-
         if(oldText != null)
         {
             // Restablecemos el texto de la interacción 2
@@ -285,6 +282,8 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     public IEnumerator textoAnimar(string dial)
     {
+        enabled = true;
+
         texto.text = "";
 
         foreach(char letra in dial)
@@ -292,8 +291,13 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             texto.text += letra;
             yield return VariablesGlobales.esperarTexto;
         }
-        
-        // Hacer que los botones aparezcan después de que el texto termine
+        botonesMostrar();
+    }
+
+    // Esta función se usa para mostrar los botones de continuar o respuesta después de que
+    // el texto animado haya terminado
+    private void botonesMostrar()
+    {
         if (i < dialogos[fila].lineas.Length - 1)
         {
             SetContinueButtonVisible(true);
@@ -310,6 +314,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
                 SetContinueButtonVisible(true);
             }
         }
+        enabled = false;
     }
 
     /// <summary>

@@ -5,7 +5,7 @@ public class TalkZoomMoveCamera : MonoBehaviour
     public static TalkZoomMoveCamera Instance { get; private set; }
 
     private Camera camara;
-    private Quaternion cabeza;
+    private Transform cabeza;
 
     private readonly float ZOOMFOV = 50;
     private readonly float NOZOOMFOV= 100;
@@ -31,12 +31,12 @@ public class TalkZoomMoveCamera : MonoBehaviour
     void Update()
     {
         camara.fieldOfView = Mathf.Lerp(camara.fieldOfView, ZOOMFOV, 2 * Time.deltaTime);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, cabeza, rotationSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(cabeza.position - transform.position), rotationSpeed * Time.deltaTime);
     }
 
     public void setCabeza(Transform cabeza)
     {
-        this.cabeza = Quaternion.LookRotation(cabeza.position - transform.position);
+        this.cabeza = cabeza;
     }
 
     /// <summary>
