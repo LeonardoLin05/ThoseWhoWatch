@@ -18306,6 +18306,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999540813}
   m_Mesh: {fileID: -2613621128415660359, guid: 1616628cb9ea70b4abed0c4fc41990e2, type: 3}
+--- !u!1 &2006033078 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2474787545215348958, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
+  m_PrefabInstance: {fileID: 689367088}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2006691931
 GameObject:
   m_ObjectHideFlags: 0
@@ -18354,7 +18359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractTalk
   pensamientoObjeto: "Como estaba vac\xEDa no me quedaba m\xE1s remedio que salir
     a comprar"
-  gameObjectDesactivar: {fileID: 0}
+  gameObjectDesactivar: {fileID: 2006033078}
   evento:
     m_PersistentCalls:
       m_Calls: []
