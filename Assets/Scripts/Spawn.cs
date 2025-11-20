@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Pajaro : MonoBehaviour
+public class Spawn : MonoBehaviour
 {
     /*
     [SerializeField] private GameObject grupoPajaros;
@@ -30,22 +30,13 @@ public class Pajaro : MonoBehaviour
     }
     */
 
-    [SerializeField] private GameObject PajaroObjeto;
-    private Animator pajaroAnimation;
+    [SerializeField] private GameObject gameObject;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Activar()
     {
-        pajaroAnimation = PajaroObjeto.GetComponent<Animator>();
-        PajaroObjeto.SetActive(false);
-    }
-
-    public void Spawn()
-    {
-        if (!PajaroObjeto.activeSelf)
+        if (!gameObject.activeSelf)
         {
-            PajaroObjeto.SetActive(true);
+            gameObject.SetActive(true);
         }
-        pajaroAnimation.SetTrigger("Fly");
     }
 }
