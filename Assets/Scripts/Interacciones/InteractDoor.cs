@@ -6,7 +6,7 @@ using UnityEngine;
 public class InteractDoor : MonoBehaviour, IInteractable
 {
     public bool bloqueada;
-    [SerializeField] private string frasePuertaBloqueada;
+    [SerializeField] private string pensamientoPuertaBloqueada;
 
     private Animator door;
     private bool open = false;
@@ -18,7 +18,7 @@ public class InteractDoor : MonoBehaviour, IInteractable
         pensamientos = GameObject.Find("Pensamiento").GetComponent<TextMeshProUGUI>();
     }
 
-    public IEnumerator interact()
+    public void interact()
     {
         if (!bloqueada)
         {
@@ -27,18 +27,13 @@ public class InteractDoor : MonoBehaviour, IInteractable
         }
         else
         {
-            if(!VariablesGlobales.EN_PENSAMIENTO)
-            StartCoroutine(puertaBloqueada());
+            puertaBloqueada();
         }
-        yield break;
     }
 
-    private IEnumerator puertaBloqueada()
+    private void puertaBloqueada()
     {
-        pensamientos.text = frasePuertaBloqueada;
-        yield return new WaitForSeconds(2f);
-        pensamientos.text = "";
-        VariablesGlobales.EN_PENSAMIENTO = false;
+        Thoughts.Instance.StartThoughts(pensamientoPuertaBloqueada);
     }
 
     // IGNORAR: para evento gasolinera
@@ -50,7 +45,7 @@ public class InteractDoor : MonoBehaviour, IInteractable
         }
         door.SetBool("open", open);
         bloqueada = true;
-        frasePuertaBloqueada = "Me había encerrado con llave";
+        pensamientoPuertaBloqueada = "Me había encerrado con llave";
     }
 
     public string MensajeInteraccion()

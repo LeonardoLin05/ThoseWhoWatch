@@ -21,13 +21,18 @@ public class InteractTeleport : MonoBehaviour, IInteractable
 		fade = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
 	}
 
-    public IEnumerator interact()
+    public void interact()
 	{
-		Interaction.Instance.enabled = false;
+		StartCoroutine(Teleport());
+	}
+
+	private IEnumerator Teleport()
+    {
+        Interaction.Instance.enabled = false;
 		fade.SetTrigger("Fade");
 		yield return new WaitForSeconds(1.5f);
 		SceneManager.LoadScene("Gasolinera"); 
-	}
+    }
 
 	public string MensajeInteraccion()
 	{

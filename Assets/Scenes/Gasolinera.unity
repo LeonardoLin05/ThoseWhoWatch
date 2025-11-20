@@ -265,17 +265,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13807,17 +13824,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13934,17 +13968,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14726,17 +14777,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14945,17 +15013,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15114,17 +15199,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
@@ -16187,7 +16289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
   bloqueada: 1
-  frasePuertaBloqueada: Estaba cerrado con llave
+  pensamientoPuertaBloqueada: 
 --- !u!114 &520844452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16544,7 +16646,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
   pensamiento_mostrar: "Me parec\xEDo que esa figura dejo algo en la parada"
-  pensamiento: {fileID: 0}
   oneTimeOnly: 1
   activaTrigger: {fileID: 0}
   npc: {fileID: 0}
@@ -17194,7 +17295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
   bloqueada: 0
-  frasePuertaBloqueada: 
+  pensamientoPuertaBloqueada: 
 --- !u!1001 &732840108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17435,7 +17536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
   bloqueada: 0
-  frasePuertaBloqueada: 
+  pensamientoPuertaBloqueada: 
 --- !u!95 &780612164
 Animator:
   serializedVersion: 7
@@ -17500,17 +17601,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
@@ -17766,17 +17884,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
@@ -18006,7 +18141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
   bloqueada: 0
-  frasePuertaBloqueada: 
+  pensamientoPuertaBloqueada: 
 --- !u!1 &925769219
 GameObject:
   m_ObjectHideFlags: 0
@@ -18395,7 +18530,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
   pensamiento_mostrar: "Por alg\xFAn motivo decid\xED entrar en el ba\xF1o."
-  pensamiento: {fileID: 566252360}
   oneTimeOnly: 1
   activaTrigger: {fileID: 0}
   npc: {fileID: 0}
@@ -18560,7 +18694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
   bloqueada: 0
-  frasePuertaBloqueada: 
+  pensamientoPuertaBloqueada: 
 --- !u!1001 &991947419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18696,17 +18830,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19031,7 +19182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
   bloqueada: 0
-  frasePuertaBloqueada: 
+  pensamientoPuertaBloqueada: 
 --- !u!33 &1058149222
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -19923,7 +20074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
   bloqueada: 0
-  frasePuertaBloqueada: 
+  pensamientoPuertaBloqueada: 
 --- !u!1 &1205677185
 GameObject:
   m_ObjectHideFlags: 0
@@ -19972,7 +20123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
   bloqueada: 1
-  frasePuertaBloqueada: "Parec\xEDa estar cerrada con llave"
+  pensamientoPuertaBloqueada: 
 --- !u!95 &1205677188
 Animator:
   serializedVersion: 7
@@ -20260,17 +20411,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20742,17 +20910,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20780,17 +20965,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
@@ -20870,17 +21072,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
@@ -20960,17 +21179,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     - target: {fileID: 5702638773402735112, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: m_Name
@@ -21076,7 +21312,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
   pensamiento_mostrar: "Sent\xEDa una sensaci\xF3n de incomodez. de lo tranquilo
     que estaba la gasolinera"
-  pensamiento: {fileID: 0}
   oneTimeOnly: 1
   activaTrigger: {fileID: 0}
   npc: {fileID: 0}
@@ -21495,17 +21730,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23209,17 +23461,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23368,17 +23637,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24408,17 +24694,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24807,17 +25110,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25383,17 +25703,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26029,7 +26366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
   bloqueada: 0
-  frasePuertaBloqueada: 
+  pensamientoPuertaBloqueada: 
 --- !u!1001 &2122941225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26331,17 +26668,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 104940450}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: frase.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[0]'
+      value: "Nooooo no-no tires la botella, tiene sentimientos tambi\xE9n \xBFSabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: Para, no hace gracia lo que estas haciendo
+      value: La estas lastimando, para por-por-favor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[2]'
+      value: "\xBFTe piensas que tiene gra-gracia? A mi amigo lo estas cabreando
+        \xD1E\xD1E\xD1E"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[3]'
-      value: "\xDALTIMO AVISO o llamo al vigilante que pasa"
+      value: De que circo te has escapado payaso, QUE NO LO TIRES HE DICHO
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[4]'
-      value: EL VIGILANTE QUE PASA VA A DESCENDER  DE LOS CIELOS A POR TI Y ESPERO
-        QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
+      value: "Perd\xF3name, no pre-pretend\xEDa gritarte, t\xEDrala tantas veces
+        como quieras, es que tengo pro-problemas de paciencia JIJIJI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
+      propertyPath: 'frase.Array.data[5]'
+      value: Oleee, bien tirado cra-crack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -75458,19 +75812,35 @@ MonoBehaviour:
   velocidadGiro: 500
   dialogos:
   - lineas:
-    - Hola
+    - "Oh vaya, no pens\xE9 que hoy tendr\xEDa clientes, no suele pasar mucha gente
+      por aqu\xED, igualmente disc\xFAlpame por la tardanza que estaba en el ba\xF1o"
   - lineas:
-    - Eres muy tonto
+    - Ey calma chico, respira un poco
+  - lineas:
+    - "\xBFQu\xE9 compa\xF1ero? Yo trabajo solo la jornada completa"
+  - lineas:
+    - "Mire, lo que necesita en estos momentos es calmarse, qu\xE9dese aqu\xED dentro
+      a salvo, y yo me encargo de llamar a la polic\xEDa"
   opciones:
   - respuestas:
-    - Hola
+    - "Ayuda \xA1En la parada de enfrente acabo de ver el cuerpo descuartizado de
+      una se\xF1ora!!!!"
     saltar: 01000000
-  siguienteFila: ffffffffffffffff
+  - respuestas:
+    - "\xBFC\xF3mo que calma? Que acaban de matar a alguien \xBFD\xF3nde est\xE1
+      tu compa\xF1ero?"
+    saltar: 02000000
+  - respuestas:
+    - Pero si me acaba de atender hace un momento
+    saltar: 03000000
+  siguienteFila: ffffffffffffffffffffffff
   botones:
   - {fileID: 1943179574}
   - {fileID: 168076242}
   continueButton: {fileID: 841668919}
   botonesFila:
+  - estado: 01000000
+  - estado: 01000000
   - estado: 01000000
   texto: {fileID: 104940450}
   fondoTexto: {fileID: 685402820}
@@ -95014,7 +95384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
   bloqueada: 0
-  frasePuertaBloqueada: 
+  pensamientoPuertaBloqueada: 
 --- !u!33 &7481476230344564728
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -99882,7 +100252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
   bloqueada: 1
-  frasePuertaBloqueada: Estaba bloqueada por algo
+  pensamientoPuertaBloqueada: "Parec\xEDa haber alguien cagando"
 --- !u!64 &7971380048675453294
 MeshCollider:
   m_ObjectHideFlags: 0

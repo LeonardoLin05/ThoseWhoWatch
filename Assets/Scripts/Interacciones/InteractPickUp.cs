@@ -4,6 +4,7 @@ using TMPro;
 
 public class InteractPickUp : MonoBehaviour, IInteractable
 {
+
     private Transform mano;
 
     private bool lanzar = false;
@@ -20,14 +21,13 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     [SerializeField] private int indice;
     [SerializeField] private int fila;
 
-    public IEnumerator interact()
+    public void interact()
     {
         if (!ENMANO)
         {
             interactuar = true;
             enabled = true;
         }
-        yield break;
     }
 
     public string MensajeInteraccion()
@@ -102,7 +102,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
         posicion = mano;
         texto.text = "[G] para Lanzar";
 
-        if (npc.gameObject.layer == 6 && desbloquear)
+        if (npc != null && npc.gameObject.layer == 6 && desbloquear)
         {
             npc.ActivarBoton(fila, indice);
         }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ScriptProvisionalCierreJuego : MonoBehaviour, IInteractable
 {
-    public IEnumerator interact()
+    public void interact()
     {
         #if UNITY_STANDALONE
             Application.Quit();
@@ -11,8 +11,6 @@ public class ScriptProvisionalCierreJuego : MonoBehaviour, IInteractable
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
         #endif
-        
-        yield break;
     }
 
     public string MensajeInteraccion()

@@ -5,7 +5,6 @@ using TMPro;
 public class InnerThoughts : MonoBehaviour
 {
     [SerializeField] private string pensamiento_mostrar;
-    [SerializeField] private TextMeshProUGUI pensamiento;
 
     // Variable para dictar si se quiere que se destruya el gameObject o no
     [SerializeField] private bool oneTimeOnly = true;
@@ -16,26 +15,11 @@ public class InnerThoughts : MonoBehaviour
     [SerializeField] private int indice;
     [SerializeField] private int fila;
 
-    void Start()
-    {
-        pensamiento = GameObject.FindGameObjectWithTag("Pensamiento").GetComponent<TextMeshProUGUI>();
-    }
-
     public void OnTriggerEnter(Collider other)
     {
-        if (!VariablesGlobales.EN_PENSAMIENTO && other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            StartCoroutine(Thoughts());
-        }
-    }
-
-    private IEnumerator Thoughts()
-    {
-        VariablesGlobales.EN_PENSAMIENTO = true;
-
-        pensamiento.text = pensamiento_mostrar;
-        yield return new WaitForSeconds(5f);
-        pensamiento.text = "";
+            Thoughts.Instance.StartThoughts(pensamiento_mostrar);
 
         if (activaTrigger != null)
         {
@@ -47,11 +31,10 @@ public class InnerThoughts : MonoBehaviour
             npc.ActivarBoton(fila, indice);
         }
 
-        VariablesGlobales.EN_PENSAMIENTO = false;
-
         if(oneTimeOnly)
         {
             Destroy(gameObject);
+        }
         }
     }
 }

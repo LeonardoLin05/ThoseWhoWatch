@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public interface IInteractable
 {
-    public IEnumerator interact();
+    public void interact();
 
     public string MensajeInteraccion();
 }
@@ -51,7 +51,7 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new(transform.position, transform.forward);
         if (Physics.Raycast(ray, out RaycastHit hit, 3f, mask) && hit.transform.gameObject.layer == 6)
         {
         Debug.DrawRay(ray.origin, ray.direction * hit.distance);
@@ -63,14 +63,13 @@ public class Interaction : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     texto.text = "";
-                    StartCoroutine(i.interact());
+                    i.interact();
                 }
             }
-            // NO quiten este return, por algún motivo si se quita los textos de las interacciones
-            // no aparecen
-            return;
         }
-        punteroInteractuar.gameObject.GetComponent<Image>().enabled = false;
-        texto.text = "";
+        else {
+            punteroInteractuar.gameObject.GetComponent<Image>().enabled = false;
+            texto.text = "";
+        }
     }
 }

@@ -26,11 +26,21 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
         materialArmario = GetComponent<MeshRenderer>().material;
     }
 
-    public IEnumerator interact()
+    public void interact()
 	{
 		if (!DENTRO_ARMARIO)
 		{
-			PlayerMovement.Instance.enabled = false;
+			StartCoroutine(Esconderse());
+		}
+		else
+		{
+			StartCoroutine(Salir());
+		}
+	}
+
+	private IEnumerator Esconderse()
+    {
+        	PlayerMovement.Instance.enabled = false;
 			HeadbobSystem.Instance.enabled = false;
 			Interaction.Instance.enabled = false;
 
@@ -49,29 +59,29 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 			Physics.SyncTransforms();
 
 			GetComponent<MeshRenderer>().material = materialTransparente;
-		}
-		else
-		{
-			Interaction.Instance.enabled = false;
+    }
 
-			fade.SetTrigger("Fade");
-			yield return _waitForSeconds1_5;
+	private IEnumerator Salir()
+    {
+        Interaction.Instance.enabled = false;
 
-			PlayerMovement.Instance.enabled = true;
-			HeadbobSystem.Instance.enabled = true;
-			Interaction.Instance.enabled = true;
+		fade.SetTrigger("Fade");
+		yield return _waitForSeconds1_5;
 
-			DENTRO_ARMARIO = false;
+		PlayerMovement.Instance.enabled = true;
+		HeadbobSystem.Instance.enabled = true;
+		Interaction.Instance.enabled = true;
 
-			// Rotamos la cámara para que mire donde queramos
-			CameraMovement.Instance.xRotation = teleportSalida.eulerAngles.x;
-			CameraMovement.Instance.yRotation = teleportSalida.eulerAngles.y;
+		DENTRO_ARMARIO = false;
 
-			player.position = teleportSalida.position;
-			Physics.SyncTransforms();
-			GetComponent<MeshRenderer>().material = materialArmario;
-		}
-	}
+		// Rotamos la cámara para que mire donde queramos
+		CameraMovement.Instance.xRotation = teleportSalida.eulerAngles.x;
+		CameraMovement.Instance.yRotation = teleportSalida.eulerAngles.y;
+
+		player.position = teleportSalida.position;
+		Physics.SyncTransforms();
+		GetComponent<MeshRenderer>().material = materialArmario;
+    }
 
 	public string MensajeInteraccion()
 	{

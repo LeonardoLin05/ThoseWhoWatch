@@ -153,8 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractPickUp
   npc: {fileID: 1326242043}
-  Desbloquear: 1
+  desbloquear: 0
   indice: 0
+  fila: 0
 --- !u!65 &75593680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -841,17 +842,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198179173}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &198212871 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4362714194862724637, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-  m_PrefabInstance: {fileID: 1719047532184657015}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &211423517
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,7 +911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
   bloqueada: 0
-  frasePuertaBloqueada: 
+  pensamientoPuertaBloqueada: 
 --- !u!95 &211423521
 Animator:
   serializedVersion: 7
@@ -1279,12 +1269,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
   pensamiento_mostrar: Soy un trigger oculto
-  pensamiento: {fileID: 198212871}
   oneTimeOnly: 1
   activaTrigger: {fileID: 0}
   npc: {fileID: 0}
   desbloquear: 0
   indice: -1
+  fila: 0
 --- !u!65 &392993261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1923,6 +1913,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractTalk
   pensamientoObjeto: 
+  gameObjectDesactivar: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &546462724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1955,6 +1949,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fd0478a7f1da74cbdd15cda35c1a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractNPCs
+  activarStart: 1
+  velocidadGiro: 50
   dialogos:
   - lineas:
     - Hola
@@ -1984,9 +1980,11 @@ MonoBehaviour:
   texto: {fileID: 983758427}
   fondoTexto: {fileID: 1719047532184657016}
   puntero: {fileID: 0}
+  npcHips: {fileID: 0}
   evento:
     m_PersistentCalls:
       m_Calls: []
+  textoInteraccion2: {fileID: 0}
 --- !u!136 &546462726
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2224,6 +2222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fd0478a7f1da74cbdd15cda35c1a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractNPCs
+  activarStart: 1
+  velocidadGiro: 50
   dialogos:
   - lineas:
     - Este NPC va a comprobar los saltos de lineas
@@ -2261,9 +2261,11 @@ MonoBehaviour:
   texto: {fileID: 983758427}
   fondoTexto: {fileID: 1719047532184657016}
   puntero: {fileID: 0}
+  npcHips: {fileID: 0}
   evento:
     m_PersistentCalls:
       m_Calls: []
+  textoInteraccion2: {fileID: 0}
 --- !u!136 &708671223
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2941,6 +2943,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fd0478a7f1da74cbdd15cda35c1a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractNPCs
+  activarStart: 1
+  velocidadGiro: 50
   dialogos:
   - lineas:
     - Soy un dialogo que espera a que algo pase
@@ -2960,9 +2964,11 @@ MonoBehaviour:
   texto: {fileID: 983758427}
   fondoTexto: {fileID: 1719047532184657016}
   puntero: {fileID: 0}
+  npcHips: {fileID: 0}
   evento:
     m_PersistentCalls:
       m_Calls: []
+  textoInteraccion2: {fileID: 0}
 --- !u!1 &1343181699
 GameObject:
   m_ObjectHideFlags: 0
@@ -3254,12 +3260,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
   pensamiento_mostrar: "Hola que tal est\xE1s"
-  pensamiento: {fileID: 198212871}
   oneTimeOnly: 1
   activaTrigger: {fileID: 392993259}
   npc: {fileID: 0}
   desbloquear: 0
   indice: -1
+  fila: 0
 --- !u!114 &1380305605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3305,12 +3311,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
   pensamiento_mostrar: Soy otro trigger
-  pensamiento: {fileID: 198212871}
   oneTimeOnly: 1
   activaTrigger: {fileID: 0}
   npc: {fileID: 0}
   desbloquear: 0
   indice: -1
+  fila: 0
 --- !u!65 &1386768821
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3776,7 +3782,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be13629eda97185429087c29679d4dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractTalk
-  pensamientoObjeto: 
+  pensamientoObjeto: Hola
+  gameObjectDesactivar: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1608408008
 GameObject:
   m_ObjectHideFlags: 0
@@ -4608,6 +4618,22 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 5436107166911004382, guid: 7268387e304ba244db3e77b5e09b9d0b, type: 2}
+    - target: {fileID: 413641693525522568, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 413641693525522568, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 413641693525522568, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 413641693525522568, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1042199005792137860, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4686,6 +4712,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1042199005792137860, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958198270519676193, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2091476544873403904, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}

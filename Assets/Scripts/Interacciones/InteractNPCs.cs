@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using System.Threading;
 
 [System.Serializable]
 public class DialogoFilas
@@ -104,11 +105,11 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         {
             StopAllCoroutines();
             texto.text = dialogos[fila].lineas[i];
-            botonesMostrar();
+            StartCoroutine(botonesMostrar());
         }
     }
 
-    public IEnumerator interact()
+    public void interact()
     {
         i = 0;
         texto.gameObject.SetActive(true);
@@ -146,7 +147,6 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         }
 
         StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
-        yield break;
     }
 
     private void AvanzarDialogo()
@@ -257,7 +257,6 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         {
             evento.Invoke();
         }
-
         texto.gameObject.SetActive(false);
         fondoTexto.SetActive(false);
         SetContinueButtonVisible(false);
@@ -291,13 +290,15 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             texto.text += letra;
             yield return VariablesGlobales.esperarTexto;
         }
-        botonesMostrar();
+        StartCoroutine(botonesMostrar());
     }
 
     // Esta función se usa para mostrar los botones de continuar o respuesta después de que
     // el texto animado haya terminado
-    private void botonesMostrar()
+    private IEnumerator botonesMostrar()
     {
+        enabled = false;
+        yield return new WaitForSecondsRealtime(0.1f);
         if (i < dialogos[fila].lineas.Length - 1)
         {
             SetContinueButtonVisible(true);
@@ -314,7 +315,6 @@ public class InteractNPCs : MonoBehaviour, IInteractable
                 SetContinueButtonVisible(true);
             }
         }
-        enabled = false;
     }
 
     /// <summary>
@@ -382,7 +382,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             gameObject.SetActive(true);
         }
         
-        StartCoroutine(interact());
+        interact();
     }
 
     /// <summary>

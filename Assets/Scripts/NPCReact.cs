@@ -61,7 +61,7 @@ public class NPCReact : MonoBehaviour
         // Solo se puede realizar si las interacciones estan activadas
         if(Interaction.Instance.isActiveAndEnabled)
         {
-            if (collision.gameObject.CompareTag("SueloGasolinera"))
+            if (NPC != null && collision.gameObject.CompareTag("SueloGasolinera"))
             {
                 StartConversation();
             } 
