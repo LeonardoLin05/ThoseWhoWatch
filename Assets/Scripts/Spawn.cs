@@ -39,4 +39,11 @@ public class Spawn : MonoBehaviour
             gameObject.SetActive(true);
         }
     }
+
+    public void Animacion()
+    {
+        Debug.Log("Entro en animacion");
+        Animator animacion = gameObject.GetComponent<Animator>();
+        animacion.SetTrigger("StartEsconderse");
+    }
 }
