@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ScriptProvisionalCierreJuego : MonoBehaviour, IInteractable
 {
-    public void interact()
+    public void Interact()
     {
         #if UNITY_STANDALONE
             Application.Quit();

@@ -1,24 +1,19 @@
-using System;
-using System.Collections;
-using TMPro;
 using UnityEngine;
 
 public class InteractDoor : MonoBehaviour, IInteractable
 {
-    public bool bloqueada;
+    [SerializeField] private bool bloqueada;
     [SerializeField] private string pensamientoPuertaBloqueada;
 
     private Animator door;
     private bool open = false;
-    private TextMeshProUGUI pensamientos;
 
     void Start()
     {
         door = GetComponent<Animator>();
-        pensamientos = GameObject.Find("Pensamiento").GetComponent<TextMeshProUGUI>();
     }
 
-    public void interact()
+    public void Interact()
     {
         if (!bloqueada)
         {
@@ -27,11 +22,11 @@ public class InteractDoor : MonoBehaviour, IInteractable
         }
         else
         {
-            puertaBloqueada();
+            PuertaBloqueada();
         }
     }
 
-    private void puertaBloqueada()
+    private void PuertaBloqueada()
     {
         Thoughts.Instance.StartThoughts(pensamientoPuertaBloqueada);
     }
@@ -46,6 +41,16 @@ public class InteractDoor : MonoBehaviour, IInteractable
         door.SetBool("open", open);
         bloqueada = true;
         pensamientoPuertaBloqueada = "Me había encerrado con llave";
+    }
+
+    public bool GetBloqueada()
+    {
+        return bloqueada;
+    }
+
+    public void SetBloqueada(bool bloqueada)
+    {
+        this.bloqueada = bloqueada;
     }
 
     public string MensajeInteraccion()

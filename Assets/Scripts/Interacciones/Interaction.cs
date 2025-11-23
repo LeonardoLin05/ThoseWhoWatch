@@ -1,11 +1,10 @@
-using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
 public interface IInteractable
 {
-    public void interact();
+    public void Interact();
 
     public string MensajeInteraccion();
 }
@@ -52,7 +51,7 @@ public class Interaction : MonoBehaviour
     void Update()
     {
         Ray ray = new(transform.position, transform.forward);
-        if (Physics.Raycast(ray, out RaycastHit hit, 3f, mask) && hit.transform.gameObject.layer == 6)
+        if (Physics.Raycast(ray, out RaycastHit hit, 2f, mask) && hit.transform.gameObject.layer == 6)
         {
         Debug.DrawRay(ray.origin, ray.direction * hit.distance);
             if (hit.collider.gameObject.TryGetComponent<IInteractable>(out IInteractable i))
@@ -63,7 +62,7 @@ public class Interaction : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     texto.text = "";
-                    i.interact();
+                    i.Interact();
                 }
             }
         }

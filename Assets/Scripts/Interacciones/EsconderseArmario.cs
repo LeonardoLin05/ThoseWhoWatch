@@ -26,7 +26,7 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
         materialArmario = GetComponent<MeshRenderer>().material;
     }
 
-    public void interact()
+    public void Interact()
 	{
 		if (!DENTRO_ARMARIO)
 		{

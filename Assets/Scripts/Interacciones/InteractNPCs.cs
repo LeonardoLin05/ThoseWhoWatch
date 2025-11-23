@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using System.Threading;
+using NUnit.Framework;
 
 [System.Serializable]
 public class DialogoFilas
@@ -17,6 +17,19 @@ public class DialogosOpcion
 {
     public string[] respuestas;
     public int[] saltar;
+
+    public UnityEvent evento;
+    private bool ejecutado = false;
+
+    public bool GetEjecutado()
+    {
+        return ejecutado;
+    }
+
+    public void SetEjecutado(bool estado)
+    {
+        ejecutado = estado;
+    }
 }
 
 public enum EstadoBoton
@@ -50,11 +63,10 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     [SerializeField] private GameObject puntero;
     [SerializeField] private Transform npcHips;
 
-    [SerializeField] private UnityEvent evento;
-
     [SerializeField] private TextMeshProUGUI textoInteraccion2;
 
     private CanvasGroup continueGroup;
+    private InteractPickUp objeto;
 
     private string oldText;
     
@@ -105,16 +117,23 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         {
             StopAllCoroutines();
             texto.text = dialogos[fila].lineas[i];
-            StartCoroutine(botonesMostrar());
+            StartCoroutine(BotonesMostrar());
         }
     }
 
-    public void interact()
+    public void Interact()
     {
         i = 0;
         texto.gameObject.SetActive(true);
         fondoTexto.SetActive(true);
-        puntero.gameObject.SetActive(false);
+        puntero.SetActive(false);
+
+        // Impedimos que el jugador pueda lanzar el objeto en mitad de la conversación
+        if(InteractPickUp.objetoEnMano)
+        {
+            objeto = GameObject.FindGameObjectWithTag("ObjetoEnMano").GetComponent<InteractPickUp>();
+            objeto.enabled = false;
+        }
 
         TalkZoomMoveCamera.Instance.setCabeza(npcHips);
         TalkZoomMoveCamera.Instance.StartZoomMovement(velocidadGiro);
@@ -160,54 +179,26 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         }
         else
         {
-            bool opcionesVisibles = false;
-            if(fila < opciones.Length && opciones[fila].respuestas.Length > 0)
-            {
-                for (int j = 0; j < botones.Length && j < opciones[fila].respuestas.Length; j++)
-                {
-                    if (botonesFila[fila].estado[j] == EstadoBoton.Visible)
-                    {
-                        opcionesVisibles = true;
-                        break;
-                    }
-                }
-
-                if (opcionesVisibles)
-                {
-                    MostrarOpcionesFila();
-                }
-            }
+            // Si hay evento que ejecutar en la última fila de diálogo
+            if(fila < opciones.Length) EjecutarEvento();
 
             if (fila < siguienteFila.Length && siguienteFila[fila] >= 0)
             {
-                fila = siguienteFila[fila];
-                FinDialogo();
+                fila = siguienteFila[fila];   
             }
             else
             {
                 gameObject.layer = 0;
-                FinDialogo();
             }
-        }
-    }
-
-    private void MostrarOpcionesFila()
-    {
-        if (fila < opciones.Length && opciones[fila].respuestas.Length > 0)
-        {
-            MostrarOpciones(opciones[fila].respuestas);
-        }
-        else
-        {
             FinDialogo();
         }
     }
 
-    private void MostrarOpciones(string[] opciones)
+    private void MostrarRespuestas()
     {
         EstadoBoton boton;
 
-        bool opcionesVisibles = false;
+        string[] opciones = this.opciones[fila].respuestas;
         int limite = Mathf.Min(botones.Length, botonesFila[fila].estado.Length, opciones.Length);
 
         for (int i = 0; i < limite; i++)
@@ -220,47 +211,53 @@ public class InteractNPCs : MonoBehaviour, IInteractable
                 botones[i].GetComponentInChildren<TextMeshProUGUI>().text = opciones[i];
                 if (boton == EstadoBoton.Visible)
                 {
-                    opcionesVisibles = true;
                     botones[i].interactable = true;
                 }
-                // Si el botón esta bloqueado
+                // Si el botón está bloqueado
                 else botones[i].interactable = false;
             }
         }
-        // Mostramos el botón de continuar en caso de que no haya ninguna opción en Visible
-        if (!opcionesVisibles)
-        {
-            SetContinueButtonVisible(true);
-        }
     }
 
-    private void SeleccionRespuesta(int sigFila)
+    private void SeleccionRespuesta(int respuesta)
     {
-        // Hacemos que ningún boton se vea en pantalla
+        // Hacemos que ningún botón se vea en pantalla
         foreach(Button boton in botones)
         {
             boton.gameObject.SetActive(false);
         }
 
-        fila = opciones[fila].saltar[sigFila];
+        EjecutarEvento();
+
+        fila = opciones[fila].saltar[respuesta];
+
         i = 0;
-        
         StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
+    }
+
+    private void EjecutarEvento()
+    {
+        DialogosOpcion opciones = this.opciones[fila];
+        // Miramos si hay un evento a ejecutar y que no se haya ejecutado ya
+        if(opciones.evento != null && !opciones.GetEjecutado())
+        {
+           opciones.evento.Invoke();
+           opciones.SetEjecutado(true);
+        }
     }
 
     private void FinDialogo()
     {
-        // Ejecutamos el evento si es que hay uno asignado
-        // NOTA: solo se ejecuta si es la última conversación que puedes
-        // hacer con el NPC, es decir, que ya no puedes volver a hablar con el NPC de nuevo
-        if(gameObject.layer == 0 && evento != null)
-        {
-            evento.Invoke();
-        }
         texto.gameObject.SetActive(false);
         fondoTexto.SetActive(false);
         SetContinueButtonVisible(false);
         puntero.SetActive(true);
+
+        // Permitimos al jugador poder tirar el objeto en mano
+        if(InteractPickUp.objetoEnMano)
+        {
+            objeto.enabled = true;
+        }
 
         // Bloqueamos el cursor
         Cursor.lockState = CursorLockMode.Locked;
@@ -279,41 +276,33 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         }
     }
 
-    public IEnumerator textoAnimar(string dial)
+    public IEnumerator textoAnimar(string dialogo)
     {
         enabled = true;
 
         texto.text = "";
 
-        foreach(char letra in dial)
+        foreach(char letra in dialogo)
         {
             texto.text += letra;
             yield return VariablesGlobales.esperarTexto;
         }
-        StartCoroutine(botonesMostrar());
+        StartCoroutine(BotonesMostrar());
     }
 
     // Esta función se usa para mostrar los botones de continuar o respuesta después de que
     // el texto animado haya terminado
-    private IEnumerator botonesMostrar()
+    private IEnumerator BotonesMostrar()
     {
         enabled = false;
-        yield return new WaitForSecondsRealtime(0.1f);
-        if (i < dialogos[fila].lineas.Length - 1)
+        yield return new WaitForSecondsRealtime(0.01f);
+        if (i < dialogos[fila].lineas.Length - 1 || !(fila < opciones.Length && opciones[fila].respuestas.Length > 0))
         {
             SetContinueButtonVisible(true);
         }
         else
         {
-            if (fila < opciones.Length && opciones[fila].respuestas.Length > 0)
-            {
-                SetContinueButtonVisible(false);
-                MostrarOpcionesFila();
-            }
-            else
-            {
-                SetContinueButtonVisible(true);
-            }
+            MostrarRespuestas();
         }
     }
 
@@ -369,28 +358,6 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         HeadbobSystem.Instance.enabled = activar;
         Interaction.Instance.enabled = activar;
         Zoom.Instance.enabled = activar;
-    }
-
-    /// <summary>
-    /// Para llamarlo en el inspector a través de un UnityEvent
-    /// </summary>
-    public void EmpezarConversacion()
-    {
-        
-        if(!gameObject.activeInHierarchy)
-        {
-            gameObject.SetActive(true);
-        }
-        
-        interact();
-    }
-
-    /// <summary>
-    /// Para llamarlo en el inspector a través de un UnityEvent
-    /// </summary>
-    public void DestroyGameObject(float time)
-    {
-        Destroy(gameObject, time);
     }
 
     public string MensajeInteraccion()

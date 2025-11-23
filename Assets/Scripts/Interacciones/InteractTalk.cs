@@ -1,6 +1,4 @@
-using System.Collections;
 using UnityEngine;
-using TMPro;
 using UnityEngine.Events;
 
 public class InteractTalk : MonoBehaviour, IInteractable
@@ -10,7 +8,7 @@ public class InteractTalk : MonoBehaviour, IInteractable
 
     [SerializeField] private UnityEvent evento;
 
-    public void interact()
+    public void Interact()
     {
         if(evento != null)
         {

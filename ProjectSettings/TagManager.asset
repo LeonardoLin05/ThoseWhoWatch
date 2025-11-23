@@ -12,6 +12,8 @@ TagManager:
   - Puntero
   - TextoInteractuar
   - TextoInteractuar2
+  - Mano
+  - ObjetoEnMano
   layers:
   - Default
   - TransparentFX

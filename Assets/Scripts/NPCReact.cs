@@ -40,10 +40,6 @@ public class NPCReact : MonoBehaviour
         {
             texto = GameObject.FindGameObjectWithTag("TextoDialogo").GetComponent<TextMeshProUGUI>();
         }
-    }
-
-    void Start()
-    {
         if (puntero == null)
         {
             puntero = GameObject.FindGameObjectWithTag("Puntero");
@@ -52,8 +48,23 @@ public class NPCReact : MonoBehaviour
         {
             textoInteraccion = GameObject.FindGameObjectWithTag("TextoInteractuar").GetComponent<TextMeshProUGUI>();
         }
-        
+        enabled = false;
+    }
+
+    void Start()
+    {   
         continueGroup = boton.GetComponent<CanvasGroup>();
+    }
+
+    void FixedUpdate()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            StopAllCoroutines();
+            texto.text = frase[vecesEjecutadas];
+            StartCoroutine(SetContinueButtonVisible(true));
+            enabled = false;
+        }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -95,12 +106,7 @@ public class NPCReact : MonoBehaviour
         }
 
         // Para que el texto aparezca de poco a poco animado
-        StartCoroutine(TextoAnimado(frase[vecesEjecutadas]));
-
-        if(vecesEjecutadas < frase.Length - 1)
-        {
-            vecesEjecutadas++;
-        }
+        StartCoroutine(TextoAnimado());
 
         // Configuraciones del boton
         boton.onClick.RemoveAllListeners();
@@ -110,6 +116,11 @@ public class NPCReact : MonoBehaviour
 
     private void StopConversation()
     {
+        if(vecesEjecutadas < frase.Length - 1)
+        {
+            vecesEjecutadas++;
+        }
+
         // Desbloqueamos movimiento de la camera, jugador e interaccion
         InteractNPCs.ActivarInstances(true);
 
@@ -119,7 +130,7 @@ public class NPCReact : MonoBehaviour
 
         // Configuraciones del boton
         boton.onClick.RemoveAllListeners();
-        SetContinueButtonVisible(false);
+        StartCoroutine(SetContinueButtonVisible(false));
 
         texto.text = "";
         texto.gameObject.SetActive(false);
@@ -138,22 +149,26 @@ public class NPCReact : MonoBehaviour
         TalkZoomMoveCamera.Instance.StopZoomMovement();
     }
 
-    private IEnumerator TextoAnimado(string frase)
+    private IEnumerator TextoAnimado()
     {
+        enabled = true;
+
         texto.text = "";
 
-        foreach (char letra in frase)
+        foreach (char letra in frase[vecesEjecutadas])
         {
             texto.text += letra;
             yield return VariablesGlobales.esperarTexto;
         }
-        SetContinueButtonVisible(true);
+        enabled = false;
+        StartCoroutine(SetContinueButtonVisible(true));
     }
 
-    private void SetContinueButtonVisible(bool visible)
+    private IEnumerator SetContinueButtonVisible(bool visible)
     {
         if (visible)
         {
+            yield return new WaitForSecondsRealtime(0.01f);
             continueGroup.alpha = 1f;
             continueGroup.interactable = true;
             continueGroup.blocksRaycasts = true;

@@ -96,9 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7cebaadc20cdcc47a78d8a92cdbe41a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractPickUp
+  mano: {fileID: 0}
   npc: {fileID: 0}
   desbloquear: 1
   indice: 1
+  fila: 0
 --- !u!114 &9050649707043940929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,8 +120,11 @@ MonoBehaviour:
   - "\xDALTIMO AVISO"
   - ESPERO QUE TE OCURRA LO PEOR POSIBLE EN ESTA VIDA Y TE MUERAS
   NPC: {fileID: 0}
+  fondoDialogo: {fileID: 0}
+  textoInteraccion: {fileID: 0}
   texto: {fileID: 0}
   boton: {fileID: 0}
+  puntero: {fileID: 0}
 --- !u!1 &8867475627781322153
 GameObject:
   m_ObjectHideFlags: 0

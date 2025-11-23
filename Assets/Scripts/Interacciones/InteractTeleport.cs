@@ -21,7 +21,7 @@ public class InteractTeleport : MonoBehaviour, IInteractable
 		fade = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
 	}
 
-    public void interact()
+    public void Interact()
 	{
 		StartCoroutine(Teleport());
 	}
