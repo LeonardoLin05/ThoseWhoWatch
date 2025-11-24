@@ -30,6 +30,10 @@ public class Interaction : MonoBehaviour
         enabled = true;
     }
 
+    void OnDisable()
+    {
+        texto.text = "";
+    }
     void Start()
     {
         mask = LayerMask.GetMask("Interactable") | LayerMask.GetMask("Default");

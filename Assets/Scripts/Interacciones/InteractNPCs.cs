@@ -45,10 +45,11 @@ public class BotonFila
 
 public class InteractNPCs : MonoBehaviour, IInteractable
 {
+    [SerializeField] private bool activarAccion = false;
     // Por si quieres que el gameObject esté desactivado al empezar la escena
-    [SerializeField] bool activarStart = true;
+    [SerializeField] private bool activarStart = true;
     // Para la velocidad de giro de la cámara que hay para mirar al NPC
-    [SerializeField] float velocidadGiro = 50f;
+    [SerializeField] private float velocidadGiro = 50f;
 
     [SerializeField] private DialogoFilas[] dialogos;
     [SerializeField] private DialogosOpcion[] opciones;
@@ -188,6 +189,10 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             }
             else
             {
+                if(activarAccion && InteractPickUp.objetoEnMano)
+                {
+                    objeto.ActivarAccion();
+                }
                 gameObject.layer = 0;
             }
             FinDialogo();

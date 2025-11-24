@@ -16518,6 +16518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fd0478a7f1da74cbdd15cda35c1a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractNPCs
+  activarAccion: 0
   activarStart: 0
   velocidadGiro: 500
   dialogos:
@@ -16689,12 +16690,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553142574}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.688614, z: 0, w: 0.72512805}
-  m_LocalPosition: {x: 129.29, y: 21.07002, z: -29.49}
+  m_LocalRotation: {x: 0, y: -0.0000004172325, z: -0, w: 1}
+  m_LocalPosition: {x: -6.948248, y: 0.9725151, z: 6.7603316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2267790971212272533}
   m_LocalEulerAnglesHint: {x: 0, y: -87.041, z: 0}
 --- !u!114 &553142578
 MonoBehaviour:
@@ -18286,6 +18287,153 @@ Transform:
   - {fileID: 3366283370417001541}
   m_Father: {fileID: 2267790971212272533}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &934156629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 934156630}
+  - component: {fileID: 934156631}
+  m_Layer: 7
+  m_Name: MusicaGasolinera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &934156630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934156629}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.00000041723246, z: -0, w: 1}
+  m_LocalPosition: {x: -4.53, y: 3.75, z: -19.64}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2267790971212272533}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &934156631
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934156629}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: dcb502826fc4d6040bcef65254588d38, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.7
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 8
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.125
+      value: 1
+      inSlope: -8.0032
+      outSlope: -8.0032
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.22796631
+      value: 0.5830841
+      inSlope: -2.0008
+      outSlope: -2.0008
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.7692871
+      value: 0.24276733
+      inSlope: -0.5688933
+      outSlope: -0.5688933
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.4372369
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.12505
+      outSlope: -0.12505
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &937738125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20608,7 +20756,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1271647083
 Transform:
   m_ObjectHideFlags: 0
@@ -20728,8 +20876,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287415319}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00066932436, y: 0.0023872296, z: -0.0021242197, w: 0.99999464}
-  m_LocalPosition: {x: -0.0019807818, y: 1.0578899, z: -0.034168206}
+  m_LocalRotation: {x: 0.0006693202, y: 0.0023872252, z: -0.00212422, w: 0.9999947}
+  m_LocalPosition: {x: -0.0019764788, y: 1.0578899, z: -0.034168247}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -28166,6 +28314,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5916957143190146337, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5916957143190146337, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5916957143190146337, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5916957143190146337, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7083849911922385223, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -32709,7 +32873,7 @@ Transform:
   m_GameObject: {fileID: 919132149573729262}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6886138, z: -0, w: 0.7251284}
-  m_LocalPosition: {x: -8.990374, y: 0.1245327, z: -16.18771}
+  m_LocalPosition: {x: -8.990385, y: 0.1245327, z: -16.187712}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36513,8 +36677,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5311751834740953227}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0006693217, y: 0.0023872552, z: -0.0021242187, w: 0.9999947}
-  m_LocalPosition: {x: -0.0019766924, y: 1.0578898, z: -0.03417597}
+  m_LocalRotation: {x: 0.00066932145, y: 0.0023872291, z: -0.00212422, w: 0.9999947}
+  m_LocalPosition: {x: -0.001977189, y: 1.0578899, z: -0.034169}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -48915,6 +49079,8 @@ Transform:
   - {fileID: 1271647083}
   - {fileID: 651728665}
   - {fileID: 957808828}
+  - {fileID: 553142577}
+  - {fileID: 934156630}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -87.041, z: 0}
 --- !u!4 &2269675043605892679
@@ -71363,7 +71529,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5364714507293848528}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.99966663, z: 0, w: 0.025819298}
+  m_LocalRotation: {x: -0, y: -0.99966663, z: -0, w: 0.025819298}
   m_LocalPosition: {x: 149.94, y: 20.295, z: -27.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
@@ -77415,6 +77581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fd0478a7f1da74cbdd15cda35c1a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractNPCs
+  activarAccion: 0
   activarStart: 0
   velocidadGiro: 500
   dialogos:
@@ -82598,6 +82765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fd0478a7f1da74cbdd15cda35c1a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractNPCs
+  activarAccion: 1
   activarStart: 1
   velocidadGiro: 50
   dialogos:
@@ -116698,7 +116866,6 @@ SceneRoots:
   - {fileID: 6436238025509473776}
   - {fileID: 1945380583}
   - {fileID: 975009464}
-  - {fileID: 553142577}
   - {fileID: 1010516662}
   - {fileID: 4699677491673049450}
   - {fileID: 530989733}

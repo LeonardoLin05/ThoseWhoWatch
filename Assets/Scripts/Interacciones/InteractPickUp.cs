@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class InteractPickUp : MonoBehaviour, IInteractable
 {
@@ -10,8 +11,14 @@ public class InteractPickUp : MonoBehaviour, IInteractable
 
     public static bool objetoEnMano = false;
 
+    private bool activarAccion = false;
+    private Animator accion;
+    private AudioSource sonidoBeber;
+
     private Rigidbody objeto;
     private TextMeshProUGUI texto;
+    private TextMeshProUGUI texto2;
+
     public InteractNPCs npc;
 
     [SerializeField] private bool desbloquear = false;
@@ -24,8 +31,12 @@ public class InteractPickUp : MonoBehaviour, IInteractable
         {
             enabled = false;
         }
+        accion = gameObject.GetComponent<Animator>();
+        sonidoBeber = gameObject.GetComponent<AudioSource>();
         objeto = gameObject.GetComponent<Rigidbody>();
+
         texto = GameObject.FindGameObjectWithTag("TextoInteractuar2").GetComponent<TextMeshProUGUI>();
+        texto2 = GameObject.FindGameObjectWithTag("TextoInteractuar3").GetComponent<TextMeshProUGUI>();
     }
 
     void Start()
@@ -71,7 +82,12 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     {
         if (objetoEnMano && Input.GetKeyDown(KeyCode.G))
         {
-           Lanzar();
+            Lanzar();
+        }
+        // Para la acción de beber la botella de agua
+        else if(activarAccion && Input.GetKeyDown(KeyCode.R))
+        {
+            StartCoroutine(AccionBeber());
         }
     }
 
@@ -88,6 +104,36 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     {
         enabled = false;
         lanzar = false;
+    }
+
+    private IEnumerator AccionBeber()
+    {
+        texto.text = "";
+        texto2.text = "";
+
+        accion.enabled = true;
+        enabled = false;
+        Interaction.Instance.enabled = false;
+
+        sonidoBeber.Play();
+
+        // Esperar lo que dura la animación
+        yield return new WaitForSecondsRealtime(5f);
+        // Para que el FixedUpdate se ejecute
+        enabled = true;
+        Interaction.Instance.enabled = true;
+        accion.enabled = false;
+
+        lanzar = true;
+        Lanzar();
+        // El objeto ya no puedes volver a recogerlo
+        gameObject.layer = 0;
+    }
+
+    public void ActivarAccion()
+    {
+        activarAccion = true;
+        texto2.text = "[R para beber]";
     }
 
     private void Lanzar()
