@@ -4,9 +4,9 @@ using System.Collections;
 public class SonidoCuervo : MonoBehaviour
 {
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private float inicio = 7f;   
-    [SerializeField] private float fin = 12f;     
-    [SerializeField] private float duracionFade = 1f; 
+    [SerializeField] private float inicio;   
+    [SerializeField] private float fin;     
+    [SerializeField] private float duracionFade; 
 
     void OnEnable()
     {
