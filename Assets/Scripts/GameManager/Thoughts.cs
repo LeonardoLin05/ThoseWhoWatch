@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class Thoughts : MonoBehaviour
 {
@@ -31,6 +32,16 @@ public class Thoughts : MonoBehaviour
         if(pensamiento == null)
         {
             pensamiento = gameObject.GetComponent<TextMeshProUGUI>();
+        }
+    }
+
+    void OnDisable()
+    {
+        pensamiento.text = "";
+        if(enPensamiento)
+        {
+            StopCoroutine(coroutine);
+            esperarPensamiento.Reset();
         }
     }
 

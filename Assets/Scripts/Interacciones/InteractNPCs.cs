@@ -4,7 +4,6 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using NUnit.Framework;
 
 [System.Serializable]
 public class DialogoFilas
@@ -136,6 +135,12 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             objeto.enabled = false;
         }
 
+        // Por si hay algun pensamiento
+        if(Thoughts.Instance.gameObject.GetComponent<TextMeshProUGUI>().text != "")
+        {
+            Thoughts.Instance.enabled = false;
+        }
+
         TalkZoomMoveCamera.Instance.setCabeza(npcHips);
         TalkZoomMoveCamera.Instance.StartZoomMovement(velocidadGiro);
 
@@ -262,6 +267,12 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         if(InteractPickUp.objetoEnMano)
         {
             objeto.enabled = true;
+        }
+
+        // Por si había algún pensamiento
+        if(!Thoughts.Instance.enabled == false)
+        {
+            Thoughts.Instance.enabled = true;
         }
 
         // Bloqueamos el cursor
