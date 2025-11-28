@@ -151,6 +151,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
         lanzar = true;
         mano.transform.DetachChildren();
         texto.text = "";
+        texto2.text = "";
 
         objetoEnMano = false;
 
