@@ -3,21 +3,26 @@ using System.Collections;
 
 public class Footsteps : MonoBehaviour {
 
-public AudioClip audioFootsteps;
-private Vector3 prevPosition;
-float minDistance = 1.2f;
+  public AudioClip audioFootsteps;
+  private Vector3 prevPosition;
+  float minDistance = 1.2f;
+  bool stepped = false;
 
-void Start()
-{
-  prevPosition = transform.position;
-}
+  void Start()
+  {
+    prevPosition = transform.position;
+  }
 
-void Update()
-{
-    if (Vector3.Distance(transform.position, prevPosition) > minDistance)
+  void Update()
+  {
+    if (!stepped && HeadbobSystem.Instance.sumY < -0.005f)
     {
         AudioSource.PlayClipAtPoint(audioFootsteps, transform.position, 0.1f);
-        prevPosition = transform.position;
+        stepped = true;
     }
-}
+    else if(stepped && HeadbobSystem.Instance.sumY >= 0f)
+    {
+        stepped = false;
+    }
+  }
 }

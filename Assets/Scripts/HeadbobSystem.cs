@@ -10,7 +10,8 @@ public class HeadbobSystem : MonoBehaviour
 
     private float Smooth = 80.0f;
 
-    Vector3 StartPos;
+    public Vector3 StartPos;
+    public float sumY = 0f;
 
     void Awake()
     {
@@ -53,7 +54,7 @@ public class HeadbobSystem : MonoBehaviour
     {
         Vector3 pos = Vector3.zero;
 
-        pos.y += Mathf.Lerp(pos.y, Mathf.Sin(Time.time * Frequency) * Amount * 1.4f, Smooth * Time.deltaTime);
+        pos.y += Mathf.Lerp(pos.y, sumY = Mathf.Sin(Time.time * Frequency) * Amount * 1.4f, Smooth * Time.deltaTime);
 
         pos.x += Mathf.Lerp(pos.x, Mathf.Cos(Time.time * Frequency / 2f) * Amount * 1.6f, Smooth * Time.deltaTime);
 
