@@ -57,6 +57,11 @@ public class InteractPickUp : MonoBehaviour, IInteractable
             transform.SetLocalPositionAndRotation(new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
             Physics.SyncTransforms();
 
+            if(activarAccion)
+            {
+                texto2.text = "[R para beber]";
+            }
+
             texto.text = "[G] para Lanzar";
             enabled = true;
 
