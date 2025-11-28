@@ -106,6 +106,13 @@ public class InteractPickUp : MonoBehaviour, IInteractable
         lanzar = false;
     }
 
+    void OnDestroy()
+    {
+        texto.text = "";
+        texto2.text = "";
+        objetoEnMano = false;
+    }
+
     private IEnumerator AccionBeber()
     {
         texto.text = "";
@@ -139,6 +146,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     private void Lanzar()
     {
         objeto.isKinematic = false;
+        gameObject.tag = "Untagged";
 
         lanzar = true;
         mano.transform.DetachChildren();
