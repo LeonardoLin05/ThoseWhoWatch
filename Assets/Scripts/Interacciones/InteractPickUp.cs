@@ -59,7 +59,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
 
             if(activarAccion)
             {
-                texto2.text = "[R para beber]";
+                texto2.text = "[R] para beber";
             }
 
             texto.text = "[G] para Lanzar";
@@ -145,7 +145,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     public void ActivarAccion()
     {
         activarAccion = true;
-        texto2.text = "[R para beber]";
+        texto2.text = "[R] para beber";
     }
 
     private void Lanzar()

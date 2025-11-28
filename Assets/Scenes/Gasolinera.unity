@@ -385,7 +385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -13956,7 +13956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -14112,7 +14112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -15010,7 +15010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -15311,7 +15311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -15501,7 +15501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -18579,7 +18579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -18874,7 +18874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -20268,7 +20268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -22033,7 +22033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -22568,7 +22568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -22627,7 +22627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -22746,7 +22746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -22865,7 +22865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 3947971523257179938, guid: 19fc074f4636af54ab8a9911809463a0, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -23439,7 +23439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -25109,7 +25109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -25297,7 +25297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -26366,7 +26366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -26799,7 +26799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 9050649707043940929, guid: 206c4726bc560504ea6836ae1d304ceb, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -27362,7 +27362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -28334,7 +28334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[1]'
-      value: La estas lastimando, para por-por-favor
+      value: "La est\xE1s lastimando, para por-por-favor"
       objectReference: {fileID: 0}
     - target: {fileID: 9091639864718649713, guid: 798063266e9a47d469d26e03753f4888, type: 3}
       propertyPath: 'frase.Array.data[2]'
@@ -83733,7 +83733,7 @@ MonoBehaviour:
     - "No lo s\xE9, preg\xFAntale a mi amigo, est\xE1 aqu\xED a mi lado haciendome
       compa\xF1\xEDa"
   - lineas:
-    - Es broma tontorron JEJEJE
+    - "Es broma tontorr\xF3n JEJEJE"
     - "Primer pasillo segunda estanter\xEDa a la izquierda, ah\xED encontrar\xE1s
       el agua bendita de Jesucristo nuestro se\xF1or"
   - lineas:
