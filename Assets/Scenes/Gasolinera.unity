@@ -17423,7 +17423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c324188504f846499d25b0b4cfe30f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
-  pensamiento_mostrar: "Me parec\xEDo que esa figura dejo algo en la parada"
+  pensamiento_mostrar: "Me parec\xEDo que esa figura dej\xF3 algo en la parada"
   oneTimeOnly: 1
   activaTrigger: {fileID: 0}
   npc: {fileID: 0}

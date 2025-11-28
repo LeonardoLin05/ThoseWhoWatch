@@ -4148,13 +4148,13 @@ MonoBehaviour:
   lineas:
   - "Para todo el que est\xE9 leyendo esto"
   - 'Hola, mi nombre es Goto  '
-  - Goto Setien\n\n
+  - "Goto Seti\xE9n\\n\\n"
   - "Y lo que voy a contar a continuaci\xF3n me pas\xF3 hace aproximadamente 1 a\xF1o\\n "
   - "Ahora que he superado el trauma que me gener\xF3 aquella situaci\xF3n, creo
     que estoy listo para contar lo sucedido aquella noche"
   - saltar
   - "Estaba harto de la ciudad y su gente, del estr\xE9s que esta me produc\xEDa  "
-  - 'Aparte odiaba a mi jefe, y para que mentir, mi trabajo en general tambien\n '
+  - "Aparte odiaba a mi jefe, y para que mentir, mi trabajo en general tambi\xE9n\\n "
   - Necesitaba un cambio urgente\n
   - "Por lo que la \xFAnica soluci\xF3n que encontr\xE9 fue mudarme lejos de todo,
     dejar mi vida atr\xE1s y comenzar una nueva, pero esta vez con la tranquilidad
