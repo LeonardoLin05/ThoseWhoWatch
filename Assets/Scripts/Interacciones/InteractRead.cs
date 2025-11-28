@@ -34,7 +34,7 @@ public class InteractRead : MonoBehaviour, IInteractable
         }
     }
 
-    public IEnumerator interact()
+    public void Interact()
     {
         if (!viendo)
         {
@@ -44,8 +44,6 @@ public class InteractRead : MonoBehaviour, IInteractable
         {
             cerrar();
         }
-
-        yield break;
     }
 
     private void cerrar()
