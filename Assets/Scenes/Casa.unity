@@ -3301,7 +3301,7 @@ MonoBehaviour:
   opciones:
   - respuestas:
     - Me he mudado hace poco
-    - Voy a comprar un par de botellas que me he quedado sin agua
+    - Voy a comprar una botella que me he quedado sin agua
     - Acabar dialogo
     saltar: 01000000020000000f000000
     evento:
@@ -3436,7 +3436,6 @@ MonoBehaviour:
   botones:
   - {fileID: 2117269678}
   - {fileID: 2117269677}
-  - {fileID: 2117269676}
   continueButton: {fileID: 2117269675}
   botonesFila:
   - estado: 010000000100000001000000
@@ -26424,17 +26423,6 @@ PrefabInstance:
 --- !u!114 &2117269675 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2908892798569661324, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-  m_PrefabInstance: {fileID: 2117269674}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
---- !u!114 &2117269676 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4122081135607380285, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
   m_PrefabInstance: {fileID: 2117269674}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
