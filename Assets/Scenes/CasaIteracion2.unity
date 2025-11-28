@@ -201,6 +201,9 @@ MonoBehaviour:
   pensamientoObjeto: "Pens\xE9 que ser\xEDa un arma de verdad, pero result\xF3 ser
     meramente de decoraci\xF3n"
   gameObjectDesactivar: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &90875247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -529,6 +532,9 @@ MonoBehaviour:
   pensamientoObjeto: "Como estaba vac\xEDa no me quedaba m\xE1s remedio que salir
     a comprar."
   gameObjectDesactivar: {fileID: 1441956241}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &145273836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -811,7 +817,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
   pensamiento_mostrar: "No era el ba\xF1o m\xE1s limpio, pero hac\xEDa su funci\xF3n."
-  pensamiento: {fileID: 0}
   oneTimeOnly: 1
   activaTrigger: {fileID: 0}
   npc: {fileID: 0}
@@ -1394,6 +1399,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fd0478a7f1da74cbdd15cda35c1a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractNPCs
+  activarAccion: 0
+  activarStart: 1
+  velocidadGiro: 50
   dialogos:
   - lineas:
     - Hola
@@ -1402,6 +1410,9 @@ MonoBehaviour:
   opciones:
   - respuestas: []
     saltar: 
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   siguienteFila: 
   botones:
   - {fileID: 1938963265}
@@ -1411,9 +1422,7 @@ MonoBehaviour:
   texto: {fileID: 1922163444}
   fondoTexto: {fileID: 0}
   puntero: {fileID: 0}
-  evento:
-    m_PersistentCalls:
-      m_Calls: []
+  npcHips: {fileID: 0}
   textoInteraccion2: {fileID: 0}
 --- !u!65 &447222608
 BoxCollider:
@@ -1687,7 +1696,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
   pensamiento_mostrar: "Estaba sediento as\xED que decid\xED ir a la nevera a por
     un poco de agua."
-  pensamiento: {fileID: 0}
   oneTimeOnly: 1
   activaTrigger: {fileID: 0}
   npc: {fileID: 0}
@@ -2649,6 +2657,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fd0478a7f1da74cbdd15cda35c1a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractNPCs
+  activarAccion: 0
+  activarStart: 1
+  velocidadGiro: 50
   dialogos:
   - lineas:
     - "Buenas jovenzuelo, \xBFQu\xE9 le trae por aqu\xED?"
@@ -2709,59 +2720,110 @@ MonoBehaviour:
     - Me he mudado hace poco.
     - Voy a comprar un par de botellas que me he quedado sin agua.
     saltar: 0100000002000000
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   - respuestas:
     - "\xBFS\xED por? "
     saltar: 03000000
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   - respuestas:
     - "\xBFS\xED por? "
     saltar: 03000000
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   - respuestas:
     - "\xBFC\xF3mo? no se que habr\xE1 visto pero no era yo."
     saltar: 04000000
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   - respuestas:
     - "\xBFC\xF3mo, \xBFA que se refiere? \xBFQu\xE9 cosas extra\xF1as exactamente?"
     - "\xBFPero, usted porque est\xE1 aqu\xED sabiendo eso? "
     saltar: 0500000006000000
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   - respuestas:
     - "\xBFY no se han denunciado esas desapariciones? \xBFNadie hace nada al respecto?"
     - "No parece muy real, yo creo que los lugare\xF1os intentan meter miedo a la
       gente de fuera para que no vengan y que siga siendo un lugar tranquilo."
     saltar: 0700000008000000
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   - respuestas:
     - "\xBFCu\xE1nto tiempo lleva esperando?"
     - "Si es real lo que ha dicho antes, en nada va a anochecer, esperemos que pase
       cuanto antes el autob\xFAs."
     saltar: 090000000a000000
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   - respuestas:
     - "Gracias por el consejo supongo...\_ \xBFUsted a donde va?"
     saltar: 06000000
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   - respuestas:
     - "Lo tendr\xE9 en cuenta... \xBFUsted a donde va?"
     saltar: 06000000
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   - respuestas:
     - " Pienso que no deber\xEDa viajar sola."
     saltar: 0b000000
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   - respuestas:
     - " Pienso que no deber\xEDa viajar sola."
     saltar: 0b000000
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   - respuestas:
     - "Igualmente me gustar\xEDa acompa\xF1arla pero me bajo en la siguiente parada,
       la de la gasolinera, y la ciudad queda muy lejos."
     saltar: 0c000000
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   - respuestas:
     - "\xBFBuena suerte? \xBFUsted no sube? "
     saltar: 0d000000
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   - respuestas:
     - "Pero si el \xFAnico que pasa por el bosque es el 591 \xBFEst\xE1 segura de
       que era otra l\xEDnea? "
     saltar: 0e000000
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   - respuestas: []
     saltar: 
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   - respuestas: []
     saltar: 
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   - respuestas:
     - "Lo tendr\xE9 en cuenta... \xBFUsted a donde va?"
     saltar: 06000000
+    evento:
+      m_PersistentCalls:
+        m_Calls: []
   siguienteFila: 00000000
   botones:
   - {fileID: 1938963265}
@@ -2787,21 +2849,7 @@ MonoBehaviour:
   texto: {fileID: 1922163444}
   fondoTexto: {fileID: 129669216}
   puntero: {fileID: 1234432830}
-  evento:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 595363842}
-        m_TargetAssemblyTypeName: SpawnBus, Assembly-CSharp
-        m_MethodName: Spawn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  npcHips: {fileID: 0}
   textoInteraccion2: {fileID: 0}
 --- !u!114 &595363842
 MonoBehaviour:
@@ -4709,6 +4757,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractTalk
   pensamientoObjeto: Desgraciadamnete el agua del grifo no era potable
   gameObjectDesactivar: {fileID: 0}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &906006432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4748,7 +4799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
   bloqueada: 0
-  frasePuertaBloqueada: 
+  pensamientoPuertaBloqueada: 
 --- !u!95 &934963001
 Animator:
   serializedVersion: 7
@@ -5471,24 +5522,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2953313818409056956, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
   m_PrefabInstance: {fileID: 2078176138}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1298798344 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2525760814430603792, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
-  m_PrefabInstance: {fileID: 2078176138}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1298798349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1298798344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f4fa183d5d95ba41974bd3b5690bdeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Footsteps
-  audioFootsteps: {fileID: 8300000, guid: 9f1642ed00669024fb473c3a2c4597ea, type: 3}
 --- !u!28 &1347259851
 Texture2D:
   m_ObjectHideFlags: 0
@@ -14866,7 +14899,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InnerThoughts
   pensamiento_mostrar: "Tom\xE9 el bus para llegar ya que no me apetec\xEDa andar
     mucho a estas horas."
-  pensamiento: {fileID: 0}
   oneTimeOnly: 1
   activaTrigger: {fileID: 0}
   npc: {fileID: 0}
@@ -14968,7 +15000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
   bloqueada: 0
-  frasePuertaBloqueada: 
+  pensamientoPuertaBloqueada: 
 --- !u!1001 &1831196233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15905,10 +15937,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2525760814430603792, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1298798349}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
 --- !u!1 &2088157562 stripped
 GameObject:
