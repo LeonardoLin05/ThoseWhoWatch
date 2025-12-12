@@ -3246,46 +3246,46 @@ MonoBehaviour:
   velocidadGiro: 50
   dialogos:
   - lineas:
-    - "Buenas jovenzuelo, \xBFQue le trae por aqu\xED?"
+    - "Buenas jovenzuelo, \xBFqu\xE9 le trae por aqu\xED?"
   - lineas:
-    - "\xBFOsea que eres nuevo por la zona no? "
+    - "O sea que eres nuevo por la zona, \xBFno? "
   - lineas:
     - "\xBFEsa parcela de ah\xED atr\xE1s es suya? "
   - lineas:
-    - "\xBFY acabas de volver a salir de casa?"
-    - "Lo digo porque un hace momento he visto a una persona salir pero la he saludado
-      y no me ha contestado \xBFEras tu?"
+    - "Y... \xBFAcabas de volver a salir de casa?"
+    - "Lo digo porque un hace momento v\xED a una persona salir y le salud\xE9, pero
+      no me devolvi\xF3 el saludo \xBFEras t\xFA?"
   - lineas:
     - No estoy muy enterada del tema porque estoy ya mayor...
     - "Pero corre el rumor de que hay algo extra\xF1o en este bosque seg\xFAn la
-      gente que vive en los alrededores  "
+      gente que vive en los alrededores."
   - lineas:
     - Sobre todo ruidos en las noches, como si fueran gritos.
     - "Pero a\xFAn m\xE1s raro es que dicen que la gente que entra desaparece sin
-      dejar rastro.  "
+      dejar rastro. "
   - lineas:
     - "Estaba de camino para visitar a mi nieto en la ciudad, pero el autob\xFAs
-      en el que iba se averi\xF3 al poco de salir y se di\xF3 media vuelta"
+      en el que iba se averi\xF3 al poco de salir y se di\xF3 media vuelta. "
     - 'El conductor me dijo que me bajara en esta parada que en nada iba a pasar
-      otro  '
+      otro... '
   - lineas:
-    - "Ni idea joven, si supiera se lo dir\xEDa. Por si acaso no se fie de nadie
-      que vea en el bosque, de nadie  "
+    - "No s\xE9, joven, cr\xE9ame que si supiera se lo dir\xEDa. Por si acaso no
+      se f\xEDe de nadie que vea en el bosque, de nadie. "
   - lineas:
-    - ' Pienso lo mismo, pero por si acaso ve con cuidado por lo que pueda pasar,
-      nunca se sabe'
+    - 'Pienso lo mismo, pero por si acaso vaya con cuidado por lo que pueda pasar,
+      nunca se sabe. '
   - lineas:
-    - "No mucho, o eso creo, a veces pierdo la noci\xF3n del tiempo"
+    - "No mucho, o eso creo, a veces pierdo la noci\xF3n del tiempo."
     - "Aunque le tengo que comentar que el conductor de antes era un poco particular,
       no llevaba el t\xEDpico uniforme de trabajo y no paraba de mirarme, como si
       me estuviera vigilando por alg\xFAn motivo. "
-    - En verdad agradezco haberme bajado, mejor esperar al siguiente
+    - 'En verdad, agradezco haberme bajado, mejor esperar al siguiente. '
   - lineas:
-    - "Dios te oiga porque se me est\xE1 acabando la paciencia"
+    - "Dios te oiga, porque se me est\xE1 acabando la paciencia. "
     - "Aunque le tengo que comentar que el conductor de antes era un poco particular,
       no llevaba el t\xEDpico uniforme de trabajo y no paraba de mirarme, como si
       me estuviera vigilando por alg\xFAn motivo. "
-    - En verdad agradezco haberme bajado, mejor esperar al siguiente
+    - 'En verdad agradezco haberme bajado, mejor esperar al siguiente. '
   - lineas:
     - "Entiendo su preocupaci\xF3n pero no necesito la ayuda de otros, estoy bien"
   - lineas:
