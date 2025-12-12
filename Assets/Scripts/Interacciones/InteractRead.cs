@@ -1,17 +1,17 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 public class InteractRead : MonoBehaviour, IInteractable
 {
-    public string texto;
+    [SerializeField] private string texto;
 
-    public GameObject panelNota;
-    public TextMeshProUGUI textoNota;
+    [SerializeField] private GameObject panelNota;
+    [SerializeField] private TextMeshProUGUI textoNota;
 
-    public Transform objetivoZoom;
-    public float velocidadZoom = 10f;
-
-    private bool viendo = false;
+    [SerializeField] private Transform objetivoZoom;
+    [SerializeField] private float velocidadZoom = 10f;
+    [SerializeField] private UnityEvent eventos;
 
     void Awake()
     {
@@ -26,29 +26,32 @@ public class InteractRead : MonoBehaviour, IInteractable
         }
     }
 
+    void Start()
+    {
+        enabled = false;
+    }
+
     void Update()
     {
-        if(viendo && Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
         {
-            cerrar();
+            Cerrar();
         }
     }
 
     public void Interact()
     {
-        if (!viendo)
-        {
-            abrir();
-        }
-        else
-        {
-            cerrar();
-        }
+        // Activamos el update
+        enabled = true;
+        Abrir();
     }
 
-    private void cerrar()
+    private void Cerrar()
     {
-        viendo = false;
+        // Desactivamos el update
+        enabled = false;
+        // Comprobamos que haya eventos que ejecutar
+        eventos?.Invoke();
 
         InteractNPCs.ActivarInstances(true);
 
@@ -56,10 +59,9 @@ public class InteractRead : MonoBehaviour, IInteractable
 
         panelNota.SetActive(false);
     }
-    private void abrir()
-    {
-        viendo = true;
 
+    private void Abrir()
+    {
         InteractNPCs.ActivarInstances(false);
 
         TalkZoomMoveCamera.Instance.setCabeza(objetivoZoom);
@@ -72,13 +74,6 @@ public class InteractRead : MonoBehaviour, IInteractable
 
     public string MensajeInteraccion()
     {
-        if (!viendo)
-        {
-            return "[E] para leer";
-        }
-        else
-        {
-            return "[E] para cerrar";
-        }
+        return "[E] para leer";
     }
 }
