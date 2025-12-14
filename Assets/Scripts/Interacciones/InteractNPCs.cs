@@ -188,6 +188,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         }
         else
         {
+            if(rotarNPC != null) rotarNPC.enabled = false;
             // Si hay evento que ejecutar en la última fila de diálogo
             if(fila < opciones.Length) EjecutarEvento();
 
@@ -261,7 +262,6 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     private void FinDialogo()
     {
-        if(rotarNPC != null) rotarNPC.enabled = false;
         texto.gameObject.SetActive(false);
         fondoTexto.SetActive(false);
         SetContinueButtonVisible(false);

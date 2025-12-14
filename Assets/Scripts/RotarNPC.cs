@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class RotarNPC : MonoBehaviour
 {
-    [SerializeField] Transform player;
+    [SerializeField] private Transform player;
+    [SerializeField] private bool enabledOnAwake = false;
 
     void Awake()
     {
-        enabled = false;
+        if(!enabledOnAwake) enabled = false;
     }
 
     // Update is called once per frame
