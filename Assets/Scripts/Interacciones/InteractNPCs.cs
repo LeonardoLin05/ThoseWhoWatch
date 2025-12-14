@@ -67,6 +67,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     private CanvasGroup continueGroup;
     private InteractPickUp objeto;
+    private RotarNPC rotarNPC;
 
     private string oldText;
     
@@ -91,6 +92,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         {
             textoInteraccion2 = GameObject.FindGameObjectWithTag("TextoInteractuar2").GetComponent<TextMeshProUGUI>();
         }
+        rotarNPC = gameObject.GetComponent<RotarNPC>();
     }
 
     void Start()
@@ -123,6 +125,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if(rotarNPC != null) rotarNPC.enabled = true;
         i = 0;
         texto.gameObject.SetActive(true);
         fondoTexto.SetActive(true);
@@ -258,6 +261,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     private void FinDialogo()
     {
+        if(rotarNPC != null) rotarNPC.enabled = false;
         texto.gameObject.SetActive(false);
         fondoTexto.SetActive(false);
         SetContinueButtonVisible(false);

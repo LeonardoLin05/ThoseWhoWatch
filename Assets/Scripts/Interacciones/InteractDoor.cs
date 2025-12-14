@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class InteractDoor : MonoBehaviour, IInteractable
@@ -7,6 +8,8 @@ public class InteractDoor : MonoBehaviour, IInteractable
 
     private Animator door;
     private bool open = false;
+
+    private WaitForSecondsRealtime esperar = new(1f);
 
     void Start()
     {
@@ -22,13 +25,17 @@ public class InteractDoor : MonoBehaviour, IInteractable
         }
         else
         {
-            PuertaBloqueada();
+            StartCoroutine(PuertaBloqueada());
         }
     }
 
-    private void PuertaBloqueada()
+    private IEnumerator PuertaBloqueada()
     {
+        gameObject.layer = 0;
+        door.SetTrigger("blocked");
         Thoughts.Instance.StartThoughts(pensamientoPuertaBloqueada);
+        yield return esperar;
+        gameObject.layer = 6;
     }
 
     // IGNORAR: para evento gasolinera
