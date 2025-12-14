@@ -8,8 +8,14 @@ public class CameraMovement : MonoBehaviour
     private Transform player;
 
     [SerializeField, Range(0f, 1000f)] private float mouseSensitivity = 500f;
+
+    public bool lockY = false;
+    public bool lockX = false;
     public float xRotation;
     public float yRotation;
+
+    private float inputX;
+    private float inputY;
 
     void Awake()
     {
@@ -40,11 +46,10 @@ public class CameraMovement : MonoBehaviour
         GirarPersonaje();   
     }
 
-	
     private void GirarCamara()
     {
-        float inputX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * mouseSensitivity;
-        float inputY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * mouseSensitivity;
+        if(!lockX) inputX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * mouseSensitivity;
+        if(!lockY) inputY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * mouseSensitivity;
 
         yRotation += inputX;
         xRotation -= inputY;

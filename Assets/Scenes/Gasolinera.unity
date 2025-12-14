@@ -17429,6 +17429,18 @@ MonoBehaviour:
             m_StringArgument: "Me fu\xED lo antes posible de aqu\xED"
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: InteractDoor, Assembly-CSharp
+          m_MethodName: SetBloqueada
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "Me fu\xED lo antes posible de aqu\xED"
+            m_BoolArgument: 0
+          m_CallState: 2
   siguienteFila: ffffffffffffffff
   botones:
   - {fileID: 1943179574}
@@ -22076,7 +22088,7 @@ Transform:
   - {fileID: 6219237132224141409}
   - {fileID: 2437248293685148892}
   - {fileID: 2886989531301978995}
-  - {fileID: 2786035684222591746}
+  - {fileID: 1244574365}
   - {fileID: 904561286}
   - {fileID: 2120899172}
   - {fileID: 713928057}
@@ -22663,6 +22675,98 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e838e2b42febbf64193d979396cd781e, type: 3}
+--- !u!1 &1244574364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1244574365}
+  - component: {fileID: 1244574368}
+  - component: {fileID: 1244574367}
+  - component: {fileID: 1244574366}
+  m_Layer: 6
+  m_Name: Door_cubicles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1244574365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244574364}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -23.326347, y: 1.4600143, z: -15.34261}
+  m_LocalScale: {x: -100, y: -99.99998, z: -100}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2786035684222591746}
+  m_Father: {fileID: 1177335158}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1244574366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244574364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d677e6906fb33449887739ed6e6544d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
+  bloqueada: 1
+  pensamientoPuertaBloqueada: "Parec\xEDa haber alguien cagando"
+--- !u!95 &1244574367
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244574364}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf3c5f43abf6f3045a9de53d44047a18, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &1244574368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244574364}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0008607782, y: 0.019259892, z: 0.009503126}
+  m_Center: {x: 0, y: 0, z: -0.0046976674}
 --- !u!1001 &1264393045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24673,7 +24777,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -56078,13 +56182,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7776621611848254392}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.715007, y: -0.006355374, z: -0.022424964, w: 0.69872874}
-  m_LocalPosition: {x: -23.326353, y: 1.4600124, z: -15.342609}
-  m_LocalScale: {x: -100, y: -100, z: -99.999985}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1177335158}
-  m_LocalEulerAnglesHint: {x: 92.679016, y: 61.157997, z: 59.856003}
+  m_Father: {fileID: 1244574365}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &2787503875432810532
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -103102,9 +103206,7 @@ GameObject:
   - component: {fileID: 2786035684222591746}
   - component: {fileID: 4951692690413324860}
   - component: {fileID: 7971380048675453292}
-  - component: {fileID: 7971380048675453293}
-  - component: {fileID: 7971380048675453294}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Toilet_cubicles_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105001,42 +105103,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7971380048675453293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7776621611848254392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d677e6906fb33449887739ed6e6544d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
-  bloqueada: 1
-  pensamientoPuertaBloqueada: "Parec\xEDa haber alguien cagando"
---- !u!64 &7971380048675453294
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7776621611848254392}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7764871860419167671, guid: 50d99b8cd4d7dec4699fd0ee87ba4611, type: 3}
 --- !u!4 &7975906944554378248
 Transform:
   m_ObjectHideFlags: 0

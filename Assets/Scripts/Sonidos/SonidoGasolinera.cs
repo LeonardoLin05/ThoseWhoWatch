@@ -9,9 +9,16 @@ public class SonidoGasolinera : MonoBehaviour
     void Update()
     {
         float distancia = Vector3.Distance(player.position, transform.position);
-        // Hacemos que el sonido sea espacial para que se vaya reduciendo segun entramos en la gasolinera
-        if(distancia < distanciaMin) audioGasolinera.spatialBlend = 1;
-        // Hacemos que el sonido deje de ser espacial para que el audio sea mono
-        else audioGasolinera.spatialBlend = 0;
+
+        // Reducimos el volumen gradualmente hasta 0
+        if(distancia < distanciaMin)
+        {
+            audioGasolinera.volume = Mathf.Lerp(audioGasolinera.volume, 0f, Time.deltaTime);
+        }
+        // Recuperamos volumen predeterminado
+        else
+        {
+            audioGasolinera.volume = Mathf.Lerp(audioGasolinera.volume, 0.2f, Time.deltaTime);
+        }
     }
 }
