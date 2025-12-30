@@ -378,6 +378,8 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         HeadbobSystem.Instance.enabled = activar;
         Interaction.Instance.enabled = activar;
         Zoom.Instance.enabled = activar;
+
+        GamePause.Instance.enabled = activar;
     }
 
     public string MensajeInteraccion()

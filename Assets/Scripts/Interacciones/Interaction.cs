@@ -34,6 +34,7 @@ public class Interaction : MonoBehaviour
     {
         texto.text = "";
     }
+    
     void Start()
     {
         mask = LayerMask.GetMask("Interactable") | LayerMask.GetMask("Default");

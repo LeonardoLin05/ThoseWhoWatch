@@ -32,10 +32,7 @@ public class ThoughtsNarration : MonoBehaviour
 
     void Start()
     {
-        CameraMovement.Instance.enabled = false;
-        PlayerMovement.Instance.enabled = false;
-        Interaction.Instance.enabled = false;
-        Zoom.Instance.enabled = false;
+        InteractNPCs.ActivarInstances(false);
 
         fade = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         textoInteractuar2 = GameObject.Find("texto_interactuar2").GetComponent<TextMeshProUGUI>();
@@ -114,13 +111,13 @@ public class ThoughtsNarration : MonoBehaviour
         if (alarma != null)
         {
             CameraMovement.Instance.lockY = true;
-            PlayerMovement.Instance.enabled = false;
-            HeadbobSystem.Instance.enabled = false; 
         }
         else
         {
             PlayerMovement.Instance.enabled = true;
+            HeadbobSystem.Instance.enabled = true;
         }
+        GamePause.Instance.enabled = true;
         Interaction.Instance.enabled = true;
         Zoom.Instance.enabled = true;
     }
