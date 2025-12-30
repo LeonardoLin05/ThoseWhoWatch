@@ -5,6 +5,7 @@ public class InteractDoor : MonoBehaviour, IInteractable
 {
     [SerializeField] private bool bloqueada;
     [SerializeField] private string pensamientoPuertaBloqueada;
+    [SerializeField] private AudioSource sonidoAbrir;
 
     private Animator door;
     private bool open = false;
@@ -20,6 +21,10 @@ public class InteractDoor : MonoBehaviour, IInteractable
     {
         if (!bloqueada)
         {
+            if (sonidoAbrir != null)
+            {
+                sonidoAbrir.Play(); 
+            }
             open = !open;
             door.SetBool("open", open);
         }

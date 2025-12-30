@@ -46,7 +46,7 @@ public class ParpadeoLuz : MonoBehaviour
                      luz.intensity = Random.Range(minIntensidad, maxIntensidad);
                 }
             }
-            if (Random.value < 0.1f)
+            if (Random.value < 0.2f)
             {
                 luz.enabled = false;
                 yield return new WaitForSeconds(0.1f); 

@@ -42,6 +42,7 @@ public class Despertarse : MonoBehaviour
         //yield return new WaitForSeconds(2f);
         pantallaNegra.gameObject.SetActive(false);
         
+        HeadbobSystem.Instance.enabled = true; 
         PlayerMovement.Instance.enabled = true;
         CameraMovement.Instance.enabled = true;
     }

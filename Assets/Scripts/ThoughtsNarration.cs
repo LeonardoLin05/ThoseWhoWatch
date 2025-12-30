@@ -16,7 +16,7 @@ public class ThoughtsNarration : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textoHora;
 
     [SerializeField] private AudioSource alarma;
-    private bool primeraHora = true; 
+    public static bool primeraHora = true; 
 
     private Animator fade;
 
@@ -115,6 +115,7 @@ public class ThoughtsNarration : MonoBehaviour
         if (primeraHora)
         {
             PlayerMovement.Instance.enabled = false;
+            HeadbobSystem.Instance.enabled = false; 
             primeraHora = false; 
         }
         else
