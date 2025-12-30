@@ -15,6 +15,9 @@ public class ThoughtsNarration : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI textoHora;
 
+    [SerializeField] private AudioSource alarma;
+    private bool primeraHora = true; 
+
     private Animator fade;
 
     private int numeroLinea;
@@ -105,7 +108,16 @@ public class ThoughtsNarration : MonoBehaviour
         yield return dosSeg;
         textoHora.text = "";
         CameraMovement.Instance.enabled = true;
-        PlayerMovement.Instance.enabled = true;
+        if (primeraHora)
+        {
+            alarma.Play();
+            PlayerMovement.Instance.enabled = false;
+            primeraHora = false; 
+        }
+        else
+        {
+            PlayerMovement.Instance.enabled = true;
+        }
         Interaction.Instance.enabled = true;
         Zoom.Instance.enabled = true;
     }
