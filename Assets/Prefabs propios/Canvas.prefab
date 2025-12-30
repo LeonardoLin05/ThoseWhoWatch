@@ -915,7 +915,7 @@ RectTransform:
   m_Children:
   - {fileID: 744728478125137919}
   - {fileID: 1741213097925526462}
-  m_Father: {fileID: 2497904393187986711}
+  m_Father: {fileID: 1042199005792137860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1626,7 +1626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1717,6 +1717,9 @@ RectTransform:
   - {fileID: 2883577010611848399}
   - {fileID: 26413584297690680}
   - {fileID: 1449252267203070446}
+  - {fileID: 8433576170093830133}
+  - {fileID: 8493359319558696948}
+  - {fileID: 2091476544873403904}
   - {fileID: 7629363604189608838}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2749,9 +2752,6 @@ RectTransform:
   m_Children:
   - {fileID: 6931565722238599213}
   - {fileID: 7875442439957810263}
-  - {fileID: 8433576170093830133}
-  - {fileID: 8493359319558696948}
-  - {fileID: 2091476544873403904}
   m_Father: {fileID: 1042199005792137860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2857,7 +2857,7 @@ RectTransform:
   - {fileID: 8947607245306337992}
   - {fileID: 3686198042833593591}
   - {fileID: 3539194628758707335}
-  m_Father: {fileID: 2497904393187986711}
+  m_Father: {fileID: 1042199005792137860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2915,7 +2915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -3213,7 +3213,7 @@ RectTransform:
   m_Children:
   - {fileID: 3990849211496231194}
   - {fileID: 4208846367206797722}
-  m_Father: {fileID: 2497904393187986711}
+  m_Father: {fileID: 1042199005792137860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3271,7 +3271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -4025,3 +4025,4 @@ MonoBehaviour:
   hora: 05:17 AM
   nuevaHora: 05:18 AM
   textoHora: {fileID: 3343775450439034218}
+  alarma: {fileID: 0}

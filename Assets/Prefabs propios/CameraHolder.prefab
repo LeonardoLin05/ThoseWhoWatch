@@ -123,6 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
   mouseSensitivity: 500
+  lockY: 0
+  lockX: 0
   xRotation: 0
   yRotation: 0
 --- !u!114 &6279691891283765525
@@ -275,6 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62438435798bb645ba550c9f6b5a33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeadbobSystem
+  audioFootsteps: {fileID: 8300000, guid: 9f1642ed00669024fb473c3a2c4597ea, type: 3}
 --- !u!114 &1574663433580471423
 MonoBehaviour:
   m_ObjectHideFlags: 0

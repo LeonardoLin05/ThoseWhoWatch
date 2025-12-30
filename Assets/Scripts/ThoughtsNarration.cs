@@ -113,6 +113,7 @@ public class ThoughtsNarration : MonoBehaviour
         CameraMovement.Instance.enabled = true;
         if (alarma != null)
         {
+            CameraMovement.Instance.lockY = true;
             PlayerMovement.Instance.enabled = false;
             HeadbobSystem.Instance.enabled = false; 
         }

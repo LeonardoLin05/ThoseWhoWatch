@@ -4,14 +4,17 @@ public class HeadbobSystem : MonoBehaviour
 {
     public static HeadbobSystem Instance { get; private set; }
 
+    [SerializeField] private AudioClip audioFootsteps;
+    private bool stepped = false;
+
     [SerializeField, Range(0f, 1f)] private static float Amount = 0.004f;
 
     [SerializeField, Range(0f, 40f)] private static float Frequency = 10.0f;
 
     private float Smooth = 80.0f;
-
-    public Vector3 StartPos;
-    public float sumY = 0f;
+    
+    private Vector3 StartPos;
+    private float sumY = 0f;
 
     void Awake()
     {
@@ -33,10 +36,22 @@ public class HeadbobSystem : MonoBehaviour
     void Update()
     {
         CheckForHeadbobTrigger();
+        CheckSound();
         StopHeadbob();
     }
 
-
+    private void CheckSound()
+    {
+        if (!stepped && sumY < -0.005f)
+        {
+            AudioSource.PlayClipAtPoint(audioFootsteps, transform.position, 0.1f);
+            stepped = true;
+        }
+        else if(stepped && sumY >= 0f)
+        {
+            stepped = false;
+        }
+    }
 
     private void CheckForHeadbobTrigger()
     {
@@ -47,8 +62,6 @@ public class HeadbobSystem : MonoBehaviour
             StartHeadBob();
         }
     }
-
-
 
     private Vector3 StartHeadBob()
     {
@@ -63,8 +76,6 @@ public class HeadbobSystem : MonoBehaviour
         return pos;
     }
 
-
-
     private void StopHeadbob()
     {
         if (transform.localPosition == StartPos) return;
@@ -77,5 +88,4 @@ public class HeadbobSystem : MonoBehaviour
         Amount = amount;
         Frequency = frequency;
     }
-
 }

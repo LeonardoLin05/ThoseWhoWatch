@@ -35,8 +35,7 @@ public class Despertarse : MonoBehaviour
         for (float a = 1; a >= 0; a -= Time.deltaTime) 
         { 
             mat.color = new Color(0, 0, 0, a); 
-            yield return null; 
-        
+            yield return null;
         }
         MantaCama.Stop();
         //yield return new WaitForSeconds(2f);
@@ -44,6 +43,7 @@ public class Despertarse : MonoBehaviour
         
         HeadbobSystem.Instance.enabled = true; 
         PlayerMovement.Instance.enabled = true;
+        CameraMovement.Instance.lockY = false;
         CameraMovement.Instance.enabled = true;
     }
 }

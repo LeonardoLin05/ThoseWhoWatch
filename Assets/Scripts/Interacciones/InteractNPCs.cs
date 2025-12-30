@@ -174,7 +174,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             botones[i].onClick.AddListener(() => SeleccionRespuesta(j));
         }
 
-        StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
+        StartCoroutine(TextoAnimar(dialogos[fila].lineas[i]));
     }
 
     private void AvanzarDialogo()
@@ -184,7 +184,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
         if (i < dialogos[fila].lineas.Length)
         {
-            StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
+            StartCoroutine(TextoAnimar(dialogos[fila].lineas[i]));
         }
         else
         {
@@ -246,7 +246,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         fila = opciones[fila].saltar[respuesta];
 
         i = 0;
-        StartCoroutine(textoAnimar(dialogos[fila].lineas[i]));
+        StartCoroutine(TextoAnimar(dialogos[fila].lineas[i]));
     }
 
     private void EjecutarEvento()
@@ -296,7 +296,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         }
     }
 
-    public IEnumerator textoAnimar(string dialogo)
+    public IEnumerator TextoAnimar(string dialogo)
     {
         enabled = true;
 

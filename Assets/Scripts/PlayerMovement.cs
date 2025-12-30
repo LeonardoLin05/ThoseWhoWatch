@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
             Instance = this;
         }
 
-        characterController = GetComponent<CharacterController>();
+        characterController = gameObject.GetComponent<CharacterController>();
     }
 
     void Update()
