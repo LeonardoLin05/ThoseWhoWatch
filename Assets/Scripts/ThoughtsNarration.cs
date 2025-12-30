@@ -104,13 +104,16 @@ public class ThoughtsNarration : MonoBehaviour
         if(cambiaHora) {
             yield return entreLetra;
             textoHora.text = nuevaHora;
+            if (primeraHora)
+            {
+                alarma.Play();
+            }
         }
         yield return dosSeg;
         textoHora.text = "";
         CameraMovement.Instance.enabled = true;
         if (primeraHora)
         {
-            alarma.Play();
             PlayerMovement.Instance.enabled = false;
             primeraHora = false; 
         }
