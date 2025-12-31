@@ -1941,6 +1941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Thoughts
   pensamiento: {fileID: 0}
+  interactuar: {fileID: 752954462911415462}
 --- !u!1 &5575255213546686927
 GameObject:
   m_ObjectHideFlags: 0

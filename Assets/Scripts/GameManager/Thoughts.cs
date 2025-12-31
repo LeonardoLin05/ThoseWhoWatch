@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
 
 public class Thoughts : MonoBehaviour
 {
@@ -9,6 +8,7 @@ public class Thoughts : MonoBehaviour
 
     // Texto donde se va a mostrar el pensamiento
     [SerializeField] private TextMeshProUGUI pensamiento;
+    [SerializeField] private TextMeshProUGUI interactuar;
 
     private bool enPensamiento = false;
 
@@ -33,6 +33,8 @@ public class Thoughts : MonoBehaviour
         {
             pensamiento = gameObject.GetComponent<TextMeshProUGUI>();
         }
+
+
     }
 
     void OnDisable()
@@ -54,15 +56,27 @@ public class Thoughts : MonoBehaviour
             StopCoroutine(coroutine);
             esperarPensamiento.Reset();
         }
-        coroutine = StartCoroutine(mostrarPensamiento(pensamiento));
+        coroutine = StartCoroutine(MostrarPensamiento(pensamiento));
     }
 
-    private IEnumerator mostrarPensamiento(string pensamiento)
+    public void StartInstruction(string instruction)
+    {
+        StartCoroutine(MostrarInstruccion(instruction));
+    }
+
+    private IEnumerator MostrarPensamiento(string pensamiento)
     {
         enPensamiento = true;
         this.pensamiento.text = pensamiento;
         yield return esperarPensamiento;
         this.pensamiento.text = "";
         enPensamiento = false;
+    }
+
+    private IEnumerator MostrarInstruccion(string instruction)
+    {
+        interactuar.text = instruction;
+        yield return esperarPensamiento;
+        interactuar.text = "";
     }
 }

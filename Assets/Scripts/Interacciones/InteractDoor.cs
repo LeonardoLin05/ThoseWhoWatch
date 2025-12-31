@@ -7,6 +7,8 @@ public class InteractDoor : MonoBehaviour, IInteractable
     [SerializeField] private string pensamientoPuertaBloqueada;
     [SerializeField] private AudioSource sonidoAbrir;
 
+    [SerializeField] private AudioSource sonidoCerrarConLlave;
+
     private Animator door;
     private bool open = false;
 
@@ -14,7 +16,7 @@ public class InteractDoor : MonoBehaviour, IInteractable
 
     void Start()
     {
-        door = GetComponent<Animator>();
+        door = gameObject.GetComponent<Animator>();
     }
 
     public void Interact()
@@ -55,6 +57,33 @@ public class InteractDoor : MonoBehaviour, IInteractable
         pensamientoPuertaBloqueada = "Me había encerrado con llave";
     }
 
+    // IGNORAR: llamada al evento casa final de noche
+    public void EventoCerrarConLlave()
+    {
+        StartCoroutine(EventoCerrarConLlaveEnumerator());
+    }
+
+    // IGNORAR: para evento puerta casa final de noche
+    private IEnumerator EventoCerrarConLlaveEnumerator()
+    {
+        PlayerMovement.Instance.enabled = false;
+        HeadbobSystem.Instance.enabled = false;
+        gameObject.layer = 0;
+
+        if(open)
+        {
+            open = !open;
+            door.SetBool("open", open);
+            yield return new WaitForSecondsRealtime(1f);
+        }
+        
+        sonidoCerrarConLlave.Play();
+        yield return new WaitForSecondsRealtime(4f);
+        PlayerMovement.Instance.enabled = true;
+        HeadbobSystem.Instance.enabled = false;
+        Thoughts.Instance.StartThoughts("Me fuí a la cama rezando para que mañana todo volviese a la normalidad");
+    }
+
     public bool GetBloqueada()
     {
         return bloqueada;
@@ -67,13 +96,6 @@ public class InteractDoor : MonoBehaviour, IInteractable
 
     public string MensajeInteraccion()
     {
-        if (!open)
-        {
-            return "[E] para Abrir";
-        }
-        else
-        {
-            return "[E] para Cerrar";
-        }
+        return !open ? "[E] para Abrir" : "[E] para Cerrar";
     }
 }
