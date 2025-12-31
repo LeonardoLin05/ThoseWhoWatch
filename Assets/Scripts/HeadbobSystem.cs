@@ -4,7 +4,9 @@ public class HeadbobSystem : MonoBehaviour
 {
     public static HeadbobSystem Instance { get; private set; }
 
-    [SerializeField] private AudioClip audioFootsteps;
+    [SerializeField] private AudioClip[] audioFootsteps;
+
+    private Transform player;
     private bool stepped = false;
 
     [SerializeField, Range(0f, 1f)] private static float Amount = 0.004f;
@@ -31,6 +33,7 @@ public class HeadbobSystem : MonoBehaviour
     void Start()
     {
         StartPos = transform.localPosition;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     void Update()
@@ -44,7 +47,7 @@ public class HeadbobSystem : MonoBehaviour
     {
         if (!stepped && sumY < -0.005f)
         {
-            AudioSource.PlayClipAtPoint(audioFootsteps, transform.position, 0.1f);
+            AudioSource.PlayClipAtPoint(audioFootsteps[Random.Range(0, audioFootsteps.Length)], player.position, 0.2f);
             stepped = true;
         }
         else if(stepped && sumY >= 0f)

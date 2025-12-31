@@ -20228,6 +20228,30 @@ MonoBehaviour:
           m_StringArgument: Trastienda
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2468919120114641345}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: set_layer
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: Trastienda
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1244574366}
+        m_TargetAssemblyTypeName: InteractDoor, Assembly-CSharp
+        m_MethodName: SetBloqueada
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: Trastienda
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &957808831
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22742,7 +22766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractDoor
   bloqueada: 1
-  pensamientoPuertaBloqueada: "Parec\xEDa haber alguien cagando"
+  pensamientoPuertaBloqueada: Estaba ocupada por alguien
   sonidoAbrir: {fileID: 0}
 --- !u!95 &1244574367
 Animator:
@@ -31076,6 +31100,14 @@ PrefabInstance:
     - target: {fileID: 8098550820813441613, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: hora
+      value: 07:57 PM
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: nuevaHora
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: cambiaHora
@@ -53387,7 +53419,7 @@ GameObject:
   - component: {fileID: 7986021426358103066}
   - component: {fileID: 8762759679422448307}
   - component: {fileID: 8762759679422448308}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Dumpster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55583,7 +55615,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 1425351657408759330, guid: 50d99b8cd4d7dec4699fd0ee87ba4611, type: 3}
-  - {fileID: 8556262120643298411, guid: 50d99b8cd4d7dec4699fd0ee87ba4611, type: 3}
+  - {fileID: 2100000, guid: 6e88b16309831984c877869b2cc61698, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75474,7 +75506,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 1425351657408759330, guid: 50d99b8cd4d7dec4699fd0ee87ba4611, type: 3}
-  - {fileID: 8556262120643298411, guid: 50d99b8cd4d7dec4699fd0ee87ba4611, type: 3}
+  - {fileID: 2100000, guid: 6e88b16309831984c877869b2cc61698, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113763,7 +113795,19 @@ MonoBehaviour:
   gameObjectDesactivar: {fileID: 0}
   evento:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2468919120114641345}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: set_layer
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!33 &8767240048370894531
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -118384,7 +118428,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 8
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -118392,23 +118436,41 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.125
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -8.0032
+      outSlope: -8.0032
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.25
+      value: 0.5
+      inSlope: -2.0008
+      outSlope: -2.0008
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 0.25
+      inSlope: -0.5002
+      outSlope: -0.5002
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.12505
+      outSlope: -0.12505
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
