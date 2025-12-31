@@ -26198,21 +26198,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2949142685184670957, guid: 88a9fdc096dde104cb48fa955755f36b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 8.0883
-      objectReference: {fileID: 0}
-    - target: {fileID: 6945782437906223619, guid: 88a9fdc096dde104cb48fa955755f36b, type: 3}
-      propertyPath: m_Name
-      value: Digital Clock
-      objectReference: {fileID: 0}
+    - target: {fileID: 2564500592285047438, guid: 88a9fdc096dde104cb48fa955755f36b, type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 1270625515}
+    - target: {fileID: 2564500592285047438, guid: 88a9fdc096dde104cb48fa955755f36b, type: 3}
+      propertyPath: pantallaNegra
+      value: 
+      objectReference: {fileID: 1492778416}
     - target: {fileID: 2949142685184670957, guid: 88a9fdc096dde104cb48fa955755f36b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 448.693
       objectReference: {fileID: 0}
     - target: {fileID: 2949142685184670957, guid: 88a9fdc096dde104cb48fa955755f36b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.0883
+      value: 8.088
       objectReference: {fileID: 0}
     - target: {fileID: 2949142685184670957, guid: 88a9fdc096dde104cb48fa955755f36b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26245,6 +26245,18 @@ PrefabInstance:
     - target: {fileID: 2949142685184670957, guid: 88a9fdc096dde104cb48fa955755f36b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735750674609617963, guid: 88a9fdc096dde104cb48fa955755f36b, type: 3}
+      propertyPath: evento.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 963673583}
+    - target: {fileID: 6735750674609617963, guid: 88a9fdc096dde104cb48fa955755f36b, type: 3}
+      propertyPath: evento.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 6945782437906223619, guid: 88a9fdc096dde104cb48fa955755f36b, type: 3}
+      propertyPath: m_Name
+      value: Digital Clock
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26987,7 +26999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: hora
-      value: 19:17 PM
+      value: 06:59 PM
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: alarma
@@ -26995,7 +27007,11 @@ PrefabInstance:
       objectReference: {fileID: 963673583}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: nuevaHora
-      value: 19:18 PM
+      value: 07:00 PM
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: cambiaHora
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: lineas.Array.size
