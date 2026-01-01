@@ -64,8 +64,8 @@ public class InteractRead : MonoBehaviour, IInteractable
     {
         InteractNPCs.ActivarInstances(false);
 
-        TalkZoomMoveCamera.Instance.setCabeza(objetivoZoom);
-        TalkZoomMoveCamera.Instance.StartZoomMovement(velocidadZoom);
+        TalkZoomMoveCamera.Instance.SetCabeza(objetivoZoom);
+        TalkZoomMoveCamera.Instance.StartZoomMovement(velocidadZoom, true);
 
         panelNota.SetActive(true);
         textoNota.text = texto;

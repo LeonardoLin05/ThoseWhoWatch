@@ -144,8 +144,8 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             Thoughts.Instance.enabled = false;
         }
 
-        TalkZoomMoveCamera.Instance.setCabeza(npcHips);
-        TalkZoomMoveCamera.Instance.StartZoomMovement(velocidadGiro);
+        TalkZoomMoveCamera.Instance.SetCabeza(npcHips);
+        TalkZoomMoveCamera.Instance.StartZoomMovement(velocidadGiro, true);
 
         // Bloqueamos movimientos de camara, personaje e interaccion
         ActivarInstances(false);

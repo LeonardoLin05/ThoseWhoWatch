@@ -89,8 +89,8 @@ public class NPCReact : MonoBehaviour
         Cursor.visible = true;
 
         // Forzamos al jugar a mirar al NPC
-        TalkZoomMoveCamera.Instance.setCabeza(NPC);
-        TalkZoomMoveCamera.Instance.StartZoomMovement(150f);
+        TalkZoomMoveCamera.Instance.SetCabeza(NPC);
+        TalkZoomMoveCamera.Instance.StartZoomMovement(150f, true);
 
         texto.gameObject.SetActive(true);
         fondoDialogo.SetActive(true);

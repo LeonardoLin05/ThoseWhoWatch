@@ -12,6 +12,8 @@ public class TalkZoomMoveCamera : MonoBehaviour
 
     private float rotationSpeed;
 
+    private bool zoom;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -30,11 +32,11 @@ public class TalkZoomMoveCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        camara.fieldOfView = Mathf.Lerp(camara.fieldOfView, ZOOMFOV, 2 * Time.deltaTime);
+        if(zoom) camara.fieldOfView = Mathf.Lerp(camara.fieldOfView, ZOOMFOV, 2 * Time.deltaTime);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(cabeza.position - transform.position), rotationSpeed * Time.deltaTime);
     }
 
-    public void setCabeza(Transform cabeza)
+    public void SetCabeza(Transform cabeza)
     {
         this.cabeza = cabeza;
     }
@@ -42,9 +44,10 @@ public class TalkZoomMoveCamera : MonoBehaviour
     /// <summary>
     /// Empieza el movimiento de zoom y rotacion
     /// </summary>
-    public void StartZoomMovement(float rotationSpeed)
+    public void StartZoomMovement(float rotationSpeed, bool zoom)
     {
         this.rotationSpeed = rotationSpeed;
+        this.zoom = zoom;
         enabled = true;
     }
 
@@ -53,7 +56,7 @@ public class TalkZoomMoveCamera : MonoBehaviour
     /// </summary>
     public void StopZoomMovement()
     {
-        camara.fieldOfView = NOZOOMFOV;
+        if(zoom) camara.fieldOfView = NOZOOMFOV;
         enabled = false;
     }
 }

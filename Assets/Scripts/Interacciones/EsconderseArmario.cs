@@ -14,6 +14,8 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 	[SerializeField] private Material materialTransparente;
 	private Material materialArmario;
 
+	private GameObject cursor;
+
 	private Animator fade;
 
 	private WaitForSeconds _waitForSeconds1_5 = new(1.5f);
@@ -22,8 +24,11 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 	// NOTA: se puede llamar desde otras clases pero no cambiar su valor desde ellas
 	public static bool DENTRO_ARMARIO { get; private set; } = false;
 
+	public static bool DESACTIVAR_ARMARIO = false;
+
 	void Start()
 	{
+		cursor = GameObject.FindGameObjectWithTag("Puntero");
 		fade = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         materialArmario = gameObject.GetComponent<MeshRenderer>().material;
@@ -43,13 +48,12 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 
 	private IEnumerator Esconderse()
     {
+			if(DESACTIVAR_ARMARIO) gameObject.layer = 0;
+
         	PlayerMovement.Instance.enabled = false;
 			HeadbobSystem.Instance.enabled = false;
 			Interaction.Instance.enabled = false;
-			//CameraMovement.Instance.enabled = false;
-
-			//CameraMovement.Instance.lockX = true;
-			//CameraMovement.Instance.lockY = true;
+			CameraMovement.Instance.enabled = false;
 
 			DENTRO_ARMARIO = true;
 
@@ -57,11 +61,11 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 			yield return _waitForSeconds1_5;
 
 			Interaction.Instance.enabled = true;
-			//CameraMovement.Instance.enabled = true;
+
+			cursor.SetActive(false);
 
 			// Rotamos la cámara para que mire donde queramos
-			CameraMovement.Instance.xRotation = teleportEntrada.eulerAngles.x;
-			CameraMovement.Instance.yRotation = teleportEntrada.eulerAngles.y;
+			CameraMovement.Instance.ChangeCameraRotation(teleportEntrada.eulerAngles.x, teleportEntrada.eulerAngles.y);
 
 			gameObject.GetComponent<MeshRenderer>().material = materialTransparente;
 			puertaDerecha.material = materialTransparente;
@@ -78,6 +82,8 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 
 	private IEnumerator Salir()
     {
+		if(DESACTIVAR_ARMARIO) gameObject.layer = 0;
+
         Interaction.Instance.enabled = false;
 
 		fade.SetTrigger("Fade");
@@ -87,13 +93,15 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 		HeadbobSystem.Instance.enabled = true;
 		Interaction.Instance.enabled = true;
 
+		cursor.SetActive(true);
+
 		DENTRO_ARMARIO = false;
 
 		// Rotamos la cámara para que mire donde queramos
-		CameraMovement.Instance.xRotation = teleportSalida.eulerAngles.x;
-		CameraMovement.Instance.yRotation = teleportSalida.eulerAngles.y;
+		CameraMovement.Instance.ChangeCameraRotation(teleportSalida.eulerAngles.x, teleportSalida.eulerAngles.y);
 
-		//CameraMovement.Instance.lockY = false;
+		CameraMovement.Instance.lockY = false;
+		CameraMovement.Instance.enabled = true;
 
 		player.position = teleportSalida.position;
 		Physics.SyncTransforms();

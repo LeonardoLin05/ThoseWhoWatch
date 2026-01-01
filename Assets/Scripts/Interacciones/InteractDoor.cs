@@ -68,7 +68,11 @@ public class InteractDoor : MonoBehaviour, IInteractable
     {
         PlayerMovement.Instance.enabled = false;
         HeadbobSystem.Instance.enabled = false;
+        CameraMovement.Instance.enabled = false;
         gameObject.layer = 0;
+
+        TalkZoomMoveCamera.Instance.SetCabeza(transform.GetChild(0));
+        TalkZoomMoveCamera.Instance.StartZoomMovement(150f, false);
 
         if(open)
         {
@@ -80,7 +84,11 @@ public class InteractDoor : MonoBehaviour, IInteractable
         sonidoCerrarConLlave.Play();
         yield return new WaitForSecondsRealtime(4f);
         PlayerMovement.Instance.enabled = true;
-        HeadbobSystem.Instance.enabled = false;
+        HeadbobSystem.Instance.enabled = true;
+        CameraMovement.Instance.enabled = true;
+
+        TalkZoomMoveCamera.Instance.StopZoomMovement();
+
         Thoughts.Instance.StartThoughts("Me fuí a la cama rezando para que mañana todo volviese a la normalidad");
     }
 

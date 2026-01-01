@@ -1,4 +1,5 @@
 using System;
+using UnityEditor;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
@@ -12,8 +13,8 @@ public class CameraMovement : MonoBehaviour
 
     public bool lockY = false;
     public bool lockX = false;
-    public float xRotation;
-    public float yRotation;
+    [SerializeField] private float xRotation;
+    [SerializeField] private float yRotation;
 
     private float inputX;
     private float inputY;
@@ -62,6 +63,14 @@ public class CameraMovement : MonoBehaviour
     private void GirarPersonaje()
     {
         player.rotation = Quaternion.Euler(0, yRotation, 0);
+    }
+
+
+    public void ChangeCameraRotation(float x, float y)
+    {
+        xRotation = x;
+        yRotation = y;
+        transform.rotation = Quaternion.Euler(x, y, 0);
     }
 
     /// <summary>
