@@ -25,11 +25,11 @@ public class InteractTV : MonoBehaviour, IInteractable
     {
         if (!active)
         {
-           return "[E] para encender"; 
+           return "[E] para Encender"; 
         }
         else
         {
-            return "[E] para apagar";
+            return "[E] para Apagar";
         }
     }
 }

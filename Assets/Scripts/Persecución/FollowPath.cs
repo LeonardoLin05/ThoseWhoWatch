@@ -5,6 +5,7 @@ public class FollowPath : MonoBehaviour
 {
     [SerializeField] private GameObject[] WP;
     [SerializeField] private GameObject armario;
+    [SerializeField] private AudioSource heartbeat;
 
     private Animator animacion;
 
@@ -22,7 +23,7 @@ public class FollowPath : MonoBehaviour
         {
             // Para tema de animaciones (si quieres que el NPC se pare a mirar alrededor antes 
             // continuar su ruta en los puntos que quieras, puedes poner más con un OR)
-            if(currentWP == 0 || currentWP == 3)
+            if (currentWP == 0 || currentWP == 3)
             {
                 StartCoroutine(Wait());
             }
@@ -32,9 +33,10 @@ public class FollowPath : MonoBehaviour
         // ¿Hemos llegado al final?
         if(currentWP >= WP.Length)
         {
+            heartbeat.Stop();
             armario.layer = 6;
             Thoughts.Instance.StartThoughts("Salí corriendo de casa");
-            animacion.SetTrigger("idle");
+            animacion.SetTrigger("lookAround");
             enabled = false;
         }
         else

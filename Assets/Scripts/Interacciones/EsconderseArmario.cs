@@ -22,12 +22,14 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 
 	// Variable global para saber si estamos dentro o fuera del armario;
 	// NOTA: se puede llamar desde otras clases pero no cambiar su valor desde ellas
-	public static bool DENTRO_ARMARIO { get; private set; } = false;
+	public static bool DENTRO_ARMARIO { get; private set; }
 
-	public static bool DESACTIVAR_ARMARIO = false;
+	public static bool DESACTIVAR_ARMARIO;
 
 	void Start()
 	{
+		DESACTIVAR_ARMARIO = false;
+		DENTRO_ARMARIO = false;
 		cursor = GameObject.FindGameObjectWithTag("Puntero");
 		fade = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -82,12 +84,16 @@ public class EsconderseArmario : MonoBehaviour, IInteractable
 
 	private IEnumerator Salir()
     {
-		if(DESACTIVAR_ARMARIO) gameObject.layer = 0;
-
         Interaction.Instance.enabled = false;
 
 		fade.SetTrigger("Fade");
 		yield return _waitForSeconds1_5;
+
+		if(DESACTIVAR_ARMARIO) {
+			PlayerMovement.Instance.activarCorrer = true;
+			gameObject.layer = 0;
+			Thoughts.Instance.StartInstruction("[LSHIFT] para Correr");
+		}
 
 		PlayerMovement.Instance.enabled = true;
 		HeadbobSystem.Instance.enabled = true;

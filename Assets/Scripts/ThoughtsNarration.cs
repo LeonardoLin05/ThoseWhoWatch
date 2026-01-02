@@ -32,7 +32,7 @@ public class ThoughtsNarration : MonoBehaviour
 
     void Start()
     {
-        InteractNPCs.ActivarInstances(false);
+        if(hora != "" ) InteractNPCs.ActivarInstances(false);
 
         fade = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         textoInteractuar2 = GameObject.Find("texto_interactuar2").GetComponent<TextMeshProUGUI>();
@@ -86,7 +86,7 @@ public class ThoughtsNarration : MonoBehaviour
         enabled = false;
         pensamientos.text = "";
         textoInteractuar2.text = "";
-        StartCoroutine(HoraAnimada());
+        if(hora != "") StartCoroutine(HoraAnimada());
         fade.SetTrigger("FadeOut");
     }
 

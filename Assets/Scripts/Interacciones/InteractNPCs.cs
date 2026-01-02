@@ -373,10 +373,11 @@ public class InteractNPCs : MonoBehaviour, IInteractable
     /// NOTA: no quitar el static o el public, se hace uso de esta función en NPCReact
     public static void ActivarInstances(bool activar)
     {
+        Interaction.Instance.enabled = activar;
         PlayerMovement.Instance.enabled = activar;
         CameraMovement.Instance.enabled = activar;
         HeadbobSystem.Instance.enabled = activar;
-        Interaction.Instance.enabled = activar;
+        
         Zoom.Instance.enabled = activar;
 
         GamePause.Instance.enabled = activar;

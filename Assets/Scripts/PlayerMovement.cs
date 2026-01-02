@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity;
     private float speed;
 
+    public bool activarCorrer = false;
+
     private CharacterController characterController;
 
     void Awake()
@@ -54,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private float Run()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (activarCorrer && Input.GetKey(KeyCode.LeftShift))
         {
             HeadbobSystem.ChangeData(0.008f, 15f);
             return walkSpeed * 1.3f;

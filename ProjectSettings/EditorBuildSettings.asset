@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gasolinera.unity
     guid: 6a2ef435ff790474f8438ba94ed8e9da
+  - enabled: 1
+    path: Assets/Scenes/CasaNoche.unity
+    guid: 4f2d7095fd153ba4caedbae1cecab449
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 112a61428145f2c4bbbb074da6af01b0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0
