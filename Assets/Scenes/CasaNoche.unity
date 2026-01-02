@@ -184,6 +184,10 @@ PrefabInstance:
       value: Creature (6)
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 1d4b68b30f8cfe24eb4621c9ab88a963, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b0d75fd51f23d2b4087004a52d597513, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 1d4b68b30f8cfe24eb4621c9ab88a963, type: 3}
       propertyPath: m_UpdateMode
       value: 1
       objectReference: {fileID: 0}
@@ -11581,6 +11585,10 @@ PrefabInstance:
       value: Creature (4)
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 1d4b68b30f8cfe24eb4621c9ab88a963, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a9df7fc0d53bcf7418603ab5efbd753b, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 1d4b68b30f8cfe24eb4621c9ab88a963, type: 3}
       propertyPath: m_UpdateMode
       value: 1
       objectReference: {fileID: 0}
@@ -13415,18 +13423,6 @@ MonoBehaviour:
           m_StringArgument: '[Click derecho] para Hacer Zoom'
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2117269675}
-        m_TargetAssemblyTypeName: Thoughts, Assembly-CSharp
-        m_MethodName: StartThoughts
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: "Me fui a mi casa r\xE1pidamente sin que me vieran"
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!82 &923730450
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14507,6 +14503,10 @@ PrefabInstance:
       value: Creature (5)
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 1d4b68b30f8cfe24eb4621c9ab88a963, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7fe3b175483b5194b836d1b414ffd37f, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 1d4b68b30f8cfe24eb4621c9ab88a963, type: 3}
       propertyPath: m_UpdateMode
       value: 1
       objectReference: {fileID: 0}
@@ -14744,6 +14744,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2117269675}
+        m_TargetAssemblyTypeName: Thoughts, Assembly-CSharp
+        m_MethodName: StartThoughts
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "Me fui a mi casa r\xE1pidamente sin que me vieran"
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!65 &1146002381
