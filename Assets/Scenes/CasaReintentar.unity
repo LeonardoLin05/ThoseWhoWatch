@@ -1687,7 +1687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2474787545215348958, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3653312915599690938, guid: 3460a9f659a7bce49ba5693363a94700, type: 3}
       propertyPath: pensamiento_mostrar
@@ -8821,7 +8821,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4826617878566361042}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -8945,7 +8945,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4826617878566361042}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -9069,7 +9069,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4826617878566361042}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -29907,15 +29907,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2953313818409056956, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 439.69
+      value: 432.9
       objectReference: {fileID: 0}
     - target: {fileID: 2953313818409056956, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.66
+      value: 8.2
       objectReference: {fileID: 0}
     - target: {fileID: 2953313818409056956, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 460.48
+      value: 575.19
       objectReference: {fileID: 0}
     - target: {fileID: 2953313818409056956, guid: 013f8cc7705c3b149a581d80e339df00, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30182,7 +30182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: hora
-      value: 09:00 PM
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: alarma
@@ -30275,6 +30275,10 @@ PrefabInstance:
       propertyPath: 'lineas.Array.data[15]'
       value: "Y al final ese deseo hecho realidad se esfum\xF3 a los pocos d\xEDas
         de mudarme"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202311578004652471, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -90255,7 +90259,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4826617878566361042}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}

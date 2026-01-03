@@ -37,7 +37,7 @@ public class RetryMenu : MonoBehaviour
             tries++;
         }
         Time.timeScale = 1f;
-        SceneManager.LoadScene("CasaNoche");
+        SceneManager.LoadScene("CasaReintentar");
     }
 
     public void Skip()
