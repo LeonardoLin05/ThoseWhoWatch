@@ -4,6 +4,7 @@ using UnityEngine.AI;
 public class ChasePlayer : MonoBehaviour
 {
     [SerializeField] private Transform target;
+    [SerializeField] private AudioSource screamer;
 
     private NavMeshAgent npc;
 
@@ -19,6 +20,10 @@ public class ChasePlayer : MonoBehaviour
 
     void Update()
     {
+        if(!screamer.isPlaying && Vector3.Distance(npc.transform.position, target.position) < 5)
+        {
+            screamer.Play();
+        }
         npc.destination = target.position;
     }
 }

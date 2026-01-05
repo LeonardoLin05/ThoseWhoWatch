@@ -5,6 +5,8 @@ public class HeadbobSystem : MonoBehaviour
     public static HeadbobSystem Instance { get; private set; }
 
     [SerializeField] private AudioClip[] audioFootsteps;
+    [SerializeField] private AudioClip[] audioFootstepsTierra;
+    [SerializeField] private AudioClip[] audioFootstepsMadera;
 
     private Transform player;
     private bool stepped = false;
@@ -18,6 +20,8 @@ public class HeadbobSystem : MonoBehaviour
     private Vector3 StartPos;
     private float sumY = 0f;
 
+    private LayerMask mask;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -28,6 +32,8 @@ public class HeadbobSystem : MonoBehaviour
         {
             Instance = this;
         }
+
+        mask = LayerMask.GetMask("Tierra") | LayerMask.GetMask("Madera") | LayerMask.GetMask("Default");
     }
 
     void Start()
@@ -47,7 +53,27 @@ public class HeadbobSystem : MonoBehaviour
     {
         if (!stepped && sumY < -0.005f)
         {
-            AudioSource.PlayClipAtPoint(audioFootsteps[Random.Range(0, audioFootsteps.Length)], player.position, 0.2f);
+            Ray ray = new(transform.position, -transform.up);
+            if (Physics.Raycast(ray, out RaycastHit hit, 3f, mask))
+            {
+                AudioClip audioToPlay;
+                switch(hit.transform.gameObject.layer)
+                {
+                    // Para tierra
+                    case 9:
+                        audioToPlay = audioFootstepsTierra[Random.Range(0, audioFootstepsTierra.Length)];
+                        break;
+                    // Para madera
+                    case 10:
+                        audioToPlay = audioFootstepsMadera[Random.Range(0, audioFootstepsMadera.Length)];
+                        break;
+                    // Sonido pisar por defecto
+                    default:
+                        audioToPlay = audioFootsteps[Random.Range(0, audioFootsteps.Length)];
+                        break;
+                }
+                AudioSource.PlayClipAtPoint(audioToPlay, player.position, 0.2f);
+            }            
             stepped = true;
         }
         else if(stepped && sumY >= 0f)

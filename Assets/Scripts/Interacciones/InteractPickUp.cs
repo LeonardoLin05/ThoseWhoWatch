@@ -130,7 +130,7 @@ public class InteractPickUp : MonoBehaviour, IInteractable
         sonidoBeber.Play();
 
         // Esperar lo que dura la animación
-        yield return new WaitForSecondsRealtime(5f);
+        yield return new WaitForSeconds(5f);
         // Para que el FixedUpdate se ejecute
         enabled = true;
         Interaction.Instance.enabled = true;

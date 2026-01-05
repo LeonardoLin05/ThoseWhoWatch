@@ -22,7 +22,7 @@ public class MirarPersecucion : MonoBehaviour
         TalkZoomMoveCamera.Instance.SetCabeza(transform);
         TalkZoomMoveCamera.Instance.StartZoomMovement(150f, true);
         InteractNPCs.ActivarInstances(false);
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSeconds(2f);
         TalkZoomMoveCamera.Instance.StopZoomMovement();
         InteractNPCs.ActivarInstances(true);
     }

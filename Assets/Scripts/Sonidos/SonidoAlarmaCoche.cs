@@ -8,7 +8,7 @@ public class SonidoAlarmaCoche : MonoBehaviour
 
     private AudioSource alarma;
 
-    private readonly WaitForSecondsRealtime parpadeo = new(0.5f);
+    private readonly WaitForSeconds parpadeo = new(0.5f);
 
     void Awake()
     {

@@ -12,7 +12,7 @@ public class InteractDoor : MonoBehaviour, IInteractable
     private Animator door;
     private bool open = false;
 
-    private WaitForSecondsRealtime esperar = new(1f);
+    private WaitForSeconds esperar = new(1f);
 
     void Start()
     {
@@ -78,11 +78,11 @@ public class InteractDoor : MonoBehaviour, IInteractable
         {
             open = !open;
             door.SetBool("open", open);
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSeconds(1f);
         }
         
         sonidoCerrarConLlave.Play();
-        yield return new WaitForSecondsRealtime(4f);
+        yield return new WaitForSeconds(4f);
         PlayerMovement.Instance.enabled = true;
         HeadbobSystem.Instance.enabled = true;
         CameraMovement.Instance.enabled = true;

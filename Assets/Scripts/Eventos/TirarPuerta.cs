@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class TirarPuerta : MonoBehaviour
@@ -15,7 +14,7 @@ public class TirarPuerta : MonoBehaviour
 
     private Animator animacionPuerta;
 
-    private WaitForSecondsRealtime treSegundos = new (3f);
+    private WaitForSeconds treSegundos = new (3f);
 
     void Awake()
     {
@@ -41,7 +40,7 @@ public class TirarPuerta : MonoBehaviour
         animacionNPC.SetTrigger("idle");
         sonidoPuertaViolento.Play();
         sonidoMusica.Stop();
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSeconds(1f);
         if(EsconderseArmario.DENTRO_ARMARIO) {
             script1.enabled = true;
             heartbeat.Play();
@@ -49,6 +48,7 @@ public class TirarPuerta : MonoBehaviour
         }
         else
         {
+
             script2.enabled = true;
             animacionNPC.SetTrigger("runFast");
         }

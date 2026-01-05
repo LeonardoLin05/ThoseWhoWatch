@@ -16,6 +16,8 @@ public class GamePause : MonoBehaviour
     [SerializeField] TMP_InputField inputX;
     [SerializeField] TMP_InputField inputY;
 
+    private AudioSource[] audioSources;
+
     private int layer = 0;
 
     private bool isPaused = false;
@@ -95,6 +97,8 @@ public class GamePause : MonoBehaviour
 
     public void Pause()
     {
+        audioSources = FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
+        foreach(AudioSource audioSource in audioSources) audioSource.Pause();
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
@@ -106,6 +110,7 @@ public class GamePause : MonoBehaviour
 
     public void Resume()
     {
+        foreach(AudioSource audioSource in audioSources) audioSource.UnPause();
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;

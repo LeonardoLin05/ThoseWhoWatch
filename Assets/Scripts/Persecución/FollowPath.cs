@@ -9,7 +9,7 @@ public class FollowPath : MonoBehaviour
 
     private Animator animacion;
 
-    private WaitForSecondsRealtime _waitForSecondsRealtime3 = new(3f);
+    private WaitForSeconds _waitForSeconds3 = new(3f);
     private int currentWP = 0;
 
     void Awake()
@@ -53,7 +53,7 @@ public class FollowPath : MonoBehaviour
     {
         animacion.SetTrigger("lookAround");
         enabled = false;
-        yield return _waitForSecondsRealtime3;
+        yield return _waitForSeconds3;
         enabled = true;
         animacion.SetTrigger("walking");
     }
