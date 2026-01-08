@@ -30321,29 +30321,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: lineas.Array.size
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[0]'
-      value: "Para todo el que est\xE9 leyendo esto"
+      value: Estuve andando un buen rato por la oscura carretera
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[1]'
-      value: 'Hola, mi nombre es Goto  '
+      value: "\\nNo s\xE9 si me afect\xF3 mucho lo que presenci\xE9 pero empec\xE9
+        a notar miradas de personas, como si me estuvieran vigilando"
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[2]'
-      value: Goto Setien\n\n
+      value: "Pero al mirar por los alrededores no ve\xEDa a nadie"
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[3]'
-      value: "Y lo que voy a contar a continuaci\xF3n me pas\xF3 hace aproximadamente
-        1 a\xF1o\\n "
+      value: "\\nLLegu\xE9 incluso a pensar que todo se trataba de una broma con 
+        c\xE1mara oculta de alg\xFAn programa"
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[4]'
-      value: "Ahora que he superado el trauma que me gener\xF3 aquella situaci\xF3n,
-        creo que estoy listo para contar lo sucedido aquella noche"
+      value: "Pero ya sab\xEDa muy bien que esa excusa solo era una manera de enga\xF1arme
+        a m\xED mismo"
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[5]'
@@ -30351,15 +30352,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[6]'
-      value: "Estaba harto de la ciudad y su gente, del estr\xE9s que esta me produc\xEDa  "
+      value: \n\n\nTodo era muy real para ser una broma
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[7]'
-      value: 'Aparte odiaba a mi jefe, y para que mentir, mi trabajo en general tambien\n '
+      value: "\\nEn ese punto solo quer\xEDa llegar a mi casa y olvidarme de todo
+        esto que estaba pasando"
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[8]'
-      value: Necesitaba un cambio urgente\n
+      value: "\\nLo que no sab\xEDa todav\xEDa era que esta noche de pesadilla todav\xEDa
+        no hab\xEDa acabado"
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[9]'

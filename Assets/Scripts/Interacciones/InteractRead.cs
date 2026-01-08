@@ -55,7 +55,10 @@ public class InteractRead : MonoBehaviour, IInteractable
 
         InteractNPCs.ActivarInstances(true);
 
-        TalkZoomMoveCamera.Instance.StopZoomMovement();
+        if(objetivoZoom != null)
+        {
+            TalkZoomMoveCamera.Instance.StopZoomMovement();
+        }
 
         panelNota.SetActive(false);
     }
@@ -64,8 +67,11 @@ public class InteractRead : MonoBehaviour, IInteractable
     {
         InteractNPCs.ActivarInstances(false);
 
-        TalkZoomMoveCamera.Instance.SetCabeza(objetivoZoom);
-        TalkZoomMoveCamera.Instance.StartZoomMovement(velocidadZoom, true);
+        if(objetivoZoom != null)
+        {
+            TalkZoomMoveCamera.Instance.SetCabeza(objetivoZoom);
+            TalkZoomMoveCamera.Instance.StartZoomMovement(velocidadZoom, true);
+        }
 
         panelNota.SetActive(true);
         textoNota.text = texto;
