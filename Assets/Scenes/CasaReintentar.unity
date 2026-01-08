@@ -37010,6 +37010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChasePlayer
   target: {fileID: 1270625515}
   screamer: {fileID: 919132147711312643}
+  musicaPersecucion: {fileID: 919132147711312636}
   stressReceiverScript: {fileID: 2103748104}
   traumaInducerScritp: {fileID: 919132147711312647}
 --- !u!136 &919132147711312633
@@ -37062,7 +37063,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -37299,7 +37300,7 @@ AudioSource:
   m_Resource: {fileID: 8300000, guid: 9d13dd53dd4b79948b1ada166cec8b9e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 0.2
+  m_Pitch: 0.5
   Loop: 1
   Mute: 0
   Spatialize: 0
