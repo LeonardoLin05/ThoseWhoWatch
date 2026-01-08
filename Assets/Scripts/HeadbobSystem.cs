@@ -53,8 +53,8 @@ public class HeadbobSystem : MonoBehaviour
     {
         if (!stepped && sumY < -0.005f)
         {
-            Ray ray = new(transform.position, -transform.up);
-            if (Physics.Raycast(ray, out RaycastHit hit, 3f, mask))
+            Ray ray = new(player.position, -player.up);
+            if (Physics.Raycast(ray, out RaycastHit hit, 2f, mask))
             {
                 AudioClip audioToPlay;
                 switch(hit.transform.gameObject.layer)

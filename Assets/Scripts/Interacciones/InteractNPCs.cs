@@ -65,6 +65,8 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     [SerializeField] private TextMeshProUGUI textoInteraccion2;
 
+    [SerializeField] private AudioSource textAudio;
+
     private CanvasGroup continueGroup;
     private InteractPickUp objeto;
     private RotarNPC rotarNPC;
@@ -304,6 +306,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
         foreach(char letra in dialogo)
         {
+            textAudio.Play();
             texto.text += letra;
             yield return VariablesGlobales.esperarTexto;
         }

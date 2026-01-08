@@ -1,35 +1,32 @@
 using UnityEngine;
+using UnityEngine.Video;
 
 public class InteractTV : MonoBehaviour, IInteractable
 {
 
-    [SerializeField] private GameObject panelVideo;
+    [SerializeField] private GameObject[] panelVideo;
 
     private bool active = false;
 
+    private int videoAReproducir = 0;
+
     public void Interact()
     {
-        if(!active){
-      panelVideo.SetActive(true);
-        active = true;
+        if(!active)
+        {
+            panelVideo[videoAReproducir].SetActive(true);
+            active = true;
         }
         else
         {
-            panelVideo.SetActive(false);
+            panelVideo[videoAReproducir].SetActive(false);
             active = false;
-            Debug.Log("hola");
+            videoAReproducir = (videoAReproducir + 1)%panelVideo.Length;
         }
     }
 
     public string MensajeInteraccion()
     {
-        if (!active)
-        {
-           return "[E] para Encender"; 
-        }
-        else
-        {
-            return "[E] para Apagar";
-        }
+        return !active ? "[E] para Encender" : "[E] para Apagar";
     }
 }

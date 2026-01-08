@@ -48,6 +48,10 @@ public class InteractDoor : MonoBehaviour, IInteractable
     // IGNORAR: para evento gasolinera
     public void EventoGasolineraEncerrar()
     {
+        if (sonidoAbrir != null)
+        {
+            sonidoAbrir.Play(); 
+        }
         if(open)
         {
             open = !open;
@@ -74,6 +78,10 @@ public class InteractDoor : MonoBehaviour, IInteractable
         TalkZoomMoveCamera.Instance.SetCabeza(transform.GetChild(0));
         TalkZoomMoveCamera.Instance.StartZoomMovement(150f, false);
 
+        if (sonidoAbrir != null)
+        {
+            sonidoAbrir.Play(); 
+        }
         if(open)
         {
             open = !open;
