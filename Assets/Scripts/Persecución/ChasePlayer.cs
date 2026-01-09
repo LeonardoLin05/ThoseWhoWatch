@@ -26,7 +26,7 @@ public class ChasePlayer : MonoBehaviour
 
     void Update()
     {
-        if(!inCoroutine && Vector3.Distance(npc.transform.position, target.position) <= 7)
+        if(!inCoroutine && Vector3.Distance(npc.transform.position, target.position) <= 3)
         {
             StartCoroutine(StartScream());
         }
