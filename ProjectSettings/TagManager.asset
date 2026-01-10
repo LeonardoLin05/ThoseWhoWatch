@@ -17,6 +17,7 @@ TagManager:
   - TextoInteractuar3
   - panelNota
   - textoNota
+  - Aguas
   layers:
   - Default
   - TransparentFX

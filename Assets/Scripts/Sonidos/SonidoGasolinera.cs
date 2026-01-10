@@ -18,7 +18,7 @@ public class SonidoGasolinera : MonoBehaviour
         // Recuperamos volumen predeterminado
         else
         {
-            audioGasolinera.volume = Mathf.Lerp(audioGasolinera.volume, 0.2f, Time.deltaTime);
+            audioGasolinera.volume = Mathf.Lerp(audioGasolinera.volume, 0.05f, Time.deltaTime);
         }
     }
 }

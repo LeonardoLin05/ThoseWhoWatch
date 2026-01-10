@@ -202,6 +202,10 @@ public class InteractNPCs : MonoBehaviour, IInteractable
             {
                 if(activarAccion && InteractPickUp.objetoEnMano)
                 {
+                    foreach(GameObject botella in GameObject.FindGameObjectsWithTag("Aguas")) {
+                        botella.layer = 0;
+                    }
+                    
                     objeto.ActivarAccion();
                 }
                 gameObject.layer = 0;

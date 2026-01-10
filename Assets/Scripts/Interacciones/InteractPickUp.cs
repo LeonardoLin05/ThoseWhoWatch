@@ -19,8 +19,11 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     private TextMeshProUGUI texto;
     private TextMeshProUGUI texto2;
 
+    private string previousTag;
+
     public InteractNPCs npc;
 
+    [SerializeField] private GameObject hornillo;
     [SerializeField] private bool desbloquear = false;
     [SerializeField] private int indice;
     [SerializeField] private int fila;
@@ -44,11 +47,23 @@ public class InteractPickUp : MonoBehaviour, IInteractable
         mano = GameObject.FindGameObjectWithTag("Mano").GetComponent<Transform>();
     }
 
+    void OnDisable()
+    {
+        texto.text = "";
+    }
+
+    void OnEnable()
+    {
+        texto.text = "[G] para Lanzar";
+    }
+
     public void Interact()
     {
         if (!objetoEnMano)
         {
             objetoEnMano = true;
+
+            previousTag = gameObject.tag;
             gameObject.tag = "ObjetoEnMano";
 
             // Ponemos el objeto en la mano del jugador
@@ -62,7 +77,11 @@ public class InteractPickUp : MonoBehaviour, IInteractable
                 texto2.text = "[R] para Beber";
             }
 
-            texto.text = "[G] para Lanzar";
+            if(hornillo != null)
+            {
+                hornillo.layer = 6;
+            }
+
             enabled = true;
 
             // Si activa alguna respuesta oculta al recogerlo
@@ -151,7 +170,12 @@ public class InteractPickUp : MonoBehaviour, IInteractable
     private void Lanzar()
     {
         objeto.isKinematic = false;
-        gameObject.tag = "Untagged";
+        gameObject.tag = previousTag;
+
+        if(hornillo != null)
+        {
+            hornillo.layer = 0;
+        }
 
         lanzar = true;
         mano.transform.DetachChildren();
