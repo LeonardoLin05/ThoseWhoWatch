@@ -11,12 +11,13 @@ public class ThoughtsNarration : MonoBehaviour
     [SerializeField] private string nuevaHora;
 
     private TextMeshProUGUI pensamientos;
-    private TextMeshProUGUI textoInteractuar2;
+    private TextMeshProUGUI textoInteractuar2; 
 
     [SerializeField] private TextMeshProUGUI textoHora;
 
     [SerializeField] private AudioSource alarma;
     [SerializeField] private AudioSource sirena;
+    [SerializeField] private GameObject creditos;
 
     private Animator fade;
 
@@ -70,7 +71,7 @@ public class ThoughtsNarration : MonoBehaviour
         {
             if (sirena != null && numeroLinea == 21)
             {
-                StartCoroutine(Creditos()); 
+                StartCoroutine(ReproducirAuidio(sirena, 0.5f, 0.4f)); 
             }
             // Usar la palabra saltar para empezar de nuevo con el siguiente texto borrando
             // todo lo anterior
@@ -92,7 +93,18 @@ public class ThoughtsNarration : MonoBehaviour
         pensamientos.text = "";
         textoInteractuar2.text = "";
         if(hora != "") StartCoroutine(HoraAnimada());
-        fade.SetTrigger("FadeOut");
+
+        if (sirena == null)
+        {
+            fade.SetTrigger("FadeOut");
+        }
+        else
+        {
+            creditos.SetActive(true); 
+            AudioSource musicaFianl = GameObject.Find("Creditos").GetComponent<AudioSource>();
+            musicaFianl.time = 77f; 
+            StartCoroutine(ReproducirAuidio(musicaFianl, 18f, 1f)); 
+        }
     }
 
     private IEnumerator HoraAnimada()
@@ -127,19 +139,20 @@ public class ThoughtsNarration : MonoBehaviour
         Zoom.Instance.enabled = true;
     }
 
-    private IEnumerator Creditos()
+    private IEnumerator ReproducirAuidio(AudioSource audio, float duracion, float volumen)
     {
-        float fadeOut = 1f; 
+        float fadeOut = 3f; 
         float t = 0f;
 
-        sirena.Play();
-        yield return new WaitForSeconds(2.5f);
+        audio.Play();
+        yield return new WaitForSeconds(duracion);
 
         while (t < fadeOut) 
         { 
-            t += Time.deltaTime; GetComponent<AudioSource>().volume = Mathf.Lerp(1f, 0f, t / fadeOut); 
+            t += Time.deltaTime; 
+            audio.volume = Mathf.Lerp(volumen, 0f, t / fadeOut); 
             yield return null; 
         }
-        sirena.Stop(); 
+        audio.Stop(); 
     }
 }
