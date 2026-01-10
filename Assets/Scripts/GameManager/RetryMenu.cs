@@ -24,7 +24,7 @@ public class RetryMenu : MonoBehaviour
         GamePause.Instance.enabled = false;
         Time.timeScale = 0f;
         retryMenuUI.SetActive(true);
-        if(tries == 3)
+        if(ZONA_PERSECUCION && tries == 3)
         {
             skipButton.SetActive(true);
         }
