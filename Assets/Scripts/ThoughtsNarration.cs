@@ -16,6 +16,7 @@ public class ThoughtsNarration : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textoHora;
 
     [SerializeField] private AudioSource alarma;
+    [SerializeField] private AudioSource sirena;
 
     private Animator fade;
 
@@ -67,6 +68,10 @@ public class ThoughtsNarration : MonoBehaviour
         }
         else
         {
+            if (sirena != null && numeroLinea == 21)
+            {
+                StartCoroutine(Creditos()); 
+            }
             // Usar la palabra saltar para empezar de nuevo con el siguiente texto borrando
             // todo lo anterior
             if (lineas[numeroLinea].CompareTo("saltar") == 0)
@@ -120,5 +125,21 @@ public class ThoughtsNarration : MonoBehaviour
         GamePause.Instance.enabled = true;
         Interaction.Instance.enabled = true;
         Zoom.Instance.enabled = true;
+    }
+
+    private IEnumerator Creditos()
+    {
+        float fadeOut = 1f; 
+        float t = 0f;
+
+        sirena.Play();
+        yield return new WaitForSeconds(2.5f);
+
+        while (t < fadeOut) 
+        { 
+            t += Time.deltaTime; GetComponent<AudioSource>().volume = Mathf.Lerp(1f, 0f, t / fadeOut); 
+            yield return null; 
+        }
+        sirena.Stop(); 
     }
 }
