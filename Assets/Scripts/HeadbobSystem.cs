@@ -72,7 +72,7 @@ public class HeadbobSystem : MonoBehaviour
                         audioToPlay = audioFootsteps[Random.Range(0, audioFootsteps.Length)];
                         break;
                 }
-                AudioSource.PlayClipAtPoint(audioToPlay, player.position, 0.2f);
+                AudioSource.PlayClipAtPoint(audioToPlay, player.position, 0.1f);
             }            
             stepped = true;
         }

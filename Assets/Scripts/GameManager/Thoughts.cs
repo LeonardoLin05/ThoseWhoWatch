@@ -33,8 +33,6 @@ public class Thoughts : MonoBehaviour
         {
             pensamiento = gameObject.GetComponent<TextMeshProUGUI>();
         }
-
-
     }
 
     void OnDisable()
@@ -50,7 +48,7 @@ public class Thoughts : MonoBehaviour
     public void StartThoughts(string pensamiento)
     {
         // Si ya estaba un pensamiento en ejecución
-        if(enPensamiento == true)
+        if(enPensamiento)
         {
             // Paramos la corutina asociada al pensamiento que estaba ya en ejecución
             StopCoroutine(coroutine);

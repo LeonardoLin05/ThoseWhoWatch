@@ -3837,9 +3837,8 @@ MonoBehaviour:
   - estado: 01000000
   texto: {fileID: 0}
   fondoTexto: {fileID: 0}
-  puntero: {fileID: 0}
   npcHips: {fileID: 2018615482}
-  textoInteraccion2: {fileID: 0}
+  interaccion: {fileID: 2117269676}
   textAudio: {fileID: 447222615}
 --- !u!114 &447222611
 MonoBehaviour:
@@ -8713,7 +8712,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: b42a1ad9657f9c5448d6cd99f7621a2d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9425,7 +9424,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 94cc19c590f9b9541986f67292127460, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9445,7 +9444,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0.5
-      value: 1
+      value: 0.3
       inSlope: -0.018731298
       outSlope: -0.018731298
       tangentMode: 0
@@ -26680,7 +26679,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 0d06fdc1c75c3514280d12576f3bb8db, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -28107,6 +28106,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &2117269676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1668515578068179980, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+  m_PrefabInstance: {fileID: 2117269674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2117269677 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 234600720659386375, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
@@ -32504,7 +32508,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: edd192cfaceeca349a2a4b74ca5a9983, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -32513,9 +32517,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 5
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -32523,23 +32527,32 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      time: 0.2
+      value: 0.5
+      inSlope: -0.41666666
+      outSlope: -0.41666666
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8
+      value: 0.25
+      inSlope: -0.3333333
+      outSlope: -0.3333333
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.2
+      inSlope: -0.20007975
+      outSlope: -0.20007975
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -32548,7 +32561,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

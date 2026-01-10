@@ -30,16 +30,16 @@ public class InteractPickUp : MonoBehaviour, IInteractable
 
     void Awake()
     {
-        if(enabled != false)
-        {
-            enabled = false;
-        }
         accion = gameObject.GetComponent<Animator>();
         sonidoBeber = gameObject.GetComponent<AudioSource>();
         objeto = gameObject.GetComponent<Rigidbody>();
 
         texto = GameObject.FindGameObjectWithTag("TextoInteractuar2").GetComponent<TextMeshProUGUI>();
         texto2 = GameObject.FindGameObjectWithTag("TextoInteractuar3").GetComponent<TextMeshProUGUI>();
+        if(enabled != false)
+        {
+            enabled = false;
+        }
     }
 
     void Start()

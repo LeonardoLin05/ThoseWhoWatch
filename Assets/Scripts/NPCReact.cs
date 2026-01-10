@@ -12,18 +12,16 @@ public class NPCReact : MonoBehaviour
     [SerializeField] private Transform NPC;
     // Fondo dialogo
     [SerializeField] private GameObject fondoDialogo;
-    // Texto interaccion (no la 2)
-    [SerializeField] private TextMeshProUGUI textoInteraccion;
     // Texto del dialogo
     [SerializeField] private TextMeshProUGUI texto;
     // Boton de respuesta/continuar
     [SerializeField] private Button boton;
-    // Puntero en pantalla
-    [SerializeField] private GameObject puntero;
+    // Canvas interaccion
+    [SerializeField] private GameObject interaccion;
+
+    [SerializeField] private AudioSource sonidoTexto;
 
     private CanvasGroup continueGroup;
-
-    private string oldText;
 
     // Lleva la cuenta de cuantas veces se ha ejecutado el script
     // para ir aumentando a la siguiente frase que se vaya a decir
@@ -39,14 +37,6 @@ public class NPCReact : MonoBehaviour
         if (texto == null)
         {
             texto = GameObject.FindGameObjectWithTag("TextoDialogo").GetComponent<TextMeshProUGUI>();
-        }
-        if (puntero == null)
-        {
-            puntero = GameObject.FindGameObjectWithTag("Puntero");
-        }
-        if (textoInteraccion == null)
-        {
-            textoInteraccion = GameObject.FindGameObjectWithTag("TextoInteractuar").GetComponent<TextMeshProUGUI>();
         }
         enabled = false;
     }
@@ -84,6 +74,12 @@ public class NPCReact : MonoBehaviour
         // Bloqueamos movimiento de la camara, jugador e interaccion
         InteractNPCs.ActivarInstances(false);
 
+        // Por si hay algun pensamiento
+        if(Thoughts.Instance.gameObject.GetComponent<TextMeshProUGUI>().text != "")
+        {
+            Thoughts.Instance.enabled = false;
+        }
+
         // Desbloqueamos el cursor del ratón
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -95,15 +91,7 @@ public class NPCReact : MonoBehaviour
         texto.gameObject.SetActive(true);
         fondoDialogo.SetActive(true);
 
-        puntero.SetActive(false);
-
-        // Comprobamos si el texto de interaccion tiene algo escrito
-        if (textoInteraccion.text != "")
-        {
-            // Lo guardamos para reestablecerlo más adelante
-            oldText = textoInteraccion.text;
-            textoInteraccion.text = "";
-        }
+        interaccion.SetActive(false);
 
         // Para que el texto aparezca de poco a poco animado
         StartCoroutine(TextoAnimado());
@@ -124,6 +112,12 @@ public class NPCReact : MonoBehaviour
         // Desbloqueamos movimiento de la camera, jugador e interaccion
         InteractNPCs.ActivarInstances(true);
 
+        // Por si había algún pensamiento
+        if(!Thoughts.Instance.enabled)
+        {
+            Thoughts.Instance.enabled = true;
+        }
+
         // Bloqueamos el cursor del ratón
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -136,14 +130,7 @@ public class NPCReact : MonoBehaviour
         texto.gameObject.SetActive(false);
         fondoDialogo.SetActive(false);
 
-        puntero.SetActive(true);
-
-        if(oldText != null)
-        {
-            // Restablecemos el texto que había en interacción
-            textoInteraccion.text = oldText;
-            oldText = null;
-        }
+        interaccion.SetActive(true);
 
         // Liberamos al jugador de mirar al NPC
         TalkZoomMoveCamera.Instance.StopZoomMovement();
@@ -157,6 +144,7 @@ public class NPCReact : MonoBehaviour
 
         foreach (char letra in frase[vecesEjecutadas])
         {
+            sonidoTexto.Play();
             texto.text += letra;
             yield return VariablesGlobales.esperarTexto;
         }

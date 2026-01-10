@@ -11739,7 +11739,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: b6ffbecceb7fa154c91ca59850f97ae5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -11759,9 +11759,9 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0.44444445
-      value: 0.1
+      value: 0.05
       inSlope: 0
-      outSlope: -0.45
+      outSlope: -0.225
       tangentMode: 65
       weightedMode: 0
       inWeight: 0.33333334
@@ -11769,7 +11769,7 @@ AudioSource:
     - serializedVersion: 3
       time: 0.6666667
       value: 0
-      inSlope: -0.45
+      inSlope: -0.225
       outSlope: 0
       tangentMode: 69
       weightedMode: 0
@@ -13700,7 +13700,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: b42a1ad9657f9c5448d6cd99f7621a2d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -30736,20 +30736,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f25c1ef6e258b4d815f4db82b8d906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Thoughts
---- !u!114 &2117269676 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 752954462911415462, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
-  m_PrefabInstance: {fileID: 2117269674}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
---- !u!1 &2117269677 stripped
+--- !u!1 &2117269676 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 6399639204109550659, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1668515578068179980, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
   m_PrefabInstance: {fileID: 2117269674}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2117269678 stripped
@@ -31038,7 +31027,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 757910707}
           m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
           m_MethodName: Stop
           m_Mode: 1
@@ -31123,9 +31112,8 @@ MonoBehaviour:
   - estado: 01000000
   texto: {fileID: 2117269679}
   fondoTexto: {fileID: 2117269678}
-  puntero: {fileID: 2117269677}
   npcHips: {fileID: 5465940246103832796}
-  textoInteraccion2: {fileID: 2117269676}
+  interaccion: {fileID: 2117269676}
   textAudio: {fileID: 2117952432}
 --- !u!114 &2117952430
 MonoBehaviour:
@@ -35722,9 +35710,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 5
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -35732,23 +35720,32 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      time: 0.2
+      value: 0.5
+      inSlope: -0.41666666
+      outSlope: -0.41666666
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8
+      value: 0.25
+      inSlope: -0.3333333
+      outSlope: -0.3333333
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.2
+      inSlope: -0.20007975
+      outSlope: -0.20007975
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -35757,7 +35754,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

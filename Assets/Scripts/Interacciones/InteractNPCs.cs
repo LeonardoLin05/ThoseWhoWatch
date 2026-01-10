@@ -60,10 +60,9 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
     [SerializeField] private TextMeshProUGUI texto;
     [SerializeField] private GameObject fondoTexto;
-    [SerializeField] private GameObject puntero;
     [SerializeField] private Transform npcHips;
 
-    [SerializeField] private TextMeshProUGUI textoInteraccion2;
+    [SerializeField] private GameObject interaccion;
 
     [SerializeField] private AudioSource textAudio;
 
@@ -85,14 +84,6 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         if(fondoTexto == null)
         {
             fondoTexto = GameObject.FindGameObjectWithTag("FondoDialogo");
-        }
-        if (puntero == null)
-        {
-            puntero = GameObject.FindGameObjectWithTag("Puntero");
-        }
-        if(textoInteraccion2 == null)
-        {
-            textoInteraccion2 = GameObject.FindGameObjectWithTag("TextoInteractuar2").GetComponent<TextMeshProUGUI>();
         }
         rotarNPC = gameObject.GetComponent<RotarNPC>();
     }
@@ -131,7 +122,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         i = 0;
         texto.gameObject.SetActive(true);
         fondoTexto.SetActive(true);
-        puntero.SetActive(false);
+        interaccion.SetActive(false);
 
         // Impedimos que el jugador pueda lanzar el objeto en mitad de la conversación
         if(InteractPickUp.objetoEnMano)
@@ -159,14 +150,6 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         // Añadimos la acción al boton de continuar
         continueButton.onClick.RemoveAllListeners();
         continueButton.onClick.AddListener(() => AvanzarDialogo());
-
-        // Compruebas si el texto de la interacción 2 tiene algo escrito
-        if (textoInteraccion2.text != "")
-        {
-            // Guarda el texto para reestablecerlo al final
-            oldText = textoInteraccion2.text;
-            textoInteraccion2.text = "";
-        }
 
         // Añadimos la acción correspondiente a los botones de respuestas
         for (int i = 0; i < botones.Length; i++)
@@ -271,7 +254,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         texto.gameObject.SetActive(false);
         fondoTexto.SetActive(false);
         SetContinueButtonVisible(false);
-        puntero.SetActive(true);
+        interaccion.SetActive(true);
 
         // Permitimos al jugador poder tirar el objeto en mano
         if(InteractPickUp.objetoEnMano)
@@ -280,7 +263,7 @@ public class InteractNPCs : MonoBehaviour, IInteractable
         }
 
         // Por si había algún pensamiento
-        if(!Thoughts.Instance.enabled == false)
+        if(!Thoughts.Instance.enabled)
         {
             Thoughts.Instance.enabled = true;
         }
@@ -293,13 +276,6 @@ public class InteractNPCs : MonoBehaviour, IInteractable
 
         // Desbloqueamos moviemientos de camara, jugador e interaccion
         ActivarInstances(true);
-
-        if(oldText != null)
-        {
-            // Restablecemos el texto de la interacción 2
-            textoInteraccion2.text = oldText;
-            oldText = null;
-        }
     }
 
     public IEnumerator TextoAnimar(string dialogo)
