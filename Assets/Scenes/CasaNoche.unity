@@ -30660,7 +30660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}
       propertyPath: 'lineas.Array.data[3]'
-      value: "\\nLLegu\xE9 incluso a pensar que todo se trataba de una broma con 
+      value: "\\nLLegu\xE9 incluso a pensar que todo se trataba de una broma con
         c\xE1mara oculta de alg\xFAn programa"
       objectReference: {fileID: 0}
     - target: {fileID: 8925646198560305378, guid: 148e05b8ea0085b4d80290999d1319fa, type: 3}

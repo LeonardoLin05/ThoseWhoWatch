@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 422f3b662fc1c0143b8d8c49142ab752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractRead
-  texto: "\xC9l mancillo su santuario"
+  texto: "\xC9l mancill\xF3 su santuario"
   panelNota: {fileID: 118158138418793808}
   textoNota: {fileID: 118158138418793807}
   objetivoZoom: {fileID: 0}
