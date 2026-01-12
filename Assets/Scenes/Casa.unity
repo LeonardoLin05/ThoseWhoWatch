@@ -3675,7 +3675,7 @@ MonoBehaviour:
   - lineas:
     - "Si la vista no me falla ah\xED pone que es el 591 el que lleva a la gasolinera"
     - "Yo estoy esperando al 571 que es el que me dej\xF3 aqu\xED tirada y el que
-      me dijeron en la estaci\xF3n de buses que llevaba a la ciuadad"
+      me dijeron en la estaci\xF3n de buses que llevaba a la ciudad"
   - lineas:
     - Muy segura
   - lineas:
@@ -3708,7 +3708,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - respuestas:
-    - "\xBFComo, \xBFA que se refiere? \xBFQue cosas extra\xF1as exactamente?"
+    - "\xBFC\xF3mo, \xBFA que se refiere? \xBFQu\xE9 cosas extra\xF1as exactamente?"
     - "\xBFPero, y usted porque est\xE1 aqu\xED sabiendo eso? "
     saltar: 0500000006000000
     evento:
